@@ -1,0 +1,711 @@
+{
+  "common": {
+    "changeLanguage": "Change language",
+    "brandHome": "Myanmar GSS home",
+    "primaryNavigation": "Primary navigation",
+    "openNavigation": "Open navigation",
+    "closeNavigation": "Close navigation",
+    "backToTop": "Back to top",
+    "detailsOnRequest": "Details available on request"
+  },
+  "header": {
+    "brandName": "Myanmar GSS",
+    "brandNote": "GOLDEN SUPPORT SERVICES",
+    "brandNoteGlobal": "GLOBAL SUPPORT SERVICES"
+  },
+  "nav": {
+    "home": "Home",
+    "company": "Company",
+    "services": "Services",
+    "recruitment": "Recruitment",
+    "process": "Process",
+    "activities": "Activities",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": " Myanmar GSS Co., Ltd. All Rights Reserved.",
+    "backToTop": "Back to top ↑"
+  },
+  "pages": {
+    "home": {
+      "title": "Myanmar GSS | Home",
+      "description": "Myanmar GSS Co., Ltd. connects Myanmar talent with opportunities in Japan."
+    },
+    "company": {
+      "title": "Myanmar GSS | Company",
+      "description": "About Myanmar GSS Co., Ltd. and its bridge between Myanmar talent and Japan."
+    },
+    "services": {
+      "title": "Myanmar GSS | Services",
+      "description": "Myanmar GSS services for Professional Talent, Specified Skilled Workers and Technical Intern Training for employment in Japan."
+    },
+    "recruitment": {
+      "title": "Myanmar GSS | Recruitment",
+      "description": "Current recruitment opportunities from Myanmar GSS Co., Ltd. for work in Japan."
+    },
+    "process": {
+      "title": "Myanmar GSS | Process",
+      "description": "Myanmar GSS recruitment process from job order to post-arrival support in Japan."
+    },
+    "activities": {
+      "title": "Myanmar GSS | Activities",
+      "description": "Training, education and activities at Myanmar GSS."
+    },
+    "contact": {
+      "title": "Myanmar GSS | Contact",
+      "description": "Contact Myanmar GSS Co., Ltd. in Kyaukkone, Yangon."
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Myanmar GSS Co., Ltd.",
+      "title1": "Myanmar talent.",
+      "title2": "A bridge to Japan.",
+      "copy": "We connect people from Myanmar with opportunities in Japan — supporting recruitment, Japanese-language education, skills training, documentation and the journey to employment.",
+      "explore": "Explore our services",
+      "talkToTeam": "Talk to our team",
+      "facts": {
+        "established": "Established",
+        "establishedValue": "8 February 2023",
+        "capital": "Capital",
+        "capitalValue": "MMK 50,000,000",
+        "location": "Location",
+        "locationValue": "Kyaukkone, Yangon, Myanmar"
+      },
+      "aria": {
+        "media": "Myanmar GSS hero",
+        "highlights": "Myanmar GSS highlights",
+        "slide1": "Myanmar GSS training environment",
+        "slide2": "Myanmar GSS training activity",
+        "slide3": "Myanmar GSS people and activities",
+        "carousel": "Hero image carousel",
+        "previous": "Previous hero image",
+        "next": "Next hero image",
+        "dots": "Choose hero image",
+        "dot": "Show hero image {{number}}"
+      }
+    },
+    "company": {
+      "eyebrow": "Company",
+      "title": "A people-first bridge between Myanmar and Japan.",
+      "copy": "Myanmar GSS Co., Ltd. supports the connection between Japanese employers and Myanmar talent, from preparation in Myanmar to employment in Japan.",
+      "cta": "Discover our company",
+      "imageAlt": "Myanmar GSS training and activities"
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Three pathways. One goal.",
+      "copy": "We prepare and connect Myanmar talent for work in Japan through professional talent placement, specified skilled worker routes and technical intern training.",
+      "talent": {
+        "title": "Highly skilled foreign talent",
+        "copy": "Connecting specialists with Japanese companies in technical, humanities and international-business roles."
+      },
+      "ssw": {
+        "title": "Specified Skilled Workers",
+        "copy": "Preparing candidates for designated sectors with language and skills-test support."
+      },
+      "intern": {
+        "title": "Technical Intern Trainees",
+        "copy": "Helping candidates build practical experience and long-term career foundations in Japan."
+      },
+      "cta": "Learn more"
+    },
+    "message": {
+      "eyebrow": "Representative message",
+      "title": "Passing opportunity forward.",
+      "quote": "I want to pass on the knowledge and experience I have gained through my connection with Japan, so that the next generation can use it to build a better future for Myanmar.",
+      "cta": "Read the full message"
+    },
+    "activities": {
+      "eyebrow": "Activities",
+      "title": "People in motion.",
+      "copy": "Training, preparation and departure are all part of the journey from Myanmar to Japan.",
+      "cta": "View activities",
+      "imageAlt": "Myanmar GSS training activities"
+    },
+    "contact": {
+      "eyebrow": "Start a conversation",
+      "title": "Looking for talent in Myanmar?",
+      "copy": "Talk to Myanmar GSS about talent placement, candidate preparation and employment support for Japan.",
+      "cta": "Contact Myanmar GSS"
+    }
+  },
+  "company": {
+    "hero": {
+      "crumb": "Company",
+      "eyebrow": "About Myanmar GSS",
+      "title": "A people-first bridge between Myanmar and Japan.",
+      "copy": "Supporting the connection between Japanese employers and Myanmar talent, from preparation in Myanmar to employment in Japan."
+    },
+    "profile": {
+      "eyebrow": "Company profile",
+      "title": "Built around people, skills and opportunity.",
+      "copy": "Myanmar GSS Co., Ltd. focuses on talent placement, Japanese-language and skills education, and employment support for people preparing to work in Japan.",
+      "facts": {
+        "focus": "Focus",
+        "focusValue": "Talent placement & support",
+        "preparation": "Preparation",
+        "preparationValue": "Language & skills education",
+        "support": "Support",
+        "supportValue": "Visa & employment process",
+        "connection": "Connection",
+        "connectionValue": "Myanmar ↔ Japan"
+      },
+      "card": {
+        "heading": "Corporate information",
+        "companyLabel": "Company name",
+        "companyValue": "Myanmar GSS Co., Ltd.",
+        "established": "Established",
+        "establishedValue": "8 February 2023",
+        "address": "Address",
+        "addressValue": "No. 38(A), Boe Yar Zar Street, Kyaukkone, Yankin Township, Yangon, Myanmar",
+        "capital": "Capital",
+        "capitalValue": "MMK 50,000,000",
+        "business": "Business",
+        "businessValue": "Foreign talent placement, education and employment support for Japan"
+      }
+    },
+    "message": {
+      "eyebrow": "Representative message",
+      "title": "Passing opportunity forward.",
+      "quote": "I want to pass on the knowledge and experience I have gained through my connection with Japan, so that the next generation can use it to build a better future for Myanmar.",
+      "p1": "I was born in Mandalay, Myanmar's second-largest city. My family was not wealthy, but people around me taught me Japanese, and later I gained work experience in Japan. Through continued connections with Japan, I have also learned from its culture and values.",
+      "p2": "Having reached the age of 54, I believe it is time to pass the baton to a younger generation. Myanmar is still a developing country and many industries have yet to grow. I hope young people who go to Japan will return not only with earnings, but also with technology, skills and knowledge that can contribute to Myanmar's future.",
+      "p3": "I hope our company's work can become one small part of that bridge."
+    }
+  },
+  "services": {
+    "hero": {
+      "crumb": "Services",
+      "eyebrow": "OUR SERVICES",
+      "title1": "Three pathways.",
+      "title2": "One goal.",
+      "copy": "Myanmar GSS supports candidates seeking employment opportunities in Japan through Professional Talent, Specified Skilled Workers and Technical Intern Training pathways.",
+      "meta1": "Professional Talent",
+      "meta2": "Specified Skilled Workers",
+      "meta3": "Technical Intern Training"
+    },
+    "pathways": {
+      "eyebrow": "THREE PATHWAYS",
+      "title1": "Choose the pathway",
+      "title2": "that fits your career.",
+      "copy": "Our services are organized around three employment pathways. Available positions and sectors may vary according to employer requirements and recruitment cycles."
+    },
+    "cards": {
+      "viewRecruitment": "View recruitment opportunities",
+      "areasTitle": "SERVICE AREAS",
+      "professional": {
+        "label": "PROFESSIONAL TALENT",
+        "title1": "Highly Skilled",
+        "title2": "Foreign Talent",
+        "copy": "Professional talent opportunities for foreign workers seeking employment in Japan under work-visa pathways.",
+        "areas": [
+          "IT Industry",
+          "Factory Work",
+          "Hotel"
+        ]
+      },
+      "ssw": {
+        "label": "SPECIFIED SKILLED WORKERS",
+        "title1": "Specified",
+        "title2": "Skilled Workers",
+        "copy": "Support for candidates preparing for employment in designated skilled-worker fields in Japan.",
+        "areas": [
+          "Airport Ground Handling Service",
+          "Infrastructure & Equipment / Lifeline & Facilities"
+        ]
+      },
+      "intern": {
+        "label": "TECHNICAL INTERN TRAINING",
+        "title1": "Technical Intern",
+        "title2": "Training",
+        "copy": "A practical training pathway for candidates who will gain workplace experience and technical skills in Japan.",
+        "areas": [
+          "Food Manufacturing"
+        ]
+      }
+    },
+    "support": {
+      "eyebrow": "CANDIDATE SUPPORT",
+      "title1": "Support beyond",
+      "title2": "job matching.",
+      "copy": "We help candidates prepare for the requirements of working in Japan and guide them through the necessary stages of the employment process.",
+      "education": {
+        "label": "EDUCATION",
+        "title": "Japanese Language Education",
+        "copy": "Build practical Japanese-language readiness for communication in work and daily life."
+      },
+      "skills": {
+        "label": "SKILLS",
+        "title": "Skills-Test Preparation",
+        "copy": "Prepare candidates for the skills requirements associated with their target employment pathway."
+      },
+      "employment": {
+        "label": "EMPLOYMENT",
+        "title": "Visa & Employment Support",
+        "copy": "Guide candidates through the required employment, visa and pre-departure procedures."
+      }
+    },
+    "process": {
+      "eyebrow": "FROM PREPARATION TO DEPARTURE",
+      "title1": "A structured process",
+      "title2": "from application to Japan.",
+      "copy": "Our recruitment process covers candidate screening, Japanese conversation testing, employer interviews, employment documentation, visa procedures, pre-departure orientation and post-arrival support.",
+      "cta": "Explore Our Process",
+      "link": "See current opportunities"
+    }
+  },
+  "recruitment": {
+    "types": {
+      "professional": "Professional Talent",
+      "ssw": "Specified Skilled Worker",
+      "intern": "Technical Intern Trainees"
+    },
+    "hero": {
+      "eyebrow": "Recruitment opportunities",
+      "title1": "Find your next",
+      "title2": "opportunity in Japan.",
+      "copy": "Explore current opportunities provided in the recruitment source document. Select a role to review the position overview, requirements, location, contract period, Japanese level and salary.",
+      "opportunities": "opportunities",
+      "japan": "Japan",
+      "processLink": "See our recruitment process"
+    },
+    "heading": {
+      "eyebrow": "Open roles",
+      "title": "Current opportunities.",
+      "roles": "roles"
+    },
+    "filters": {
+      "aria": "Filter recruitment roles",
+      "all": "All roles",
+      "ask": "Ask about a role"
+    },
+    "jobMeta": {
+      "location": "Location",
+      "japanese": "Japanese",
+      "salary": "Salary"
+    },
+    "empty": {
+      "title": "No roles found.",
+      "copy": "Please select another category."
+    },
+    "note": {
+      "eyebrow": "Important information",
+      "title": "Need help choosing a role?",
+      "copy": "Our recruitment team can explain the role details and guide you through the application process.",
+      "cta": "Contact our team"
+    },
+    "modal": {
+      "eyebrow": "Recruitment opportunity",
+      "closeAria": "Close role details",
+      "fallbackRole": "Role details",
+      "location": "Location",
+      "japaneseLevel": "Japanese Level",
+      "contract": "Contract",
+      "salary": "Salary",
+      "overview": "Role overview",
+      "requirements": "Requirements",
+      "askAboutRole": "Ask about this role",
+      "close": "Close"
+    },
+    "jobs": {
+      "job1": {
+        "role": "Travel Industry Worker",
+        "type": "Professional Talent",
+        "summary": "Sales & Marketing and Operations work within the travel industry.",
+        "cardLocation": "Chuo-ku, Tokyo",
+        "cardLanguage": "N2",
+        "cardSalary": "220,000 Yen",
+        "location": "Chuo-ku, Tokyo, Japan",
+        "salary": "220,000 Yen",
+        "language": "N2 (JLPT N2)",
+        "duration": "Full-time",
+        "requirements": "Japanese-language preparation; Japanese Language Level N2 (JLPT N2); sector skills preparation."
+      },
+      "job2": {
+        "role": "Engineering",
+        "type": "Professional Talent",
+        "summary": "Design support work using Auto CAD (2D, 3D).",
+        "cardLocation": "Oita / Tokyo",
+        "cardLanguage": "N3 / N1",
+        "cardSalary": "230,000–450,000 Yen",
+        "location": "Oita City, Oita / Taito-ku, Tokyo, Japan",
+        "salary": "230,000 Yen – 450,000 Yen",
+        "language": "N3 (Fluent in Speaking), N1",
+        "duration": "Full-time",
+        "requirements": "Japanese-language preparation; Japanese Language Level N3 (fluent in speaking); engineering background; relevant technical knowledge; CAD qualification."
+      },
+      "job3": {
+        "role": "IT Industry",
+        "type": "Professional Talent",
+        "summary": "Mechanical, electronic, software and process opportunities.",
+        "cardLocation": "Adachi-ku, Tokyo",
+        "cardLanguage": "N2 / N1",
+        "cardSalary": "220,000–350,000 Yen",
+        "location": "Adachi-ku, Tokyo, Japan",
+        "salary": "220,000 Yen – 350,000 Yen",
+        "language": "N2, N1",
+        "duration": "Full-time",
+        "requirements": "Japanese Language Level N2–N1; engineering background; relevant technical knowledge; CAD qualification; system development experience; knowledge of C#, C++, Oracle, Perl, Python, Flash and ActionScript; 3+ years of administrative experience."
+      },
+      "job4": {
+        "role": "Factory Work",
+        "type": "Professional Talent",
+        "summary": "Manufacturing using power tools, automated machine operation and maintenance.",
+        "cardLocation": "Okayama",
+        "cardLanguage": "N3",
+        "cardSalary": "200,000–270,000 Yen",
+        "location": "Minami Ward, Okayama, Japan",
+        "salary": "200,000 Yen – 270,000 Yen",
+        "language": "N3 (Fluent in Speaking)",
+        "duration": "Full-time",
+        "requirements": "Japanese Language Level N3 (JLPT N3), fluent in speaking."
+      },
+      "job5": {
+        "role": "Hotel Operations",
+        "type": "Professional Talent",
+        "summary": "Hotel management, guest support, reservations, OTA operation and local guide services.",
+        "cardLocation": "Miyagi",
+        "cardLanguage": "Communication",
+        "cardSalary": "180,000 Yen",
+        "location": "Higashimatsushima-shi, Miyagi, Japan",
+        "salary": "180,000 Yen",
+        "language": "Japanese sufficient for communication",
+        "duration": "Full-time",
+        "requirements": "Hospitality interest; service mindset; Japanese at a level sufficient for communication; education degree."
+      },
+      "job6": {
+        "role": "Caregiving",
+        "type": "Specified Skilled Worker",
+        "summary": "Caregiving work for a Japanese care facility.",
+        "cardLocation": "Kanagawa",
+        "cardLanguage": "N4",
+        "cardSalary": "180,000–200,000 Yen",
+        "location": "Hiratsuka-shi, Kanagawa, Japan",
+        "salary": "180,000 Yen – 200,000 Yen",
+        "language": "N4",
+        "duration": "5 Year Contract",
+        "requirements": "Japanese Language Level N4 or JFT A2 (fluent in speaking); high school passed or above; must pass the Specified Skilled Worker Exam (Nursing Care)."
+      },
+      "job7": {
+        "role": "Food Services",
+        "type": "Specified Skilled Worker",
+        "summary": "Food preparation, customer service, kitchen support and daily operations.",
+        "cardLocation": "Chiba",
+        "cardLanguage": "N4–N3",
+        "cardSalary": "180,000–220,000 Yen",
+        "location": "Kisarazu, Chiba, Japan",
+        "salary": "180,000 Yen – 220,000 Yen",
+        "language": "N4–N3",
+        "duration": "5 Year Contract",
+        "requirements": "Japanese Language Level N4–N3 or JFT A2 (fluent in speaking); high school passed or above; must pass the Specified Skilled Worker Exam (Food Service Industry)."
+      },
+      "job8": {
+        "role": "Food Manufacturing",
+        "type": "Specified Skilled Worker",
+        "summary": "Production work in a ready-made meal manufacturing environment.",
+        "cardLocation": "Hokkaido",
+        "cardLanguage": "N4",
+        "cardSalary": "160,000–200,000 Yen",
+        "location": "Kitahiroshima-shi, Hokkaido, Japan",
+        "salary": "160,000 Yen – 200,000 Yen",
+        "language": "N4",
+        "duration": "5 Year Contract",
+        "requirements": "Japanese Language Level N4 or JFT A2; high school passed or above; must pass the Specified Skilled Worker Test (Food Industry)."
+      },
+      "job9": {
+        "role": "Airport Ground Handling Services",
+        "type": "Specified Skilled Worker",
+        "summary": "Baggage handling, ramp-side support and airport operational assistance.",
+        "cardLocation": "Tokyo",
+        "cardLanguage": "N4",
+        "cardSalary": "200,000–220,000 Yen",
+        "location": "Ota-ku, Tokyo, Japan",
+        "salary": "200,000 Yen – 220,000 Yen",
+        "language": "N4",
+        "duration": "5 Year Contract",
+        "requirements": "Japanese Language Level N4 or JFT A2; high school passed or above; must pass the Specified Skilled Worker Exam (Aviation Industry: Ground Handling)."
+      },
+      "job10": {
+        "role": "Infrastructure & Equipment",
+        "type": "Specified Skilled Worker",
+        "summary": "Installation, maintenance, testing and operational support for electrical systems and equipment.",
+        "cardLocation": "Fukui",
+        "cardLanguage": "N4",
+        "cardSalary": "250,000 Yen",
+        "location": "Fukui City, Fukui, Japan",
+        "salary": "250,000 Yen",
+        "language": "N4",
+        "duration": "5 Year Contract",
+        "requirements": "Japanese Language Level N4 or JFT A2; high school passed or above; must pass the Specified Skilled Worker Exam (Infrastructure and Equipment)."
+      },
+      "job11": {
+        "role": "Hotel Operation",
+        "type": "Technical Intern Trainees",
+        "summary": "Guest transportation, guest services, meal venue preparation and food and beverage service.",
+        "cardLocation": "Tochigi",
+        "cardLanguage": "N4",
+        "cardSalary": "186,000 Yen",
+        "location": "Tochigi, Japan",
+        "salary": "186,000 Yen",
+        "language": "N4",
+        "duration": "3 Year Contract",
+        "requirements": "Basic Japanese level; service mindset."
+      },
+      "job12": {
+        "role": "Garment Manufacturing",
+        "type": "Technical Intern Trainees",
+        "summary": "Garment sewing, fabric cutting, assembly, finishing and quality inspection.",
+        "cardLocation": "Okayama",
+        "cardLanguage": "N4",
+        "cardSalary": "170,138 Yen",
+        "location": "Okayama, Japan",
+        "salary": "170,138 Yen",
+        "language": "N4",
+        "duration": "3 Year Contract",
+        "requirements": "Basic Japanese and sewing experience."
+      },
+      "job13": {
+        "role": "Construction & Scaffolding",
+        "type": "Technical Intern Trainees",
+        "summary": "General construction, scaffolding installation, dismantling and site support.",
+        "cardLocation": "Hiroshima",
+        "cardLanguage": "N4",
+        "cardSalary": "161,588 Yen",
+        "location": "Hiroshima, Japan",
+        "salary": "161,588 Yen",
+        "language": "N4",
+        "duration": "3 Year Contract",
+        "requirements": "Basic Japanese language skills and experience in construction and manual labor."
+      },
+      "job14": {
+        "role": "Caregiving (Kaigo)",
+        "type": "Technical Intern Trainees",
+        "summary": "Support for elderly people with daily activities, personal care, mobility and meals.",
+        "cardLocation": "Kanagawa",
+        "cardLanguage": "N3",
+        "cardSalary": "222,390 Yen",
+        "location": "Kanagawa, Japan",
+        "salary": "222,390 Yen",
+        "language": "N3",
+        "duration": "3 Year Contract",
+        "requirements": "Intermediate Japanese language."
+      },
+      "job15": {
+        "role": "Meal Preparation & Food Service",
+        "type": "Technical Intern Trainees",
+        "summary": "Food preparation, cooking assistance, serving and kitchen operations.",
+        "cardLocation": "Yokohama",
+        "cardLanguage": "N4",
+        "cardSalary": "209,000 Yen",
+        "location": "Yokohama, Japan",
+        "salary": "209,000 Yen",
+        "language": "N4",
+        "duration": "3 Year Contract",
+        "requirements": "Basic Japanese language and food preparation experience."
+      },
+      "job16": {
+        "role": "Bread & Bakery Production",
+        "type": "Technical Intern Trainees",
+        "summary": "Bread and bakery production including mixing, shaping, baking and packaging.",
+        "cardLocation": "Fukushima",
+        "cardLanguage": "N4",
+        "cardSalary": "160,000–170,000 Yen",
+        "location": "Fukushima, Japan",
+        "salary": "160,000 Yen – 170,000 Yen",
+        "language": "N4",
+        "duration": "3 Year Contract",
+        "requirements": "Basic Japanese language and food preparation experience."
+      },
+      "job17": {
+        "role": "Bento & Confectionery Production",
+        "type": "Technical Intern Trainees",
+        "summary": "Bento and confectionery production including preparation, cooking, packaging and quality control.",
+        "cardLocation": "Yamanashi",
+        "cardLanguage": "N4",
+        "cardSalary": "191,780 Yen",
+        "location": "Yamanashi, Japan",
+        "salary": "191,780 Yen",
+        "language": "N4",
+        "duration": "3 Year Contract",
+        "requirements": "Basic Japanese language and food preparation experience."
+      },
+      "job18": {
+        "role": "Machine Processing & Electrical Control Panels",
+        "type": "Technical Intern Trainees",
+        "summary": "Machine operation and electrical control-panel assembly, wiring, testing and inspection.",
+        "cardLocation": "Gunma",
+        "cardLanguage": "N4",
+        "cardSalary": "160,000–170,000 Yen",
+        "location": "Gunma, Japan",
+        "salary": "160,000 Yen – 170,000 Yen",
+        "language": "N4",
+        "duration": "3 Year Contract",
+        "requirements": "Basic Japanese proficiency and strong performance in aptitude, academic ability and IQ tests."
+      }
+    },
+    "viewDetails": "View role details"
+  },
+  "process": {
+    "hero": {
+      "eyebrow": "Our recruitment process",
+      "title1": "From job order to",
+      "title2": "departure to Japan.",
+      "copy": "A structured 15-step recruitment and employment-support process designed to guide candidates and Japanese employers from the first job order through post-arrival support.",
+      "stepsLabel": "15 steps",
+      "route": "Myanmar ↔ Japan",
+      "viewOpportunities": "View current opportunities"
+    },
+    "intro": {
+      "eyebrow": "How it works",
+      "title": "A clear path at every stage.",
+      "copy": "Each stage has a defined purpose, from receiving the employer's requirements to preparing candidates, completing required procedures, and supporting workers after arrival in Japan."
+    },
+    "steps": {
+      "s1": {
+        "label": "Step 01",
+        "title": "Receive Job Order",
+        "copy": "Receive a job order and recruitment requirements from a Japanese employer."
+      },
+      "s2": {
+        "label": "Step 02",
+        "title": "Job Announcement & Candidate Recruitment",
+        "copy": "Publish the job vacancy on our official page and begin recruiting suitable candidates."
+      },
+      "s3": {
+        "label": "Step 03",
+        "title": "CV Collection & Document Screening",
+        "copy": "Collect candidates' CVs and required documents."
+      },
+      "s4": {
+        "label": "Step 04",
+        "title": "In-House Japanese Conversation Test",
+        "copy": "Conduct a Japanese conversation (Kaiwa) test at our agency and select qualified candidates."
+      },
+      "s5": {
+        "label": "Step 05",
+        "title": "CV Submission to Japan",
+        "copy": "Submit the CVs of candidates who pass our Agency's Kaiwa test to the Japanese employer for further consideration."
+      },
+      "s6": {
+        "label": "Step 06",
+        "title": "Employer Interview",
+        "copy": "Arrange and conduct interviews between the selected candidates and the Japanese employer."
+      },
+      "s7": {
+        "label": "Step 07",
+        "title": "Employment Contract",
+        "copy": "Successful candidates sign an employment contract with the Japanese employer."
+      },
+      "s8": {
+        "label": "Step 08",
+        "title": "Demand Application",
+        "copy": "Submit the required demand documents to the relevant labor authorities in Myanmar."
+      },
+      "s9": {
+        "label": "Step 09",
+        "title": "Certificate of Eligibility (COE) Application",
+        "copy": "Proceed with the Certificate of Eligibility (COE) application in Japan."
+      },
+      "s10": {
+        "label": "Step 10",
+        "title": "Visa Application",
+        "copy": "Apply for the appropriate visa at the relevant visa application center."
+      },
+      "s11": {
+        "label": "Step 11",
+        "title": "Standard Labor Contract",
+        "copy": "Complete the required labor contract procedures with the relevant labor authorities in Myanmar."
+      },
+      "s12": {
+        "label": "Step 12",
+        "title": "OWIC Card Application",
+        "copy": "Apply for the Overseas Worker Identification Card (OWIC)."
+      },
+      "s13": {
+        "label": "Step 13",
+        "title": "Pre-Departure Orientation",
+        "copy": "Provide pre-departure orientation covering work conditions, workplace rules, life in Japan, and important information for living and working in Japan."
+      },
+      "s14": {
+        "label": "Step 14",
+        "title": "Departure to Japan",
+        "copy": "Complete the final departure procedures and travel to Japan."
+      },
+      "s15": {
+        "label": "Step 15",
+        "title": "Post-Arrival Support",
+        "copy": "Provide necessary support and follow-up assistance after the workers arrive in Japan."
+      }
+    },
+    "cta": {
+      "eyebrow": "Ready for the next step?",
+      "title": "Explore available recruitment opportunities.",
+      "button": "View recruitment"
+    }
+  },
+  "activities": {
+    "hero": {
+      "crumb": "Activities",
+      "eyebrow": "Training · Education · Departure",
+      "title": "People in motion.",
+      "copy": "Training, preparation and departure are all part of the journey from Myanmar to Japan."
+    },
+    "gallery": {
+      "imageMainAlt": "Myanmar GSS training and activities",
+      "labelMain": "Training · Education · Departure",
+      "imageRepAlt": "Myanmar GSS representative",
+      "labelRep": "Company leadership",
+      "purpose": "Our purpose",
+      "title": "Skills go home with people.",
+      "copy": "The value of working in Japan is not limited to income. Knowledge, skills and experience can also return to Myanmar and contribute to its future."
+    },
+    "learning": {
+      "eyebrow": "Learning environment",
+      "title": "Preparation happens together.",
+      "copy": "Training and activity imagery gives visitors a clearer view of the people and environment behind the recruitment journey.",
+      "imageAlt": "Training activity"
+    }
+  },
+  "contact": {
+    "hero": {
+      "crumb": "Contact",
+      "eyebrow": "Start a conversation",
+      "title": "Let's build the right connection.",
+      "copy": "Talk to Myanmar GSS about talent placement, candidate preparation and employment support for Japan."
+    },
+    "section": {
+      "companyName": "Myanmar GSS Co., Ltd.",
+      "title": "Looking for talent in Myanmar?",
+      "copy": "Talk to our team about highly skilled talent, specified skilled workers, technical intern trainees and the preparation required before employment in Japan."
+    },
+    "card": {
+      "company": "Company",
+      "companyValue": "Myanmar GSS Co., Ltd.",
+      "address": "Address",
+      "addressValue1": "No. 38(A), Boe Yar Zar Street,",
+      "addressValue2": "Kyaukkone, Yankin Township, Yangon, Myanmar",
+      "email": "Email",
+      "emailValue": "Contact the company directly for the current official email address.",
+      "openMaps": "Open location search",
+      "note": "The previous example.com mail link has been removed so the site no longer sends messages to a fake address."
+    },
+    "cards": {
+      "employers": {
+        "eyebrow": "Employers",
+        "title": "Need talent?",
+        "copy": "Share your role, location, work conditions, language expectations and target start date."
+      },
+      "candidates": {
+        "eyebrow": "Candidates",
+        "title": "Looking for Japan?",
+        "copy": "Contact the team to confirm current opportunities, requirements and application steps."
+      },
+      "important": {
+        "eyebrow": "Important",
+        "title": "Verify current details.",
+        "copy": "Vacancies, salaries, requirements and contact details should be verified before publishing or applying."
+      }
+    }
+  }
+}

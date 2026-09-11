@@ -26,22 +26,28 @@
 
   <header class="nav-shell">
     <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="Myanmar GSS home">
-        <span class="brand-logo-wrap"><img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo"></span>
-        <span class="brand-copy"><span class="brand-name">Myanmar GSS</span><span class="brand-note">GLOBAL SUPPORT
+      <a class="brand" href="index.html" aria-label="Myanmar GSS home" data-i18n-aria-label="common.brandHome">
+        <span class="brand-logo-wrap"><img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo" data-i18n-alt="header.brandName"></span>
+        <span class="brand-copy"><span class="brand-name" data-i18n="header.brandName">Myanmar GSS</span><span class="brand-note" data-i18n="header.brandNoteGlobal">GLOBAL SUPPORT
             SERVICES</span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-i18n-aria-label="common.openNavigation">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-        <a class="nav-link" data-page="index.html" href="index.html">Home</a>
-        <a class="nav-link" data-page="about.html" href="about.html">Company</a>
-        <a class="nav-link" data-page="services.html" href="services.html">Services</a>
-        <a class="nav-link" data-page="recruitment.html" href="recruitment.html">Recruitment</a>
-        <a class="nav-link" data-page="process.html" href="process.html">Process</a>
-        <a class="nav-link" data-page="activities.html" href="activities.html">Activities</a>
-        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html">Contact</a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
+        <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link" data-page="about.html" href="about.html" data-i18n="nav.company">Company</a>
+        <a class="nav-link" data-page="services.html" href="services.html" data-i18n="nav.services">Services</a>
+        <a class="nav-link" data-page="recruitment.html" href="recruitment.html" data-i18n="nav.recruitment">Recruitment</a>
+        <a class="nav-link" data-page="process.html" href="process.html" data-i18n="nav.process">Process</a>
+        <a class="nav-link" data-page="activities.html" href="activities.html" data-i18n="nav.activities">Activities</a>
+        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html" data-i18n="nav.contact">Contact</a>
+
+        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
+          <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -50,10 +56,10 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <div class="crumb">Company</div>
-        <div class="eyebrow">About Myanmar GSS</div>
-        <h1>A people-first bridge between Myanmar and Japan.</h1>
-        <p>Supporting the connection between Japanese employers and Myanmar talent, from preparation in Myanmar to
+        <div class="crumb" data-i18n="company.hero.crumb">Company</div>
+        <div class="eyebrow" data-i18n="company.hero.eyebrow">About Myanmar GSS</div>
+        <h1 data-i18n="company.hero.title">A people-first bridge between Myanmar and Japan.</h1>
+        <p data-i18n="company.hero.copy">Supporting the connection between Japanese employers and Myanmar talent, from preparation in Myanmar to
           employment in Japan.</p>
       </div>
     </section>
@@ -61,41 +67,41 @@
       <div class="container">
         <div class="row g-5">
           <div class="col reveal">
-            <div class="eyebrow">Company profile</div>
-            <h2 class="section-title">Built around people, skills and opportunity.</h2>
-            <p class="section-copy">Myanmar GSS Co., Ltd. focuses on talent placement, Japanese-language and skills
+            <div class="eyebrow" data-i18n="company.profile.eyebrow">Company profile</div>
+            <h2 class="section-title" data-i18n="company.profile.title">Built around people, skills and opportunity.</h2>
+            <p class="section-copy" data-i18n="company.profile.copy">Myanmar GSS Co., Ltd. focuses on talent placement, Japanese-language and skills
               education, and employment support for people preparing to work in Japan.</p>
             <div class="fact-grid">
-              <div class="fact"><small>Focus</small><strong>Talent placement & support</strong></div>
-              <div class="fact"><small>Preparation</small><strong>Language & skills education</strong></div>
-              <div class="fact"><small>Support</small><strong>Visa & employment process</strong></div>
-              <div class="fact"><small>Connection</small><strong>Myanmar ↔ Japan</strong></div>
+              <div class="fact"><small data-i18n="company.profile.facts.focus">Focus</small><strong data-i18n="company.profile.facts.focusValue">Talent placement & support</strong></div>
+              <div class="fact"><small data-i18n="company.profile.facts.preparation">Preparation</small><strong data-i18n="company.profile.facts.preparationValue">Language & skills education</strong></div>
+              <div class="fact"><small data-i18n="company.profile.facts.support">Support</small><strong data-i18n="company.profile.facts.supportValue">Visa & employment process</strong></div>
+              <div class="fact"><small data-i18n="company.profile.facts.connection">Connection</small><strong data-i18n="company.profile.facts.connectionValue">Myanmar ↔ Japan</strong></div>
             </div>
           </div>
           <div class="col reveal delay-1">
             <div class="profile">
-              <div class="profile-head"><strong>Corporate information</strong><span>Myanmar GSS Co., Ltd.</span></div>
+              <div class="profile-head"><strong data-i18n="company.profile.card.heading">Corporate information</strong><span data-i18n="company.profile.card.companyValue">Myanmar GSS Co., Ltd.</span></div>
               <div class="profile-body">
                 <div class="profile-row">
-                  <div class="profile-label">Company name</div>
-                  <div class="profile-value">Myanmar GSS Co., Ltd.</div>
+                  <div class="profile-label" data-i18n="company.profile.card.companyLabel">Company name</div>
+                  <div class="profile-value" data-i18n="company.profile.card.companyValue">Myanmar GSS Co., Ltd.</div>
                 </div>
                 <div class="profile-row">
-                  <div class="profile-label">Established</div>
-                  <div class="profile-value">8 February 2023</div>
+                  <div class="profile-label" data-i18n="company.profile.card.established">Established</div>
+                  <div class="profile-value" data-i18n="company.profile.card.establishedValue">8 February 2023</div>
                 </div>
                 <div class="profile-row">
-                  <div class="profile-label">Address</div>
-                  <div class="profile-value">No. 38(A), Boe Yar Zar Street, Kyaukkone, Yankin Township, Yangon, Myanmar
+                  <div class="profile-label" data-i18n="company.profile.card.address">Address</div>
+                  <div class="profile-value" data-i18n="company.profile.card.addressValue">No. 38(A), Boe Yar Zar Street, Kyaukkone, Yankin Township, Yangon, Myanmar
                   </div>
                 </div>
                 <div class="profile-row">
-                  <div class="profile-label">Capital</div>
-                  <div class="profile-value">MMK 50,000,000</div>
+                  <div class="profile-label" data-i18n="company.profile.card.capital">Capital</div>
+                  <div class="profile-value" data-i18n="company.profile.card.capitalValue">MMK 50,000,000</div>
                 </div>
                 <div class="profile-row">
-                  <div class="profile-label">Business</div>
-                  <div class="profile-value">Foreign talent placement, education and employment support for Japan</div>
+                  <div class="profile-label" data-i18n="company.profile.card.business">Business</div>
+                  <div class="profile-value" data-i18n="company.profile.card.businessValue">Foreign talent placement, education and employment support for Japan</div>
                 </div>
               </div>
             </div>
@@ -107,20 +113,20 @@
       <div class="container">
         <div class="row g-5">
           <div class="col reveal">
-            <div class="eyebrow" style="color:#ffb5c3">Representative message</div>
-            <h2 class="section-title">Passing opportunity forward.</h2>
+            <div class="eyebrow" style="color:#ffb5c3" data-i18n="company.message.eyebrow">Representative message</div>
+            <h2 class="section-title" data-i18n="company.message.title">Passing opportunity forward.</h2>
           </div>
           <div class="col reveal delay-1">
-            <div class="quote">I want to pass on the knowledge and experience I have gained through my connection with
+            <div class="quote" data-i18n="company.message.quote">I want to pass on the knowledge and experience I have gained through my connection with
               Japan, so that the next generation can use it to build a better future for Myanmar.</div>
-            <p>I was born in Mandalay, Myanmar's second-largest city. My family was not wealthy, but people around me
+            <p data-i18n="company.message.p1">I was born in Mandalay, Myanmar's second-largest city. My family was not wealthy, but people around me
               taught me Japanese, and later I gained work experience in Japan. Through continued connections with Japan,
               I have also learned from its culture and values.</p>
-            <p>Having reached the age of 54, I believe it is time to pass the baton to a younger generation. Myanmar is
+            <p data-i18n="company.message.p2">Having reached the age of 54, I believe it is time to pass the baton to a younger generation. Myanmar is
               still a developing country and many industries have yet to grow. I hope young people who go to Japan will
               return not only with earnings, but also with technology, skills and knowledge that can contribute to
               Myanmar's future.</p>
-            <p>I hope our company's work can become one small part of that bridge.</p>
+            <p data-i18n="company.message.p3">I hope our company's work can become one small part of that bridge.</p>
           </div>
         </div>
       </div>
@@ -129,11 +135,12 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span data-year></span> Myanmar GSS Co., Ltd. All Rights Reserved.</div>
-      <a href="#top">Back to top ↑</a>
+      <div>© <span data-year></span><span data-i18n="footer.rights"> Myanmar GSS Co., Ltd. All Rights Reserved.</span></div>
+      <a href="#top" data-i18n="footer.backToTop">Back to top ↑</a>
     </div>
   </footer>
-  <button class="backtop" id="backTop" type="button" aria-label="Back to top">↑</button>
+  <button class="backtop" id="backTop" type="button" aria-label="Back to top" data-i18n-aria-label="common.backToTop">↑</button>
+  <script src="js/vendor/i18next.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 </body>

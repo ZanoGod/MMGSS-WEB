@@ -26,22 +26,28 @@
 
   <header class="nav-shell">
     <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="Myanmar GSS home">
-        <span class="brand-logo-wrap"><img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo"></span>
-        <span class="brand-copy"><span class="brand-name">Myanmar GSS</span><span class="brand-note">GLOBAL SUPPORT
+      <a class="brand" href="index.html" aria-label="Myanmar GSS home" data-i18n-aria-label="common.brandHome">
+        <span class="brand-logo-wrap"><img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo" data-i18n-alt="header.brandName"></span>
+        <span class="brand-copy"><span class="brand-name" data-i18n="header.brandName">Myanmar GSS</span><span class="brand-note" data-i18n="header.brandNoteGlobal">GLOBAL SUPPORT
             SERVICES</span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-i18n-aria-label="common.openNavigation">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-        <a class="nav-link" data-page="index.html" href="index.html">Home</a>
-        <a class="nav-link" data-page="about.html" href="about.html">Company</a>
-        <a class="nav-link" data-page="services.html" href="services.html">Services</a>
-        <a class="nav-link" data-page="recruitment.html" href="recruitment.html">Recruitment</a>
-        <a class="nav-link" data-page="process.html" href="process.html">Process</a>
-        <a class="nav-link" data-page="activities.html" href="activities.html">Activities</a>
-        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html">Contact</a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
+        <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link" data-page="about.html" href="about.html" data-i18n="nav.company">Company</a>
+        <a class="nav-link" data-page="services.html" href="services.html" data-i18n="nav.services">Services</a>
+        <a class="nav-link" data-page="recruitment.html" href="recruitment.html" data-i18n="nav.recruitment">Recruitment</a>
+        <a class="nav-link" data-page="process.html" href="process.html" data-i18n="nav.process">Process</a>
+        <a class="nav-link" data-page="activities.html" href="activities.html" data-i18n="nav.activities">Activities</a>
+        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html" data-i18n="nav.contact">Contact</a>
+
+        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
+          <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -50,32 +56,32 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <div class="crumb">Contact</div>
-        <div class="eyebrow">Start a conversation</div>
-        <h1>Let's build the right connection.</h1>
-        <p>Talk to Myanmar GSS about talent placement, candidate preparation and employment support for Japan.</p>
+        <div class="crumb" data-i18n="contact.hero.crumb">Contact</div>
+        <div class="eyebrow" data-i18n="contact.hero.eyebrow">Start a conversation</div>
+        <h1 data-i18n="contact.hero.title">Let's build the right connection.</h1>
+        <p data-i18n="contact.hero.copy">Talk to Myanmar GSS about talent placement, candidate preparation and employment support for Japan.</p>
       </div>
     </section>
     <section class="section contact">
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col">
-            <div class="eyebrow" style="color:#ffd6de">Myanmar GSS Co., Ltd.</div>
-            <h2 class="section-title">Looking for talent in Myanmar?</h2>
-            <p>Talk to our team about highly skilled talent, specified skilled workers, technical intern trainees and
+            <div class="eyebrow" style="color:#ffd6de" data-i18n="contact.section.companyName">Myanmar GSS Co., Ltd.</div>
+            <h2 class="section-title" data-i18n="contact.section.title">Looking for talent in Myanmar?</h2>
+            <p data-i18n="contact.section.copy">Talk to our team about highly skilled talent, specified skilled workers, technical intern trainees and
               the preparation required before employment in Japan.</p>
           </div>
           <div class="col">
             <div class="contact-card">
-              <div class="contact-row"><small>Company</small><strong>Myanmar GSS Co., Ltd.</strong></div>
-              <div class="contact-row"><small>Address</small><strong>No. 38(A), Boe Yar Zar Street,<br>Kyaukkone, Yankin
-                  Township, Yangon, Myanmar</strong></div>
-              <div class="contact-row"><small>Email</small><strong>Contact the company directly for the current official
+              <div class="contact-row"><small data-i18n="contact.card.company">Company</small><strong data-i18n="contact.card.companyValue">Myanmar GSS Co., Ltd.</strong></div>
+              <div class="contact-row"><small data-i18n="contact.card.address">Address</small><strong><span data-i18n="contact.card.addressValue1">No. 38(A), Boe Yar Zar Street,</span><br><span data-i18n="contact.card.addressValue2">Kyaukkone, Yankin
+                  Township, Yangon, Myanmar</span></strong></div>
+              <div class="contact-row"><small data-i18n="contact.card.email">Email</small><strong data-i18n="contact.card.emailValue">Contact the company directly for the current official
                   email address.</strong></div>
               <div class="contact-actions"><a class="btn btn-red"
                   href="https://www.google.com/maps/search/?api=1&query=No.+38(A),+Boe+Yar+Zar+Street,+Kyaukkone,+Yankin+Township,+Yangon,+Myanmar"
-                  target="_blank" rel="noopener">Open location search</a></div>
-              <div class="form-note">The previous example.com mail link has been removed so the site no longer sends
+                  target="_blank" rel="noopener" data-i18n="contact.card.openMaps">Open location search</a></div>
+              <div class="form-note" data-i18n="contact.card.note">The previous example.com mail link has been removed so the site no longer sends
                 messages to a fake address.</div>
             </div>
           </div>
@@ -87,25 +93,25 @@
         <div class="row g-4">
           <div class="col">
             <div class="card-clean">
-              <div class="eyebrow">Employers</div>
-              <h3>Need talent?</h3>
-              <p class="section-copy">Share your role, location, work conditions, language expectations and target start
+              <div class="eyebrow" data-i18n="contact.cards.employers.eyebrow">Employers</div>
+              <h3 data-i18n="contact.cards.employers.title">Need talent?</h3>
+              <p class="section-copy" data-i18n="contact.cards.employers.copy">Share your role, location, work conditions, language expectations and target start
                 date.</p>
             </div>
           </div>
           <div class="col">
             <div class="card-clean">
-              <div class="eyebrow">Candidates</div>
-              <h3>Looking for Japan?</h3>
-              <p class="section-copy">Contact the team to confirm current opportunities, requirements and application
+              <div class="eyebrow" data-i18n="contact.cards.candidates.eyebrow">Candidates</div>
+              <h3 data-i18n="contact.cards.candidates.title">Looking for Japan?</h3>
+              <p class="section-copy" data-i18n="contact.cards.candidates.copy">Contact the team to confirm current opportunities, requirements and application
                 steps.</p>
             </div>
           </div>
           <div class="col">
             <div class="card-clean">
-              <div class="eyebrow">Important</div>
-              <h3>Verify current details.</h3>
-              <p class="section-copy">Vacancies, salaries, requirements and contact details should be verified before
+              <div class="eyebrow" data-i18n="contact.cards.important.eyebrow">Important</div>
+              <h3 data-i18n="contact.cards.important.title">Verify current details.</h3>
+              <p class="section-copy" data-i18n="contact.cards.important.copy">Vacancies, salaries, requirements and contact details should be verified before
                 publishing or applying.</p>
             </div>
           </div>
@@ -116,11 +122,12 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span data-year></span> Myanmar GSS Co., Ltd. All Rights Reserved.</div>
-      <a href="#top">Back to top ↑</a>
+      <div>© <span data-year></span><span data-i18n="footer.rights"> Myanmar GSS Co., Ltd. All Rights Reserved.</span></div>
+      <a href="#top" data-i18n="footer.backToTop">Back to top ↑</a>
     </div>
   </footer>
-  <button class="backtop" id="backTop" type="button" aria-label="Back to top">↑</button>
+  <button class="backtop" id="backTop" type="button" aria-label="Back to top" data-i18n-aria-label="common.backToTop">↑</button>
+  <script src="js/vendor/i18next.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 </body>

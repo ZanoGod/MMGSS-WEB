@@ -15,6 +15,12 @@
   const navToggle = $("#navToggle");
   const navLinks = $("#navLinks");
 
+  const i18n = window.MMGSSI18n || null;
+
+  function translate(key, options, fallback) {
+    return i18n ? i18n.t(key, options, fallback) : fallback || key;
+  }
+
   /* =========================================================
      PAGE LOADER
      ========================================================= */
@@ -53,7 +59,7 @@
 
     navToggle?.setAttribute("aria-expanded", "false");
 
-    navToggle?.setAttribute("aria-label", "Open navigation");
+    navToggle?.setAttribute("aria-label", translate("common.openNavigation", undefined, "Open navigation"));
 
     body.classList.remove("menu-open");
   }
@@ -67,7 +73,7 @@
 
     navToggle.setAttribute(
       "aria-label",
-      open ? "Close navigation" : "Open navigation",
+      translate(open ? "common.closeNavigation" : "common.openNavigation", undefined, open ? "Close navigation" : "Open navigation"),
     );
 
     body.classList.toggle("menu-open", open);
@@ -295,6 +301,21 @@
     "Requirements",
   ];
 
+  const jobValueKeys = {
+    Location: "location",
+    Salary: "salary",
+    Language: "language",
+    Duration: "duration",
+    Summary: "summary",
+    Requirements: "requirements",
+  };
+
+  const jobTypeKeys = {
+    professional: "recruitment.types.professional",
+    ssw: "recruitment.types.ssw",
+    "technical-intern": "recruitment.types.intern",
+  };
+
   /* ---------------------------------------------------------
      Open modal
      --------------------------------------------------------- */
@@ -305,63 +326,54 @@
     }
 
     /*
-     * IMPORTANT:
+     * Job information is loaded from the stable job ID.
+     * Each role has a dedicated key namespace in the locale files:
      *
-     * The job information is stored on the
-     * closest .job-item.
-     *
-     * Previously the script attempted to read
-     * data directly from the button, which caused
-     * the modal to appear empty.
+     *   recruitment.jobs.<jobId>.role
+     *   recruitment.jobs.<jobId>.location
+     *   recruitment.jobs.<jobId>.salary
+     *   recruitment.jobs.<jobId>.language
+     *   recruitment.jobs.<jobId>.duration
+     *   recruitment.jobs.<jobId>.summary
+     *   recruitment.jobs.<jobId>.requirements
      */
 
     const job = button.closest(".job-item");
 
-    const data = job?.dataset || {};
+    const jobId = button.dataset.job || job?.dataset.jobId || "";
 
     /* Role */
 
     if (modalRole) {
-      modalRole.textContent = data.role || "Role details";
+      modalRole.textContent = jobId
+        ? translate(`recruitment.jobs.${jobId}.role`)
+        : translate("recruitment.modal.fallbackRole", undefined, "Role details");
     }
 
     /* Type */
 
     if (modalType) {
-      const categoryNames = {
-        professional: "Professional Talent",
-        ssw: "Specified Skilled Worker",
-        "technical-intern": "Technical Intern Trainees",
-      };
+      const typeKey = job ? jobTypeKeys[job.dataset.type] : null;
 
-      modalType.textContent =
-        categoryNames[data.type] || "Recruitment opportunity";
+      modalType.textContent = typeKey
+        ? translate(typeKey)
+        : translate("recruitment.modal.eyebrow", undefined, "Recruitment opportunity");
     }
 
     /* Modal information */
 
-    const values = {
-      Location: data.location,
-
-      Salary: data.salary,
-
-      Language: data.language,
-
-      Duration: data.duration,
-
-      Summary: data.summary,
-
-      Requirements: data.requirements,
-    };
-
-    Object.entries(values).forEach(([key, value]) => {
-      const element = $(`#modal${key}`);
+    modalFields.forEach((field) => {
+      const element = $(`#modal${field}`);
 
       if (!element) {
         return;
       }
 
-      element.textContent = value || "Details available on request";
+      const value = jobId
+        ? translate(`recruitment.jobs.${jobId}.${jobValueKeys[field]}`)
+        : "";
+
+      element.textContent = value || translate("common.detailsOnRequest", undefined, "Details available on request");
     });
 
     /* Show modal */

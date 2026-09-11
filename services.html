@@ -44,51 +44,57 @@
   <header class="nav-shell">
     <div class="container nav-inner">
 
-      <a class="brand" href="index.html" aria-label="Myanmar GSS home">
+      <a class="brand" href="index.html" aria-label="Myanmar GSS home" data-i18n-aria-label="common.brandHome">
         <span class="brand-logo-wrap">
-          <img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo">
+          <img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo" data-i18n-alt="header.brandName">
         </span>
 
         <span class="brand-copy">
-          <span class="brand-name">Myanmar GSS</span>
-          <span class="brand-note">GLOBAL SUPPORT SERVICES</span>
+          <span class="brand-name" data-i18n="header.brandName">Myanmar GSS</span>
+          <span class="brand-note" data-i18n="header.brandNoteGlobal">GLOBAL SUPPORT SERVICES</span>
         </span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-i18n-aria-label="common.openNavigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-        <a class="nav-link" data-page="index.html" href="index.html">
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
+        <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">
           Home
         </a>
 
-        <a class="nav-link" data-page="about.html" href="about.html">
+        <a class="nav-link" data-page="about.html" href="about.html" data-i18n="nav.company">
           Company
         </a>
 
-        <a class="nav-link" data-page="services.html" href="services.html">
+        <a class="nav-link" data-page="services.html" href="services.html" data-i18n="nav.services">
           Services
         </a>
 
-        <a class="nav-link" data-page="recruitment.html" href="recruitment.html">
+        <a class="nav-link" data-page="recruitment.html" href="recruitment.html" data-i18n="nav.recruitment">
           Recruitment
         </a>
 
-        <a class="nav-link" data-page="process.html" href="process.html">
+        <a class="nav-link" data-page="process.html" href="process.html" data-i18n="nav.process">
           Process
         </a>
 
-        <a class="nav-link" data-page="activities.html" href="activities.html">
+        <a class="nav-link" data-page="activities.html" href="activities.html" data-i18n="nav.activities">
           Activities
         </a>
 
-        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html">
+        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html" data-i18n="nav.contact">
           Contact
         </a>
+
+        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
+          <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        </div>
       </nav>
 
     </div>
@@ -105,20 +111,20 @@
 
           <div class="services-hero-copy reveal">
 
-            <div class="crumb">
+            <div class="crumb" data-i18n="services.hero.crumb">
               Services
             </div>
 
-            <div class="eyebrow">
+            <div class="eyebrow" data-i18n="services.hero.eyebrow">
               OUR SERVICES
             </div>
 
             <h1>
-              Three pathways.<br>
-              <span>One goal.</span>
+              <span data-i18n="services.hero.title1">Three pathways.</span><br>
+              <span data-i18n="services.hero.title2">One goal.</span>
             </h1>
 
-            <p>
+            <p data-i18n="services.hero.copy">
               Myanmar GSS supports candidates seeking employment opportunities
               in Japan through Professional Talent, Specified Skilled Workers
               and Technical Intern Training pathways.
@@ -131,17 +137,17 @@
 
             <div class="hero-meta-item">
               <span>01</span>
-              <strong>Professional Talent</strong>
+              <strong data-i18n="services.hero.meta1">Professional Talent</strong>
             </div>
 
             <div class="hero-meta-item">
               <span>02</span>
-              <strong>Specified Skilled Workers</strong>
+              <strong data-i18n="services.hero.meta2">Specified Skilled Workers</strong>
             </div>
 
             <div class="hero-meta-item">
               <span>03</span>
-              <strong>Technical Intern Training</strong>
+              <strong data-i18n="services.hero.meta3">Technical Intern Training</strong>
             </div>
 
           </div>
@@ -159,17 +165,17 @@
         <div class="section-heading reveal">
 
           <div>
-            <div class="eyebrow">
+            <div class="eyebrow" data-i18n="services.pathways.eyebrow">
               THREE PATHWAYS
             </div>
 
             <h2>
-              Choose the pathway<br>
-              that fits your career.
+              <span data-i18n="services.pathways.title1">Choose the pathway</span><br>
+              <span data-i18n="services.pathways.title2">that fits your career.</span>
             </h2>
           </div>
 
-          <p>
+          <p data-i18n="services.pathways.copy">
             Our services are organized around three employment pathways.
             Available positions and sectors may vary according to employer
             requirements and recruitment cycles.
@@ -186,7 +192,7 @@
             <div class="service-card-top">
               <div class="service-number">01</div>
 
-              <div class="service-label">
+              <div class="service-label" data-i18n="services.cards.professional.label">
                 PROFESSIONAL TALENT
               </div>
             </div>
@@ -194,30 +200,30 @@
             <div class="service-card-body">
 
               <h3>
-                Highly Skilled<br>
-                Foreign Talent
+                <span data-i18n="services.cards.professional.title1">Highly Skilled</span><br>
+                <span data-i18n="services.cards.professional.title2">Foreign Talent</span>
               </h3>
 
-              <p>
+              <p data-i18n="services.cards.professional.copy">
                 Professional talent opportunities for foreign workers
                 seeking employment in Japan under work-visa pathways.
               </p>
 
               <div class="service-rule"></div>
 
-              <div class="service-subtitle">
+              <div class="service-subtitle" data-i18n="services.cards.areasTitle">
                 SERVICE AREAS
               </div>
 
               <ul class="service-list">
-                <li>IT Industry</li>
-                <li>Factory Work</li>
-                <li>Hotel</li>
+                <li data-i18n="services.cards.professional.areas.0">IT Industry</li>
+                <li data-i18n="services.cards.professional.areas.1">Factory Work</li>
+                <li data-i18n="services.cards.professional.areas.2">Hotel</li>
               </ul>
 
             </div>
 
-            <a class="service-link" href="recruitment.html">
+            <a class="service-link" href="recruitment.html" data-i18n="services.cards.viewRecruitment">
               View recruitment opportunities
               <span></span>
             </a>
@@ -231,7 +237,7 @@
             <div class="service-card-top">
               <div class="service-number">02</div>
 
-              <div class="service-label">
+              <div class="service-label" data-i18n="services.cards.ssw.label">
                 SPECIFIED SKILLED WORKERS
               </div>
             </div>
@@ -239,24 +245,24 @@
             <div class="service-card-body">
 
               <h3>
-                Specified<br>
-                Skilled Workers
+                <span data-i18n="services.cards.ssw.title1">Specified</span><br>
+                <span data-i18n="services.cards.ssw.title2">Skilled Workers</span>
               </h3>
 
-              <p>
+              <p data-i18n="services.cards.ssw.copy">
                 Support for candidates preparing for employment in
                 designated skilled-worker fields in Japan.
               </p>
 
               <div class="service-rule"></div>
 
-              <div class="service-subtitle">
+              <div class="service-subtitle" data-i18n="services.cards.areasTitle">
                 SERVICE AREAS
               </div>
 
               <ul class="service-list">
-                <li>Airport Ground Handling Service</li>
-                <li>
+                <li data-i18n="services.cards.ssw.areas.0">Airport Ground Handling Service</li>
+                <li data-i18n="services.cards.ssw.areas.1">
                   Infrastructure &amp; Equipment /
                   Lifeline &amp; Facilities
                 </li>
@@ -264,7 +270,7 @@
 
             </div>
 
-            <a class="service-link" href="recruitment.html">
+            <a class="service-link" href="recruitment.html" data-i18n="services.cards.viewRecruitment">
               View recruitment opportunities
               <span></span>
             </a>
@@ -278,7 +284,7 @@
             <div class="service-card-top">
               <div class="service-number">03</div>
 
-              <div class="service-label">
+              <div class="service-label" data-i18n="services.cards.intern.label">
                 TECHNICAL INTERN TRAINING
               </div>
             </div>
@@ -286,28 +292,28 @@
             <div class="service-card-body">
 
               <h3>
-                Technical Intern<br>
-                Training
+                <span data-i18n="services.cards.intern.title1">Technical Intern</span><br>
+                <span data-i18n="services.cards.intern.title2">Training</span>
               </h3>
 
-              <p>
+              <p data-i18n="services.cards.intern.copy">
                 A practical training pathway for candidates who will
                 gain workplace experience and technical skills in Japan.
               </p>
 
               <div class="service-rule"></div>
 
-              <div class="service-subtitle">
+              <div class="service-subtitle" data-i18n="services.cards.areasTitle">
                 SERVICE AREAS
               </div>
 
               <ul class="service-list">
-                <li>Food Manufacturing</li>
+                <li data-i18n="services.cards.intern.areas.0">Food Manufacturing</li>
               </ul>
 
             </div>
 
-            <a class="service-link" href="recruitment.html">
+            <a class="service-link" href="recruitment.html" data-i18n="services.cards.viewRecruitment">
               View recruitment opportunities
               <span></span>
             </a>
@@ -327,17 +333,17 @@
         <div class="section-heading section-heading-centered reveal">
 
           <div>
-            <div class="eyebrow">
+            <div class="eyebrow" data-i18n="services.support.eyebrow">
               CANDIDATE SUPPORT
             </div>
 
             <h2>
-              Support beyond<br>
-              job matching.
+              <span data-i18n="services.support.title1">Support beyond</span><br>
+              <span data-i18n="services.support.title2">job matching.</span>
             </h2>
           </div>
 
-          <p>
+          <p data-i18n="services.support.copy">
             We help candidates prepare for the requirements of working
             in Japan and guide them through the necessary stages of the
             employment process.
@@ -352,15 +358,15 @@
             <div class="support-number">01</div>
 
             <div>
-              <div class="support-label">
+              <div class="support-label" data-i18n="services.support.education.label">
                 EDUCATION
               </div>
 
-              <h3>
+              <h3 data-i18n="services.support.education.title">
                 Japanese Language Education
               </h3>
 
-              <p>
+              <p data-i18n="services.support.education.copy">
                 Build practical Japanese-language readiness for
                 communication in work and daily life.
               </p>
@@ -372,15 +378,15 @@
             <div class="support-number">02</div>
 
             <div>
-              <div class="support-label">
+              <div class="support-label" data-i18n="services.support.skills.label">
                 SKILLS
               </div>
 
-              <h3>
+              <h3 data-i18n="services.support.skills.title">
                 Skills-Test Preparation
               </h3>
 
-              <p>
+              <p data-i18n="services.support.skills.copy">
                 Prepare candidates for the skills requirements
                 associated with their target employment pathway.
               </p>
@@ -392,15 +398,15 @@
             <div class="support-number">03</div>
 
             <div>
-              <div class="support-label">
+              <div class="support-label" data-i18n="services.support.employment.label">
                 EMPLOYMENT
               </div>
 
-              <h3>
+              <h3 data-i18n="services.support.employment.title">
                 Visa &amp; Employment Support
               </h3>
 
-              <p>
+              <p data-i18n="services.support.employment.copy">
                 Guide candidates through the required employment,
                 visa and pre-departure procedures.
               </p>
@@ -421,16 +427,16 @@
 
           <div class="process-callout-copy">
 
-            <div class="eyebrow">
+            <div class="eyebrow" data-i18n="services.process.eyebrow">
               FROM PREPARATION TO DEPARTURE
             </div>
 
             <h2>
-              A structured process<br>
-              from application to Japan.
+              <span data-i18n="services.process.title1">A structured process</span><br>
+              <span data-i18n="services.process.title2">from application to Japan.</span>
             </h2>
 
-            <p>
+            <p data-i18n="services.process.copy">
               Our recruitment process covers candidate screening,
               Japanese conversation testing, employer interviews,
               employment documentation, visa procedures,
@@ -441,12 +447,12 @@
 
           <div class="process-callout-action">
 
-            <a class="btn btn-primary" href="process.html">
+            <a class="btn btn-primary" href="process.html" data-i18n="services.process.cta">
               Explore Our Process
               <span></span>
             </a>
 
-            <a class="text-link" href="recruitment.html">
+            <a class="text-link" href="recruitment.html" data-i18n="services.process.link">
               See current opportunities
               <span></span>
             </a>
@@ -466,11 +472,11 @@
     <div class="container footer-inner">
 
       <div>
-        © <span data-year></span>
-        Myanmar GSS Co., Ltd. All Rights Reserved.
+        © <span data-year></span><span data-i18n="footer.rights">
+        Myanmar GSS Co., Ltd. All Rights Reserved.</span>
       </div>
 
-      <a href="#top">
+      <a href="#top" data-i18n="footer.backToTop">
         Back to top ↑
       </a>
 
@@ -479,11 +485,12 @@
 
 
   <!-- BACK TO TOP -->
-  <button class="backtop" id="backTop" type="button" aria-label="Back to top">
+  <button class="backtop" id="backTop" type="button" aria-label="Back to top" data-i18n-aria-label="common.backToTop">
     ↑
   </button>
 
 
+  <script src="js/vendor/i18next.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 

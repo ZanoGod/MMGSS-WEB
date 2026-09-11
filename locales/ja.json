@@ -1,0 +1,711 @@
+{
+  "common": {
+    "changeLanguage": "言語を選択",
+    "brandHome": "Myanmar GSS ホーム",
+    "primaryNavigation": "メインナビゲーション",
+    "openNavigation": "メニューを開く",
+    "closeNavigation": "メニューを閉じる",
+    "backToTop": "トップへ戻る",
+    "detailsOnRequest": "詳細はお問い合わせください"
+  },
+  "header": {
+    "brandName": "Myanmar GSS",
+    "brandNote": "ゴールデン・サポート・サービス",
+    "brandNoteGlobal": "グローバル・サポート・サービス"
+  },
+  "nav": {
+    "home": "ホーム",
+    "company": "会社情報",
+    "services": "サービス",
+    "recruitment": "採用情報",
+    "process": "手続き",
+    "activities": "活動",
+    "contact": "お問い合わせ"
+  },
+  "footer": {
+    "rights": " Myanmar GSS Co., Ltd. All Rights Reserved.",
+    "backToTop": "トップへ戻る ↑"
+  },
+  "pages": {
+    "home": {
+      "title": "Myanmar GSS | ホーム",
+      "description": "Myanmar GSS Co., Ltd. | ミャンマー人材と日本をつなぐ人材紹介・教育・就労支援"
+    },
+    "company": {
+      "title": "Myanmar GSS | 会社情報",
+      "description": "Myanmar GSS Co., Ltd.について。ミャンマー人材と日本企業をつなぐ人材紹介・教育・就労支援。"
+    },
+    "services": {
+      "title": "Myanmar GSS | サービス",
+      "description": "Myanmar GSSの人材紹介、日本語教育、技能教育、就労・ビザ支援サービス。"
+    },
+    "recruitment": {
+      "title": "Myanmar GSS | 採用情報",
+      "description": "Myanmar GSSの日本向け求人情報。職種、勤務地、雇用形態、日本語レベルをご案内します。"
+    },
+    "process": {
+      "title": "Myanmar GSS | ご利用の流れ",
+      "description": "ミャンマーから日本で働くまでの相談、選考、教育、手続き、出国までの流れ。"
+    },
+    "activities": {
+      "title": "Myanmar GSS | 活動",
+      "description": "Myanmar GSSの研修、教育、活動の様子をご紹介します。"
+    },
+    "contact": {
+      "title": "Myanmar GSS | お問い合わせ",
+      "description": "Myanmar GSS Co., Ltd.へのお問い合わせ。ヤンゴン・ミャンマー。"
+    }
+  },
+  "home": {
+    "hero": {
+      "kicker": "Myanmar GSS Co., Ltd.",
+      "title1": "ミャンマーの人材。",
+      "title2": "日本への架け橋。",
+      "copy": "ミャンマーの人材と日本の機会をつなぎ、採用、日本語教育、技能研修、書類手続きから就労までをサポートします。",
+      "explore": "サービスを見る",
+      "talkToTeam": "お問い合わせ",
+      "facts": {
+        "established": "設立",
+        "establishedValue": "2023年2月8日",
+        "capital": "資本金",
+        "capitalValue": "MMK 50,000,000",
+        "location": "所在地",
+        "locationValue": "ミャンマー・ヤンゴン、キャウッコーン"
+      },
+      "aria": {
+        "media": "Myanmar GSS ヒーロー",
+        "highlights": "Myanmar GSS ハイライト",
+        "slide1": "Myanmar GSS 研修環境",
+        "slide2": "Myanmar GSS 研修活動",
+        "slide3": "Myanmar GSS 人々と活動",
+        "carousel": "ヒーロー画像カルーセル",
+        "previous": "前の画像",
+        "next": "次の画像",
+        "dots": "画像を選択",
+        "dot": "画像 {{number}} を表示"
+      }
+    },
+    "company": {
+      "eyebrow": "会社情報",
+      "title": "人を中心に、ミャンマーと日本をつなぐ架け橋。",
+      "copy": "Myanmar GSS Co., Ltd.は、ミャンマーでの準備から日本での就労まで、日本企業とミャンマー人材をつなぎます。",
+      "cta": "会社情報を見る",
+      "imageAlt": "Myanmar GSS 研修・活動の様子"
+    },
+    "services": {
+      "eyebrow": "事業内容",
+      "title": "3つの道、ひとつの目標。",
+      "copy": "専門人材、特定技能、技能実習を通じて、日本で働くミャンマー人材の準備とマッチングを支援します。",
+      "talent": {
+        "title": "高度外国人材",
+        "copy": "技術・人文知識・国際業務などの分野で、専門人材と日本企業をつなぎます。"
+      },
+      "ssw": {
+        "title": "特定技能",
+        "copy": "対象分野で働くため、日本語教育と技能試験対策を含む準備を支援します。"
+      },
+      "intern": {
+        "title": "技能実習生",
+        "copy": "日本で実務経験を積み、長期的なキャリアの基盤を築けるよう支援します。"
+      },
+      "cta": "詳しく見る"
+    },
+    "message": {
+      "eyebrow": "代表メッセージ",
+      "title": "機会を次の世代へ。",
+      "quote": "日本とのつながりを通じて得た知識と経験を次の世代へ伝え、ミャンマーのより良い未来づくりに役立ててほしいと考えています。",
+      "cta": "全文を見る"
+    },
+    "activities": {
+      "eyebrow": "活動",
+      "title": "人が動けば、未来が動く。",
+      "copy": "研修、準備、出国まで、ミャンマーから日本へ向かう一つひとつの過程を支えます。",
+      "cta": "活動を見る",
+      "imageAlt": "Myanmar GSS 研修活動"
+    },
+    "contact": {
+      "eyebrow": "お問い合わせ",
+      "title": "ミャンマーで人材をお探しですか？",
+      "copy": "人材紹介、候補者の準備、日本での就労支援についてMyanmar GSSへご相談ください。",
+      "cta": "Myanmar GSSへ問い合わせ"
+    }
+  },
+  "company": {
+    "hero": {
+      "crumb": "会社情報",
+      "eyebrow": "Myanmar GSSについて",
+      "title": "人を中心に、ミャンマーと日本をつなぐ架け橋。",
+      "copy": "ミャンマーでの準備から日本での就労まで、日本企業とミャンマー人材のつながりを支援します。"
+    },
+    "profile": {
+      "eyebrow": "会社概要",
+      "title": "人・技能・機会を中心に。",
+      "copy": "Myanmar GSS Co., Ltd.は、人材紹介、日本語・技能教育、日本で働くための就労支援を行っています。",
+      "facts": {
+        "focus": "重点",
+        "focusValue": "人材紹介・支援",
+        "preparation": "準備",
+        "preparationValue": "日本語・技能教育",
+        "support": "支援",
+        "supportValue": "ビザ・就労手続き",
+        "connection": "つながり",
+        "connectionValue": "ミャンマー ↔ 日本"
+      },
+      "card": {
+        "heading": "会社情報",
+        "companyLabel": "会社名",
+        "companyValue": "Myanmar GSS Co., Ltd.",
+        "established": "設立",
+        "establishedValue": "2023年2月8日",
+        "address": "住所",
+        "addressValue": "No. 38(A)、ボーヤーザール通り、キャウッコーン、ヤンキン郡区、ヤンゴン、ミャンマー",
+        "capital": "資本金",
+        "capitalValue": "MMK 50,000,000",
+        "business": "事業内容",
+        "businessValue": "外国人材紹介、教育、日本での就労支援"
+      }
+    },
+    "message": {
+      "eyebrow": "代表メッセージ",
+      "title": "機会を次の世代へ。",
+      "quote": "日本とのつながりを通じて得た知識と経験を次の世代へ伝え、ミャンマーのより良い未来づくりに役立ててほしいと考えています。",
+      "p1": "私はミャンマー第二の都市マンダレーで生まれました。家は裕福ではありませんでしたが、周囲の人々が日本語を教えてくれ、後に日本での勤務経験も得ました。日本とのつながりを通じて、その文化や価値観からも多くを学びました。",
+      "p2": "54歳となり、次の世代へバトンを渡す時期だと考えています。ミャンマーは今も発展途上にあり、成長していない産業も多くあります。日本へ渡る若者たちが、収入だけでなく、技術、技能、知識を持ち帰り、ミャンマーの未来に貢献してほしいと願っています。",
+      "p3": "当社の仕事が、その架け橋の小さな一部になればと思います。"
+    }
+  },
+  "services": {
+    "hero": {
+      "crumb": "サービス",
+      "eyebrow": "私たちのサービス",
+      "title1": "3つの道、",
+      "title2": "ひとつの目標。",
+      "copy": "Myanmar GSSは、専門人材、特定技能、技能実習の3つのルートを通じて、日本での就労を目指す候補者を支援します。",
+      "meta1": "専門人材",
+      "meta2": "特定技能",
+      "meta3": "技能実習"
+    },
+    "pathways": {
+      "eyebrow": "3つのルート",
+      "title1": "あなたのキャリアに",
+      "title2": "合った道を選ぶ。",
+      "copy": "当社のサービスは3つの雇用ルートに沿って構成されています。募集中の職種や分野は、雇用主の要件や採用時期によって異なる場合があります。"
+    },
+    "cards": {
+      "viewRecruitment": "採用情報を見る",
+      "areasTitle": "サービス分野",
+      "professional": {
+        "label": "専門人材",
+        "title1": "高度",
+        "title2": "外国人材",
+        "copy": "就労ビザのルートで日本の就労を目指す外国人人材向けの専門職の機会です。",
+        "areas": [
+          "IT業界",
+          "工場勤務",
+          "ホテル"
+        ]
+      },
+      "ssw": {
+        "label": "特定技能",
+        "title1": "特定",
+        "title2": "技能",
+        "copy": "日本の指定技能分野での就労を目指す候補者への支援です。",
+        "areas": [
+          "空港グランドハンドリングサービス",
+          "インフラ・設備 / ライフライン・施設"
+        ]
+      },
+      "intern": {
+        "label": "技能実習",
+        "title1": "技能実習",
+        "title2": "制度",
+        "copy": "日本で実務経験と技術を身につける候補者のための実践的な研修ルートです。",
+        "areas": [
+          "食品製造"
+        ]
+      }
+    },
+    "support": {
+      "eyebrow": "候補者サポート",
+      "title1": "マッチングだけでは",
+      "title2": "終わらない支援。",
+      "copy": "日本で働くために必要な要件への準備と、就労手続きの各段階をサポートします。",
+      "education": {
+        "label": "教育",
+        "title": "日本語教育",
+        "copy": "仕事と日常生活でのコミュニケーションに必要な実践的な日本語力を身につけます。"
+      },
+      "skills": {
+        "label": "技能",
+        "title": "技能試験対策",
+        "copy": "希望する雇用ルートに必要な技能要件に向けて候補者を準備します。"
+      },
+      "employment": {
+        "label": "就労",
+        "title": "ビザ・就労支援",
+        "copy": "必要な雇用、ビザ、出国前の手続きを案内します。"
+      }
+    },
+    "process": {
+      "eyebrow": "準備から出国まで",
+      "title1": "応募から日本へ、",
+      "title2": "体系化されたプロセス。",
+      "copy": "当社の採用プロセスは、候補者選考、日本語会話テスト、雇用主面接、雇用書類、ビザ手続き、出国前オリエンテーション、渡日後のサポートまでをカバーします。",
+      "cta": "プロセスを見る",
+      "link": "現在の求人を見る"
+    }
+  },
+  "recruitment": {
+    "types": {
+      "professional": "専門人材",
+      "ssw": "特定技能",
+      "intern": "技能実習生"
+    },
+    "hero": {
+      "eyebrow": "採用情報",
+      "title1": "次のチャンスを",
+      "title2": "日本で見つけよう。",
+      "copy": "採用元資料に掲載されている現在の求人をご確認ください。職種を選択すると、業務概要、応募条件、勤務地、契約期間、日本語レベル、給与をご確認いただけます。",
+      "opportunities": "件の求人",
+      "japan": "日本",
+      "processLink": "採用プロセスを見る"
+    },
+    "heading": {
+      "eyebrow": "募集中の求人",
+      "title": "現在の求人。",
+      "roles": "件"
+    },
+    "filters": {
+      "aria": "求人を絞り込む",
+      "all": "すべての求人",
+      "ask": "求人について問い合わせる"
+    },
+    "jobMeta": {
+      "location": "勤務地",
+      "japanese": "日本語",
+      "salary": "給与"
+    },
+    "empty": {
+      "title": "該当する求人がありません。",
+      "copy": "別のカテゴリを選択してください。"
+    },
+    "note": {
+      "eyebrow": "重要なお知らせ",
+      "title": "どの職種を選べばよいかお悩みですか？",
+      "copy": "採用チームが職種の詳細を説明し、応募手続きをサポートします。",
+      "cta": "チームへ問い合わせる"
+    },
+    "modal": {
+      "eyebrow": "求人情報",
+      "closeAria": "求人詳細を閉じる",
+      "fallbackRole": "求人詳細",
+      "location": "勤務地",
+      "japaneseLevel": "日本語レベル",
+      "contract": "契約期間",
+      "salary": "給与",
+      "overview": "職務概要",
+      "requirements": "応募条件",
+      "askAboutRole": "この求人について問い合わせる",
+      "close": "閉じる"
+    },
+    "jobs": {
+      "job1": {
+        "role": "旅行業スタッフ",
+        "type": "専門人材",
+        "summary": "旅行業界における営業・マーケティングおよびオペレーション業務。",
+        "cardLocation": "東京・中央区",
+        "cardLanguage": "N2",
+        "cardSalary": "220,000円",
+        "location": "東京都中央区",
+        "salary": "220,000円",
+        "language": "N2（JLPT N2）",
+        "duration": "正社員",
+        "requirements": "日本語準備、日本語能力レベルN2（JLPT N2）、分野別技能準備。"
+      },
+      "job2": {
+        "role": "エンジニアリング",
+        "type": "専門人材",
+        "summary": "Auto CAD（2D・3D）を使用した設計支援業務。",
+        "cardLocation": "大分 / 東京",
+        "cardLanguage": "N3 / N1",
+        "cardSalary": "230,000〜450,000円",
+        "location": "大分県大分市 / 東京都台東区",
+        "salary": "230,000円〜450,000円",
+        "language": "N3（会話流暢）、N1",
+        "duration": "正社員",
+        "requirements": "日本語準備、日本語能力レベルN3（会話流暢）、工学系の経験、関連する技術知識、CAD資格。"
+      },
+      "job3": {
+        "role": "IT業界",
+        "type": "専門人材",
+        "summary": "機械、電子、ソフトウェア、プロセスに関する業務の機会。",
+        "cardLocation": "東京・足立区",
+        "cardLanguage": "N2 / N1",
+        "cardSalary": "220,000〜350,000円",
+        "location": "東京都足立区",
+        "salary": "220,000円〜350,000円",
+        "language": "N2、N1",
+        "duration": "正社員",
+        "requirements": "日本語能力レベルN2〜N1、工学系の経験、関連する技術知識、CAD資格、システム開発経験、C#・C++・Oracle・Perl・Python・Flash・ActionScriptの知識、実務経験3年以上。"
+      },
+      "job4": {
+        "role": "工場勤務",
+        "type": "専門人材",
+        "summary": "電動工具を使った製造、自動機の操作・保守。",
+        "cardLocation": "岡山",
+        "cardLanguage": "N3",
+        "cardSalary": "200,000〜270,000円",
+        "location": "岡山県南区",
+        "salary": "200,000円〜270,000円",
+        "language": "N3（会話流暢）",
+        "duration": "正社員",
+        "requirements": "日本語能力レベルN3（JLPT N3）、会話流暢。"
+      },
+      "job5": {
+        "role": "ホテル運営",
+        "type": "専門人材",
+        "summary": "ホテル運営、ゲストサポート、予約、OTA運営、現地ガイドサービス。",
+        "cardLocation": "宮城",
+        "cardLanguage": "会話レベル",
+        "cardSalary": "180,000円",
+        "location": "宮城県東松島市",
+        "salary": "180,000円",
+        "language": "コミュニケーションに十分な日本語",
+        "duration": "正社員",
+        "requirements": "接客業への関心、サービス精神、コミュニケーションに十分な日本語、学士・修士課程修了。"
+      },
+      "job6": {
+        "role": "介護職",
+        "type": "特定技能",
+        "summary": "日本の介護施設での介護業務。",
+        "cardLocation": "神奈川",
+        "cardLanguage": "N4",
+        "cardSalary": "180,000〜200,000円",
+        "location": "神奈川県平塚市",
+        "salary": "180,000円〜200,000円",
+        "language": "N4",
+        "duration": "5年契約",
+        "requirements": "日本語能力レベルN4またはJFT A2（会話流暢）、高等学校卒業以上、介護分野の特定技能試験合格が必要。"
+      },
+      "job7": {
+        "role": "外食サービス",
+        "type": "特定技能",
+        "summary": "食事の準備、接客、厨房補助、日常業務。",
+        "cardLocation": "千葉",
+        "cardLanguage": "N4–N3",
+        "cardSalary": "180,000〜220,000円",
+        "location": "千葉県木更津市",
+        "salary": "180,000円〜220,000円",
+        "language": "N4–N3",
+        "duration": "5年契約",
+        "requirements": "日本語能力レベルN4〜N3またはJFT A2（会話流暢）、高等学校卒業以上、外食業分野の特定技能試験合格が必要。"
+      },
+      "job8": {
+        "role": "食品製造",
+        "type": "特定技能",
+        "summary": "弁当・惣菜製造環境での生産業務。",
+        "cardLocation": "北海道",
+        "cardLanguage": "N4",
+        "cardSalary": "160,000〜200,000円",
+        "location": "北海道北広島市",
+        "salary": "160,000円〜200,000円",
+        "language": "N4",
+        "duration": "5年契約",
+        "requirements": "日本語能力レベルN4またはJFT A2、高等学校卒業以上、食品業分野の特定技能試験合格が必要。"
+      },
+      "job9": {
+        "role": "空港グランドハンドリング",
+        "type": "特定技能",
+        "summary": "手荷物対応、ランプサイド支援、空港運営補助。",
+        "cardLocation": "東京",
+        "cardLanguage": "N4",
+        "cardSalary": "200,000〜220,000円",
+        "location": "東京都大田区",
+        "salary": "200,000円〜220,000円",
+        "language": "N4",
+        "duration": "5年契約",
+        "requirements": "日本語能力レベルN4またはJFT A2、高等学校卒業以上、航空業（グランドハンドリング）の特定技能試験合格が必要。"
+      },
+      "job10": {
+        "role": "建設電気設備",
+        "type": "特定技能",
+        "summary": "電気設備・機器の設置、保守、試験、運用支援。",
+        "cardLocation": "福井",
+        "cardLanguage": "N4",
+        "cardSalary": "250,000円",
+        "location": "福井県福井市",
+        "salary": "250,000円",
+        "language": "N4",
+        "duration": "5年契約",
+        "requirements": "日本語能力レベルN4またはJFT A2、高等学校卒業以上、インフラ・設備分野の特定技能試験合格が必要。"
+      },
+      "job11": {
+        "role": "ホテル運営",
+        "type": "技能実習生",
+        "summary": "ゲスト送迎、滞在中のサービス、食事会場の準備、飲食物の提供。",
+        "cardLocation": "栃木",
+        "cardLanguage": "N4",
+        "cardSalary": "186,000円",
+        "location": "栃木県",
+        "salary": "186,000円",
+        "language": "N4",
+        "duration": "3年契約",
+        "requirements": "基礎的な日本語レベル、サービス精神。"
+      },
+      "job12": {
+        "role": "縫製・衣料品製造",
+        "type": "技能実習生",
+        "summary": "縫製、裁断、組立、仕上げ、品質検査。",
+        "cardLocation": "岡山",
+        "cardLanguage": "N4",
+        "cardSalary": "170,138円",
+        "location": "岡山県",
+        "salary": "170,138円",
+        "language": "N4",
+        "duration": "3年契約",
+        "requirements": "基礎的な日本語と縫製経験。"
+      },
+      "job13": {
+        "role": "建設・足場工事",
+        "type": "技能実習生",
+        "summary": "一般建設工事、足場の組立・解体、現場支援。",
+        "cardLocation": "広島",
+        "cardLanguage": "N4",
+        "cardSalary": "161,588円",
+        "location": "広島県",
+        "salary": "161,588円",
+        "language": "N4",
+        "duration": "3年契約",
+        "requirements": "基礎的な日本語力と建設・肉体労働の経験。"
+      },
+      "job14": {
+        "role": "介護（カイゴ）",
+        "type": "技能実習生",
+        "summary": "高齢者の日常生活、身の回りの介助、移動、食事の支援。",
+        "cardLocation": "神奈川",
+        "cardLanguage": "N3",
+        "cardSalary": "222,390円",
+        "location": "神奈川県",
+        "salary": "222,390円",
+        "language": "N3",
+        "duration": "3年契約",
+        "requirements": "中級レベルの日本語。"
+      },
+      "job15": {
+        "role": "調理・飲食サービス",
+        "type": "技能実習生",
+        "summary": "食材の下処理、調理補助、盛り付け、配膳、厨房業務。",
+        "cardLocation": "横浜",
+        "cardLanguage": "N4",
+        "cardSalary": "209,000円",
+        "location": "神奈川県横浜市",
+        "salary": "209,000円",
+        "language": "N4",
+        "duration": "3年契約",
+        "requirements": "基礎的な日本語と調理経験。"
+      },
+      "job16": {
+        "role": "パン・ベーカリー製造",
+        "type": "技能実習生",
+        "summary": "配合、成形、焼成、包装を含むパン・ベーカリー製品の製造。",
+        "cardLocation": "福島",
+        "cardLanguage": "N4",
+        "cardSalary": "160,000〜170,000円",
+        "location": "福島県",
+        "salary": "160,000円〜170,000円",
+        "language": "N4",
+        "duration": "3年契約",
+        "requirements": "基礎的な日本語と調理経験。"
+      },
+      "job17": {
+        "role": "弁当・製菓製造",
+        "type": "技能実習生",
+        "summary": "仕込み、調理、梱包、品質管理を含む弁当・製菓製品の製造。",
+        "cardLocation": "山梨",
+        "cardLanguage": "N4",
+        "cardSalary": "191,780円",
+        "location": "山梨県",
+        "salary": "191,780円",
+        "language": "N4",
+        "duration": "3年契約",
+        "requirements": "基礎的な日本語と調理経験。"
+      },
+      "job18": {
+        "role": "機械加工・電気制御盤",
+        "type": "技能実習生",
+        "summary": "機械操作と電気制御盤の組立、配線、試験、検査。",
+        "cardLocation": "群馬",
+        "cardLanguage": "N4",
+        "cardSalary": "160,000〜170,000円",
+        "location": "群馬県",
+        "salary": "160,000円〜170,000円",
+        "language": "N4",
+        "duration": "3年契約",
+        "requirements": "基礎的な日本語力と、適性・学力・IQテストでの高い成績。"
+      }
+    },
+    "viewDetails": "詳細を見る"
+  },
+  "process": {
+    "hero": {
+      "eyebrow": "採用プロセス",
+      "title1": "求人依頼から",
+      "title2": "日本への出発まで。",
+      "copy": "最初の求人依頼から渡日後のサポートまで、候補者と日本企業を案内する体系的な15ステップの採用・就労支援プロセスです。",
+      "stepsLabel": "15ステップ",
+      "route": "ミャンマー ↔ 日本",
+      "viewOpportunities": "現在の求人を見る"
+    },
+    "intro": {
+      "eyebrow": "進め方",
+      "title": "どの段階でも明確な道筋。",
+      "copy": "雇用主の要件の受け付けから候補者の準備、必要な手続きの完了、日本到着後の支援まで、各ステップには明確な目的があります。"
+    },
+    "steps": {
+      "s1": {
+        "label": "ステップ 01",
+        "title": "求人依頼の受け付け",
+        "copy": "日本の雇用主から求人依頼と採用要件を受け付けます。"
+      },
+      "s2": {
+        "label": "ステップ 02",
+        "title": "求人公募と候補者募集",
+        "copy": "公式ページに求人を掲載し、適切な候補者の募集を開始します。"
+      },
+      "s3": {
+        "label": "ステップ 03",
+        "title": "履歴書収集・書類選考",
+        "copy": "候補者の履歴書と必要書類を収集します。"
+      },
+      "s4": {
+        "label": "ステップ 04",
+        "title": "社内日本語会話テスト",
+        "copy": "当社で日本語会話（カイワ）テストを実施し、資格のある候補者を選考します。"
+      },
+      "s5": {
+        "label": "ステップ 05",
+        "title": "日本への履歴書提出",
+        "copy": "当社の会話テストに合格した候補者の履歴書を、さらなる選考のため日本の雇用主に提出します。"
+      },
+      "s6": {
+        "label": "ステップ 06",
+        "title": "雇用主面接",
+        "copy": "選考された候補者と日本の雇用主との面接を調整・実施します。"
+      },
+      "s7": {
+        "label": "ステップ 07",
+        "title": "雇用契約",
+        "copy": "採用された候補者が日本の雇用主と雇用契約を交わします。"
+      },
+      "s8": {
+        "label": "ステップ 08",
+        "title": "求人申請",
+        "copy": "必要な求人申請書類をミャンマーの関連労働当局に提出します。"
+      },
+      "s9": {
+        "label": "ステップ 09",
+        "title": "在留資格認定証明書（COE）申請",
+        "copy": "日本での在留資格認定証明書（COE）の申請手続きを進めます。"
+      },
+      "s10": {
+        "label": "ステップ 10",
+        "title": "ビザ申請",
+        "copy": "所定のビザ申請センターで適切なビザを申請します。"
+      },
+      "s11": {
+        "label": "ステップ 11",
+        "title": "標準労働契約",
+        "copy": "ミャンマーの関連労働当局で必要な労働契約手続きを行います。"
+      },
+      "s12": {
+        "label": "ステップ 12",
+        "title": "OWICカード申請",
+        "copy": "海外労働者識別カード（OWIC）を申請します。"
+      },
+      "s13": {
+        "label": "ステップ 13",
+        "title": "出国前オリエンテーション",
+        "copy": "労働条件、職場のルール、日本の生活、生活・就労に必要な重要な情報を含む出国前オリエンテーションを実施します。"
+      },
+      "s14": {
+        "label": "ステップ 14",
+        "title": "日本への出発",
+        "copy": "最終的な出国手続きを完了し、日本へ渡航します。"
+      },
+      "s15": {
+        "label": "ステップ 15",
+        "title": "渡日後のサポート",
+        "copy": "労働者が日本に到着した後も、必要な支援とフォローアップを提供します。"
+      }
+    },
+    "cta": {
+      "eyebrow": "次のステップへ進みませんか？",
+      "title": "募集中の求人をチェックしましょう。",
+      "button": "採用情報を見る"
+    }
+  },
+  "activities": {
+    "hero": {
+      "crumb": "活動",
+      "eyebrow": "研修・教育・出国",
+      "title": "人が動けば、未来が動く。",
+      "copy": "研修、準備、出国まで、ミャンマーから日本へ向かう一つひとつの過程を支えます。"
+    },
+    "gallery": {
+      "imageMainAlt": "Myanmar GSS 研修・活動の様子",
+      "labelMain": "研修・教育・出国",
+      "imageRepAlt": "Myanmar GSS 代表者",
+      "labelRep": "会社のリーダーシップ",
+      "purpose": "私たちの目的",
+      "title": "技能は人とともにミャンマーへ。",
+      "copy": "日本で働く価値は収入だけではありません。知識、技能、経験をミャンマーへ持ち帰り、未来に生かすこともできます。"
+    },
+    "learning": {
+      "eyebrow": "学習環境",
+      "title": "一緒に準備します。",
+      "copy": "研修や活動の様子を通じて、採用の背景にある人々と環境をより身近に感じていただけます。",
+      "imageAlt": "研修活動"
+    }
+  },
+  "contact": {
+    "hero": {
+      "crumb": "お問い合わせ",
+      "eyebrow": "ご相談はこちら",
+      "title": "適切なつながりを築きましょう。",
+      "copy": "人材紹介、候補者の準備、日本での就労支援についてMyanmar GSSへご相談ください。"
+    },
+    "section": {
+      "companyName": "Myanmar GSS Co., Ltd.",
+      "title": "ミャンマーで人材をお探しですか？",
+      "copy": "高度人材、特定技能、技能実習生、日本での就労前に必要な準備について、私たちのチームへご相談ください。"
+    },
+    "card": {
+      "company": "会社名",
+      "companyValue": "Myanmar GSS Co., Ltd.",
+      "address": "住所",
+      "addressValue1": "No. 38(A)、ボーヤーザール通り、",
+      "addressValue2": "キャウッコーン、ヤンキン郡区、ヤンゴン、ミャンマー",
+      "email": "メール",
+      "emailValue": "現在の公式メールアドレスは会社へ直接お問い合わせください。",
+      "openMaps": "所在地を検索",
+      "note": "以前のexample.com宛てのメールリンクは削除しました。現在、架空のアドレスへメッセージが送信されることはありません。"
+    },
+    "cards": {
+      "employers": {
+        "eyebrow": "雇用主の皆様",
+        "title": "人材をお探しですか？",
+        "copy": "職種、勤務地、勤務条件、日本語レベル、希望開始時期をお知らせください。"
+      },
+      "candidates": {
+        "eyebrow": "求職者の皆様",
+        "title": "日本での仕事をお探しですか？",
+        "copy": "現在の求人、応募条件、応募手順についてチームへお問い合わせください。"
+      },
+      "important": {
+        "eyebrow": "重要",
+        "title": "最新情報をご確認ください。",
+        "copy": "求人、給与、応募条件、連絡先は、掲載または応募前に必ず最新情報をご確認ください。"
+      }
+    }
+  }
+}

@@ -26,22 +26,28 @@
 
   <header class="nav-shell">
     <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="Myanmar GSS home">
-        <span class="brand-logo-wrap"><img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo"></span>
-        <span class="brand-copy"><span class="brand-name">Myanmar GSS</span><span class="brand-note">GLOBAL SUPPORT
+      <a class="brand" href="index.html" aria-label="Myanmar GSS home" data-i18n-aria-label="common.brandHome">
+        <span class="brand-logo-wrap"><img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo" data-i18n-alt="header.brandName"></span>
+        <span class="brand-copy"><span class="brand-name" data-i18n="header.brandName">Myanmar GSS</span><span class="brand-note" data-i18n="header.brandNoteGlobal">GLOBAL SUPPORT
             SERVICES</span></span>
       </a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-i18n-aria-label="common.openNavigation">
         <span></span><span></span><span></span>
       </button>
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-        <a class="nav-link" data-page="index.html" href="index.html">Home</a>
-        <a class="nav-link" data-page="about.html" href="about.html">Company</a>
-        <a class="nav-link" data-page="services.html" href="services.html">Services</a>
-        <a class="nav-link" data-page="recruitment.html" href="recruitment.html">Recruitment</a>
-        <a class="nav-link" data-page="process.html" href="process.html">Process</a>
-        <a class="nav-link" data-page="activities.html" href="activities.html">Activities</a>
-        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html">Contact</a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
+        <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav-link" data-page="about.html" href="about.html" data-i18n="nav.company">Company</a>
+        <a class="nav-link" data-page="services.html" href="services.html" data-i18n="nav.services">Services</a>
+        <a class="nav-link" data-page="recruitment.html" href="recruitment.html" data-i18n="nav.recruitment">Recruitment</a>
+        <a class="nav-link" data-page="process.html" href="process.html" data-i18n="nav.process">Process</a>
+        <a class="nav-link" data-page="activities.html" href="activities.html" data-i18n="nav.activities">Activities</a>
+        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html" data-i18n="nav.contact">Contact</a>
+
+        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
+          <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -50,32 +56,32 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <div class="crumb">Activities</div>
-        <div class="eyebrow">Training · Education · Departure</div>
-        <h1>People in motion.</h1>
-        <p>Training, preparation and departure are all part of the journey from Myanmar to Japan.</p>
+        <div class="crumb" data-i18n="activities.hero.crumb">Activities</div>
+        <div class="eyebrow" data-i18n="activities.hero.eyebrow">Training · Education · Departure</div>
+        <h1 data-i18n="activities.hero.title">People in motion.</h1>
+        <p data-i18n="activities.hero.copy">Training, preparation and departure are all part of the journey from Myanmar to Japan.</p>
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="row g-3">
           <div class="col reveal">
-            <div class="gallery-box"><img src="assets/gallery-main.png" alt="Myanmar GSS training and activities">
-              <div class="gallery-label">Training · Education · Departure</div>
+            <div class="gallery-box"><img src="assets/gallery-main.png" alt="Myanmar GSS training and activities" data-i18n-alt="activities.gallery.imageMainAlt">
+              <div class="gallery-label" data-i18n="activities.gallery.labelMain">Training · Education · Departure</div>
             </div>
           </div>
           <div class="col">
             <div class="row g-3">
               <div class="col-12 reveal delay-1">
-                <div class="gallery-box"><img src="assets/representative.png" alt="Myanmar GSS representative">
-                  <div class="gallery-label">Company leadership</div>
+                <div class="gallery-box"><img src="assets/representative.png" alt="Myanmar GSS representative" data-i18n-alt="activities.gallery.imageRepAlt">
+                  <div class="gallery-label" data-i18n="activities.gallery.labelRep">Company leadership</div>
                 </div>
               </div>
               <div class="col-12 reveal delay-2">
                 <div class="gallery-copy">
-                  <div class="eyebrow">Our purpose</div>
-                  <h2>Skills go home with people.</h2>
-                  <p class="section-copy">The value of working in Japan is not limited to income. Knowledge, skills and
+                  <div class="eyebrow" data-i18n="activities.gallery.purpose">Our purpose</div>
+                  <h2 data-i18n="activities.gallery.title">Skills go home with people.</h2>
+                  <p class="section-copy" data-i18n="activities.gallery.copy">The value of working in Japan is not limited to income. Knowledge, skills and
                     experience can also return to Myanmar and contribute to its future.</p>
                 </div>
               </div>
@@ -87,12 +93,12 @@
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col">
-            <div class="eyebrow">Learning environment</div>
-            <h2 class="section-title">Preparation happens together.</h2>
-            <p class="section-copy">Training and activity imagery gives visitors a clearer view of the people and
+            <div class="eyebrow" data-i18n="activities.learning.eyebrow">Learning environment</div>
+            <h2 class="section-title" data-i18n="activities.learning.title">Preparation happens together.</h2>
+            <p class="section-copy" data-i18n="activities.learning.copy">Training and activity imagery gives visitors a clearer view of the people and
               environment behind the recruitment journey.</p>
           </div>
-          <div class="col"><img src="assets/activity.png" alt="Training activity"
+          <div class="col"><img src="assets/activity.png" alt="Training activity" data-i18n-alt="activities.learning.imageAlt"
               style="width:100%;min-height:440px;object-fit:cover"></div>
         </div>
       </div>
@@ -101,11 +107,12 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span data-year></span> Myanmar GSS Co., Ltd. All Rights Reserved.</div>
-      <a href="#top">Back to top ↑</a>
+      <div>© <span data-year></span><span data-i18n="footer.rights"> Myanmar GSS Co., Ltd. All Rights Reserved.</span></div>
+      <a href="#top" data-i18n="footer.backToTop">Back to top ↑</a>
     </div>
   </footer>
-  <button class="backtop" id="backTop" type="button" aria-label="Back to top">↑</button>
+  <button class="backtop" id="backTop" type="button" aria-label="Back to top" data-i18n-aria-label="common.backToTop">↑</button>
+  <script src="js/vendor/i18next.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 </body>

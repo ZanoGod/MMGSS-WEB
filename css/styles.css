@@ -1115,98 +1115,104 @@ body.modal-open {
   }
 }
 
-/* Language switcher — compact bilingual toggle */
-.language-toggle {
-  appearance: none;
-  border: 1px solid #d9dde1;
-  background: #fff;
-  color: #22272b;
+/* Language selector — EN / 日本語 / မြန်မာ */
+.language-selector {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-width: 104px;
-  height: 36px;
-  padding: 3px 8px;
+  gap: 2px;
+  margin-left: 8px;
+  padding: 3px;
   border-radius: 999px;
-  cursor: pointer;
-  font:
-    700 0.68rem/1 "IBM Plex Sans",
-    Arial,
-    sans-serif;
-  letter-spacing: 0.04em;
+  border: 1px solid #d9dde1;
+  background: #fff;
   box-shadow: 0 4px 14px #0000000a;
   transition:
     border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    transform 0.2s ease;
+    box-shadow 0.2s ease;
 }
-.language-toggle:hover {
+.language-selector:hover {
   border-color: #b9bdc1;
   box-shadow: 0 7px 20px #00000012;
-  transform: translateY(-1px);
 }
-.language-toggle:focus-visible {
+.language-selector:focus-within {
   outline: 3px solid #c9002d33;
   outline-offset: 3px;
 }
-.language-option {
-  min-width: 30px;
-  text-align: center;
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
-}
-.language-en {
-  color: #c9002d;
-}
-.language-ja {
+.language-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
   color: #73797e;
-  min-width: 40px;
-}
-.language-track {
-  width: 30px;
-  height: 18px;
-  padding: 2px;
+  min-width: 46px;
+  padding: 7px 10px;
   border-radius: 999px;
-  background: #dfe2e5;
-  display: flex;
-  align-items: center;
-  transition: background 0.2s ease;
+  cursor: pointer;
+  font:
+    700 0.66rem/1 "IBM Plex Sans",
+    "Myanmar Text",
+    "Noto Sans Myanmar",
+    Arial,
+    sans-serif;
+  letter-spacing: 0.04em;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
-.language-thumb {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #c9002d;
-  box-shadow: 0 1px 4px #00000026;
-  transform: translateX(0);
-  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.language-toggle.is-ja .language-track {
-  background: #f3d4da;
-}
-.language-toggle.is-ja .language-thumb {
-  transform: translateX(12px);
-}
-.language-toggle.is-ja .language-en {
-  color: #73797e;
-}
-.language-toggle.is-ja .language-ja {
+.language-btn:hover {
   color: #c9002d;
 }
-.nav-shell.scrolled .language-toggle {
+.language-btn[aria-pressed="true"] {
+  background: #c9002d;
+  color: #fff;
+}
+.language-btn:focus-visible {
+  outline: 3px solid #c9002d33;
+  outline-offset: 2px;
+}
+.nav-shell.scrolled .language-selector {
   border-color: #d3d7da;
 }
 @media (max-width: 900px) {
-  .language-toggle {
-    width: 100%;
-    height: 42px;
-    margin: 8px 0 0;
-    justify-content: center;
+  .language-selector {
+    width: calc(100% - 12px);
+    margin: 8px 6px 0 6px;
+    justify-content: stretch;
+  }
+  .language-btn {
+    flex: 1;
+    min-width: 0;
+  }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .nav-shell .nav-inner {
+    gap: 10px;
+  }
+  .nav-shell .nav-links {
+    gap: 4px;
+  }
+  .nav-shell .nav-link {
+    padding: 8px 6px;
+    font-size: 0.8rem;
+  }
+  .nav-shell .brand-note {
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+  }
+  .language-selector {
+    margin-left: 4px;
+  }
+  .language-btn {
+    min-width: 38px;
+    padding: 6px 8px;
+    font-size: 0.62rem;
   }
 }
 html[lang="ja"] body {
   font-family:
     "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+}
+html[lang="my"] body {
+  font-family:
+    "Myanmar Text", "Noto Sans Myanmar", "Padauk",
+    "IBM Plex Sans", Arial, sans-serif;
 }

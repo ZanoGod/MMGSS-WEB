@@ -1,0 +1,37 @@
+# Myanmar GSS — static site hosting (Apache)
+
+<IfModule mod_mime.c>
+  AddDefaultCharset UTF-8
+
+  AddType application/json .json
+  AddType image/svg+xml .svg .svgz
+  AddType application/javascript .js .mjs
+
+  AddCharset UTF-8 .html
+  AddCharset UTF-8 .css
+  AddCharset UTF-8 .js
+  AddCharset UTF-8 .json
+</IfModule>
+
+<IfModule mod_headers.c>
+  # HTML is always fresh so language/SEO changes appear immediately.
+  <FilesMatch "\.(html?)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+
+  # Static assets: cache but revalidate.
+  <FilesMatch "\.(css|js|json|png|jpe?g|gif|svg|webp|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=86400, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json text/javascript image/svg+xml
+</IfModule>
+
+# Optional: enable HTTPS redirects when a certificate is configured.
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# </IfModule>
