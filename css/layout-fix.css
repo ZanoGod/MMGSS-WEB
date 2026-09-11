@@ -1,0 +1,151 @@
+/* =========================================================
+   MGSS — layout-fix.css
+   Load AFTER styles.css
+   Page-wide alignment + responsive grid fixes.
+   ========================================================= */
+
+:root {
+  --mgss-container: 1180px;
+  --mgss-gap: 24px;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container,
+.nav-inner,
+.footer-inner {
+  width: min(var(--mgss-container), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.row > .col {
+  grid-column: span 6;
+  min-width: 0;
+}
+
+.row.three > .col {
+  grid-column: span 4;
+}
+
+.g-4 { gap: 24px; }
+.g-5 { gap: 48px; }
+
+.align-items-center {
+  align-items: center;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.row img,
+.section-image,
+.gallery-box img,
+.visual-card img {
+  max-width: 100%;
+}
+
+.section-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.service-card,
+.card-clean,
+.job-card {
+  height: 100%;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.nav-inner {
+  min-height: 76px;
+}
+
+.footer-inner {
+  width: min(var(--mgss-container), calc(100% - 40px));
+}
+
+.btn {
+  position: relative;
+  z-index: 5;
+  pointer-events: auto;
+}
+
+@media (max-width: 900px) {
+  .container,
+  .nav-inner,
+  .footer-inner {
+    width: calc(100% - 32px);
+  }
+
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .row > .col {
+    grid-column: span 2;
+  }
+
+  .row.three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .row.three > .col {
+    grid-column: span 1;
+  }
+
+  .row.three > .col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .g-5 {
+    gap: 32px;
+  }
+
+  .section-image {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 68px 0;
+  }
+
+  .row,
+  .row.three {
+    grid-template-columns: 1fr;
+  }
+
+  .row > .col,
+  .row.three > .col,
+  .row.three > .col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .g-4 { gap: 18px; }
+  .g-5 { gap: 26px; }
+
+  .section-image {
+    min-height: 300px;
+  }
+}

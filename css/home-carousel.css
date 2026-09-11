@@ -1,0 +1,189 @@
+/* =========================================================
+   MGSS — home-carousel.css
+   Load AFTER styles.css and layout-fix.css.
+   ========================================================= */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #170207;
+  transform: none !important;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.035);
+  transition:
+    opacity 0.85s cubic-bezier(.2,.8,.2,1),
+    transform 6s cubic-bezier(.2,.8,.2,1),
+    visibility 0s linear .85s;
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition-delay: 0s;
+}
+
+/* Readability layer */
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 0, 4, .90) 0%,
+      rgba(10, 0, 4, .76) 34%,
+      rgba(10, 0, 4, .42) 68%,
+      rgba(10, 0, 4, .12) 100%
+    );
+}
+
+.hero-grid {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+}
+
+.hero-carousel-controls {
+  position: absolute;
+  z-index: 10;
+  right: max(20px, calc((100vw - var(--mgss-container)) / 2));
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.hero-carousel-arrow {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  padding: 0 0 3px;
+  border: 1px solid rgba(255,255,255,.40);
+  border-radius: 50%;
+  background: rgba(12,0,4,.55);
+  color: #fff;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.hero-carousel-arrow:hover,
+.hero-carousel-arrow:focus-visible {
+  background: #c9002d;
+  border-color: #c9002d;
+  transform: translateY(-1px);
+}
+
+.hero-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.hero-carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 999px;
+  background: rgba(12,0,4,.55);
+  opacity: .72;
+  cursor: pointer;
+  transition:
+    width .25s ease,
+    opacity .25s ease,
+    background .25s ease;
+}
+
+.hero-carousel-dot.active {
+  width: 26px;
+  background: #fff;
+  opacity: 1;
+}
+
+.hero-carousel-arrow:focus-visible,
+.hero-carousel-dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .hero-photo::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(10,0,4,.22) 0%,
+        rgba(10,0,4,.58) 48%,
+        rgba(10,0,4,.94) 100%
+      );
+  }
+
+  .hero-carousel-controls {
+    right: 16px;
+    bottom: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-carousel-controls {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .hero-carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .hero-carousel-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .hero-carousel-dot.active {
+    width: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    transform: none;
+    transition: opacity .01ms linear;
+  }
+}

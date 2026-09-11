@@ -1,0 +1,741 @@
+/* =========================================================
+   MGSS PROCESS PAGE
+   Clean, aligned, responsive version
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE HERO
+   ========================================================= */
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 71, 105, 0.22),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #170207 0%,
+      #4b0718 58%,
+      #8e001f 100%
+    );
+}
+
+.page-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.10;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  padding: 110px 24px 92px;
+  box-sizing: border-box;
+}
+
+.page-hero h1 {
+  margin: 10px 0 20px;
+
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  line-height: 0.98;
+
+  letter-spacing: -0.075em;
+}
+
+.page-hero h1 span {
+  color: #ff6d88;
+}
+
+.page-hero p {
+  max-width: 740px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.78);
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   HERO META
+   ========================================================= */
+
+.page-hero-meta {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.page-hero-meta > span,
+.page-hero-meta > a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+
+  font-size: 0.76rem;
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+.page-hero-meta > a:hover {
+  background: #fff;
+  color: #170207;
+}
+
+
+/* =========================================================
+   PROCESS SECTION
+   ========================================================= */
+
+.process-section {
+  padding: 82px 0 92px;
+
+  background: #fff;
+}
+
+.process-section > .container {
+  width: 100%;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.process-intro {
+  width: 100%;
+  max-width: 780px;
+
+  margin: 0 auto 52px;
+
+  text-align: center;
+}
+
+.process-intro .eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 10px;
+}
+
+.process-intro .section-title {
+  margin: 0 auto 14px;
+
+  line-height: 1.08;
+}
+
+.process-intro .section-copy {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROCESS TIMELINE
+   ========================================================= */
+
+.process-timeline {
+  position: relative;
+
+  width: 100%;
+  max-width: 980px;
+
+  margin: 0 auto;
+}
+
+
+/*
+   Timeline vertical line.
+
+   It sits exactly in the middle
+   of the numbered markers.
+*/
+
+.process-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 36px;
+
+  top: 36px;
+  bottom: 36px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #d40032 0%,
+      #efb6c2 75%,
+      #e4e6e8 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PROCESS STEP
+   ========================================================= */
+
+.process-step {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 72px minmax(0, 1fr);
+
+  align-items: start;
+
+  column-gap: 24px;
+
+  width: 100%;
+
+  margin: 0 0 20px;
+
+  box-sizing: border-box;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   NUMBER MARKER
+   ========================================================= */
+
+/*
+   No icons are used here.
+
+   The number itself is the visual indicator.
+*/
+
+.process-marker {
+  position: relative;
+
+  z-index: 2;
+
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #efc0ca;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: #d00032;
+
+  font-family: Manrope, Inter, sans-serif;
+
+  font-size: 0.95rem;
+  font-weight: 900;
+
+  line-height: 1;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 28px rgba(201,0,45,0.08);
+}
+
+
+/*
+   Alternating background is subtle,
+   but there are still no icons.
+*/
+
+.process-step:nth-child(even) .process-marker {
+  background: #fff7f9;
+}
+
+
+/* =========================================================
+   PROCESS CARD
+   ========================================================= */
+
+.process-card {
+  width: 100%;
+  min-width: 0;
+
+  min-height: 0;
+
+  padding: 28px 30px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e3e5e7;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 38px rgba(16,18,22,0.055);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #efbdc8;
+
+  box-shadow:
+    0 20px 50px rgba(16,18,22,0.09);
+}
+
+
+/* =========================================================
+   FINAL PROCESS CARD
+   ========================================================= */
+
+.process-card-final {
+  background:
+    linear-gradient(
+      135deg,
+      #fff7f9 0%,
+      #fff 100%
+    );
+
+  border-color: #efbdc8;
+}
+
+
+/* =========================================================
+   PROCESS LABEL
+   ========================================================= */
+
+.process-label {
+  display: block;
+
+  margin: 0 0 8px;
+
+  color: #d00032;
+
+  font-size: 0.65rem;
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PROCESS TITLE
+   ========================================================= */
+
+.process-card h3 {
+  margin: 0 0 9px;
+
+  color: #11151a;
+
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   PROCESS DESCRIPTION
+   ========================================================= */
+
+.process-card p {
+  width: 100%;
+  max-width: 820px;
+
+  margin: 0;
+
+  color: #687079;
+
+  font-size: 0.95rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.process-cta {
+  padding: 60px 0;
+
+  background: #d00032;
+
+  color: #fff;
+}
+
+.process-cta-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 36px;
+
+  width: 100%;
+}
+
+.process-cta-inner > div {
+  min-width: 0;
+}
+
+.process-cta h2 {
+  max-width: 780px;
+
+  margin: 8px 0 0;
+
+  color: #fff;
+
+  font-size: clamp(2rem, 4vw, 3.6rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.055em;
+}
+
+.process-cta .btn {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 56px;
+
+  padding: 0 26px;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.process-section + .process-cta {
+  margin-top: 0;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .page-hero-inner {
+    padding: 90px 24px 78px;
+  }
+
+  .process-section {
+    padding: 72px 0 82px;
+  }
+
+  .process-timeline {
+    max-width: 860px;
+  }
+
+  .process-step {
+    grid-template-columns: 64px minmax(0, 1fr);
+
+    column-gap: 20px;
+  }
+
+  .process-timeline::before {
+    left: 32px;
+  }
+
+  .process-marker {
+    width: 64px;
+    height: 64px;
+  }
+
+  .process-card {
+    padding: 25px 26px;
+  }
+
+  .process-cta-inner {
+    gap: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .page-hero-inner {
+    padding: 76px 20px 66px;
+  }
+
+  .page-hero h1 {
+    margin-top: 8px;
+
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+
+    line-height: 1;
+  }
+
+  .page-hero p {
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+  }
+
+  .page-hero-meta {
+    margin-top: 24px;
+  }
+
+
+  .process-section {
+    padding: 64px 0 72px;
+  }
+
+
+  .process-intro {
+    margin-bottom: 38px;
+
+    text-align: left;
+  }
+
+  .process-intro .eyebrow {
+    justify-content: flex-start;
+  }
+
+  .process-intro .section-title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .process-intro .section-copy {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  .process-timeline::before {
+    left: 26px;
+
+    top: 27px;
+    bottom: 27px;
+  }
+
+
+  .process-step {
+    grid-template-columns: 54px minmax(0, 1fr);
+
+    column-gap: 14px;
+
+    margin-bottom: 15px;
+  }
+
+
+  .process-marker {
+    width: 54px;
+    height: 54px;
+
+    font-size: 0.78rem;
+  }
+
+
+  .process-card {
+    padding: 21px 19px;
+
+    border-radius: 16px;
+  }
+
+
+  .process-label {
+    margin-bottom: 7px;
+
+    font-size: 0.61rem;
+  }
+
+
+  .process-card h3 {
+    margin-bottom: 8px;
+
+    font-size: 1.18rem;
+
+    line-height: 1.25;
+  }
+
+
+  .process-card p {
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+  }
+
+
+  .process-cta {
+    padding: 46px 0;
+  }
+
+
+  .process-cta-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+  }
+
+
+  .process-cta h2 {
+    font-size: clamp(1.9rem, 9vw, 2.8rem);
+  }
+
+
+  .process-cta .btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .page-hero-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .process-section {
+    padding-top: 56px;
+  }
+
+  .process-step {
+    grid-template-columns: 46px minmax(0, 1fr);
+
+    column-gap: 11px;
+  }
+
+  .process-timeline::before {
+    left: 23px;
+  }
+
+  .process-marker {
+    width: 46px;
+    height: 46px;
+
+    font-size: 0.72rem;
+  }
+
+  .process-card {
+    padding: 18px 16px;
+  }
+
+  .process-card h3 {
+    font-size: 1.08rem;
+  }
+
+  .process-card p {
+    font-size: 0.84rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .process-card {
+    transition: none;
+  }
+
+  .process-card:hover {
+    transform: none;
+  }
+}

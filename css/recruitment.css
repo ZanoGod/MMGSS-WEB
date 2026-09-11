@@ -1,0 +1,1285 @@
+/* =========================================================
+   MGSS RECRUITMENT PAGE
+   Clean, aligned, responsive version
+   ========================================================= */
+
+
+/* =========================================================
+   PAGE HERO
+   ========================================================= */
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+
+  color: #fff;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255,71,105,0.22),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #170207 0%,
+      #4b0718 58%,
+      #8e001f 100%
+    );
+}
+
+.page-hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.10;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  padding: 110px 24px 92px;
+
+  box-sizing: border-box;
+}
+
+.page-hero h1 {
+  margin: 10px 0 20px;
+
+  font-size: clamp(3rem, 7vw, 6.2rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.075em;
+}
+
+.page-hero h1 span {
+  color: #ff6d88;
+}
+
+.page-hero p {
+  max-width: 740px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.78);
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   HERO META
+   ========================================================= */
+
+.page-hero-meta {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.page-hero-meta > span,
+.page-hero-meta > a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  border-radius: 999px;
+
+  color: #fff;
+
+  background: rgba(255,255,255,0.06);
+
+  font-size: 0.76rem;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+.page-hero-meta > a:hover {
+  background: #fff;
+  color: #170207;
+}
+
+
+/* =========================================================
+   RECRUITMENT SECTION
+   ========================================================= */
+
+.recruitment-section {
+  padding: 82px 0 100px;
+
+  background: #f7f7f5;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.recruitment-heading {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  width: 100%;
+}
+
+.recruitment-heading > div:first-child {
+  min-width: 0;
+}
+
+.recruitment-heading .section-title {
+  margin: 8px 0 0;
+
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   ROLE COUNT
+   ========================================================= */
+
+.role-count {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e1e3e5;
+
+  border-radius: 999px;
+
+  background: #fff;
+
+  color: #4d5358;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+}
+
+.role-count span {
+  margin-right: 4px;
+
+  color: #d00032;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.recruitment-toolbar {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  width: 100%;
+
+  margin: 28px 0 30px;
+
+  padding: 9px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e2e4e6;
+
+  border-radius: 16px;
+
+  background: #fff;
+}
+
+.filter-group {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  min-width: 0;
+}
+
+.filter {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 14px;
+
+  border: 1px solid transparent;
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: #656b70;
+
+  font-family: inherit;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+}
+
+.filter:hover {
+  background: #fff1f4;
+  color: #d00032;
+}
+
+.filter.active {
+  background: #d00032;
+  color: #fff;
+}
+
+.text-link {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 38px;
+
+  color: #d00032;
+
+  font-size: 0.8rem;
+
+  font-weight: 850;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   JOB GRID
+   ========================================================= */
+
+.jobs-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 20px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   JOB CARD
+   ========================================================= */
+
+.job-item {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: stretch;
+
+  min-width: 0;
+
+  height: 100%;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e1e3e5;
+
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 12px 38px rgba(16,18,22,0.045);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.job-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d00032,
+      #ff7c94,
+      transparent
+    );
+}
+
+.job-item:hover {
+  transform: translateY(-4px);
+
+  border-color: #efbdc8;
+
+  box-shadow:
+    0 24px 60px rgba(16,18,22,0.09);
+}
+
+
+/* =========================================================
+   JOB TOP LINE
+   ========================================================= */
+
+.job-topline {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  width: 100%;
+
+  margin: 0 0 18px;
+
+  color: #d00032;
+
+  font-size: 0.67rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+.job-topline span:first-child {
+  flex: 0 0 auto;
+}
+
+.job-topline span:last-child {
+  min-width: 0;
+
+  color: #858b90;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   JOB TITLE
+   ========================================================= */
+
+.job-item h3 {
+  margin: 0 0 10px;
+
+  color: #11151a;
+
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* =========================================================
+   JOB DESCRIPTION
+   ========================================================= */
+
+.job-item > p {
+  width: 100%;
+
+  margin: 0;
+
+  color: #687079;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   JOB META
+   ========================================================= */
+
+.job-meta {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  align-items: start;
+
+  gap: 16px;
+
+  width: 100%;
+
+  margin: 23px 0 22px;
+
+  padding-top: 18px;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid #e3e5e7;
+}
+
+.job-meta > span {
+  display: block;
+
+  min-width: 0;
+
+  color: #202428;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+.job-meta small {
+  display: block;
+
+  margin: 0 0 5px;
+
+  color: #92979c;
+
+  font-size: 0.6rem;
+
+  font-weight: 850;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   JOB BUTTON
+   ========================================================= */
+
+.job-view {
+  align-self: flex-start;
+
+  margin-top: auto;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.recruitment-empty {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 50px 20px;
+
+  box-sizing: border-box;
+
+  border: 1px dashed #d7dadd;
+
+  border-radius: 18px;
+
+  background: #fff;
+
+  text-align: center;
+}
+
+.recruitment-empty h3 {
+  margin: 0 0 6px;
+}
+
+.recruitment-empty p {
+  margin: 0;
+
+  color: #687079;
+}
+
+
+/* =========================================================
+   RECRUITMENT NOTE
+   ========================================================= */
+
+.recruitment-note {
+  padding: 76px 0;
+
+  background: #fff;
+}
+
+.recruitment-note-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  width: 100%;
+
+  padding: 42px;
+
+  box-sizing: border-box;
+
+  border-radius: 24px;
+
+  background: #fff1f4;
+}
+
+.recruitment-note-inner > div {
+  min-width: 0;
+}
+
+.recruitment-note h2 {
+  margin: 8px 0 8px;
+
+  color: #11151a;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.05em;
+}
+
+.recruitment-note p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #687079;
+
+  line-height: 1.7;
+}
+
+.recruitment-note .btn {
+  flex: 0 0 auto;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+/*
+   IMPORTANT:
+   Use #jobModal rather than generic .modal.
+   This prevents styles from styles.css
+   from breaking the modal dimensions.
+*/
+
+#jobModal {
+  position: fixed !important;
+
+  inset: 0 !important;
+
+  z-index: 99999 !important;
+
+  display: grid !important;
+
+  place-items: center !important;
+
+  width: 100vw !important;
+
+  height: 100vh !important;
+
+  min-height: 100vh !important;
+
+  margin: 0 !important;
+
+  padding: 24px !important;
+
+  box-sizing: border-box !important;
+
+  background: rgba(23,2,7,0.72) !important;
+
+  backdrop-filter: blur(9px);
+
+  -webkit-backdrop-filter: blur(9px);
+
+  overflow: auto !important;
+}
+
+#jobModal[hidden] {
+  display: none !important;
+}
+
+
+/* =========================================================
+   MODAL PANEL
+   ========================================================= */
+
+#jobModal .modal-panel {
+  position: relative !important;
+
+  width: min(860px, 100%) !important;
+
+  max-width: 860px !important;
+
+  max-height: calc(100vh - 48px) !important;
+
+  margin: auto !important;
+
+  padding: 34px !important;
+
+  box-sizing: border-box !important;
+
+  overflow: auto !important;
+
+  border: 1px solid #e3e5e7 !important;
+
+  border-radius: 24px !important;
+
+  background: #fff !important;
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,0.28) !important;
+
+  transform: translateY(8px) scale(0.985);
+
+  opacity: 0;
+
+  transition:
+    transform 0.18s ease,
+    opacity 0.18s ease;
+}
+
+#jobModal.is-open .modal-panel {
+  transform: translateY(0) scale(1);
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   MODAL CLOSE BUTTON
+   ========================================================= */
+
+#jobModal .modal-close {
+  position: absolute !important;
+
+  top: 18px !important;
+  right: 18px !important;
+
+  z-index: 5;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 42px !important;
+  height: 42px !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  box-sizing: border-box !important;
+
+  border: 1px solid #e1e3e5 !important;
+
+  border-radius: 50% !important;
+
+  background: #fff !important;
+
+  color: #202428 !important;
+
+  font-family: inherit;
+
+  font-size: 24px !important;
+
+  line-height: 1 !important;
+
+  cursor: pointer !important;
+}
+
+#jobModal .modal-close:hover {
+  border-color: #efbdc8 !important;
+
+  background: #fff7f9 !important;
+
+  color: #d00032 !important;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+#jobModal .eyebrow {
+  margin-bottom: 8px;
+}
+
+#jobModal .modal-type {
+  display: block;
+
+  margin: 0;
+
+  color: #d00032;
+
+  font-size: 0.67rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+
+  line-height: 1.3;
+
+  text-transform: uppercase;
+}
+
+#jobModal #modalRole {
+  width: calc(100% - 60px);
+
+  max-width: 760px;
+
+  margin: 8px 0 24px;
+
+  color: #11151a;
+
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+
+  line-height: 1.04;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   MODAL FACTS
+   ========================================================= */
+
+#jobModal .modal-facts {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 10px;
+
+  width: 100%;
+
+  margin: 0 0 28px;
+}
+
+#jobModal .modal-facts > div {
+  min-width: 0;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e2e4e6;
+
+  border-radius: 14px;
+
+  background: #fafafa;
+}
+
+#jobModal .modal-facts small {
+  display: block;
+
+  margin: 0 0 6px;
+
+  color: #92979c;
+
+  font-size: 0.6rem;
+
+  font-weight: 850;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+#jobModal .modal-facts strong {
+  display: block;
+
+  min-width: 0;
+
+  color: #202428;
+
+  font-size: 0.82rem;
+
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   MODAL CONTENT
+   ========================================================= */
+
+#jobModal .modal-copy {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: start;
+
+  gap: 28px;
+
+  width: 100%;
+}
+
+#jobModal .modal-copy > div {
+  min-width: 0;
+}
+
+#jobModal .modal-copy h3 {
+  margin: 0 0 8px;
+
+  color: #11151a;
+
+  font-size: 1.05rem;
+
+  line-height: 1.3;
+}
+
+#jobModal .modal-copy p {
+  margin: 0;
+
+  color: #687079;
+
+  font-size: 0.9rem;
+
+  line-height: 1.75;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+   ========================================================= */
+
+#jobModal .modal-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 28px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #e3e5e7;
+}
+
+#jobModal .modal-actions .btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+#jobModal .btn-light {
+  border: 1px solid #e1e3e5;
+
+  background: #fff;
+
+  color: #222;
+}
+
+#jobModal .btn-light:hover {
+  background: #f5f5f5;
+}
+
+
+/* =========================================================
+   BODY LOCK WHEN MODAL IS OPEN
+   ========================================================= */
+
+body.modal-open {
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .page-hero-inner {
+    padding: 90px 24px 78px;
+  }
+
+  .recruitment-section {
+    padding: 72px 0 86px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #jobModal {
+    padding: 18px !important;
+  }
+
+  #jobModal .modal-panel {
+    max-height: calc(100vh - 36px) !important;
+  }
+
+  #jobModal .modal-facts {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .page-hero-inner {
+    padding: 76px 20px 66px;
+  }
+
+  .page-hero h1 {
+    margin-top: 8px;
+
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+
+    line-height: 1;
+  }
+
+  .page-hero p {
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+  }
+
+
+  .recruitment-section {
+    padding: 64px 0 72px;
+  }
+
+
+  .recruitment-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+  }
+
+  .recruitment-heading .section-title {
+    margin-left: 0;
+  }
+
+
+  .recruitment-toolbar {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 14px;
+  }
+
+
+  .filter-group {
+    width: 100%;
+  }
+
+
+  .filter {
+    flex: 1 1 auto;
+  }
+
+
+  .text-link {
+    align-self: flex-start;
+
+    padding: 0 4px;
+  }
+
+
+  .job-item {
+    padding: 23px;
+  }
+
+
+  .job-topline {
+    align-items: flex-start;
+  }
+
+
+  .job-topline span:last-child {
+    max-width: 65%;
+
+    text-align: right;
+  }
+
+
+  .job-meta {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+  }
+
+
+  .recruitment-note {
+    padding: 58px 0;
+  }
+
+
+  .recruitment-note-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 24px;
+
+    padding: 30px 24px;
+  }
+
+
+  .recruitment-note .btn {
+    width: 100%;
+  }
+
+
+  #jobModal {
+    padding: 10px !important;
+  }
+
+
+  #jobModal .modal-panel {
+    width: 100% !important;
+
+    max-height: calc(100vh - 20px) !important;
+
+    padding: 26px 18px !important;
+
+    border-radius: 18px !important;
+  }
+
+
+  #jobModal .modal-close {
+    top: 14px !important;
+    right: 14px !important;
+
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+
+  #jobModal #modalRole {
+    width: calc(100% - 52px);
+
+    font-size: clamp(1.85rem, 8vw, 2.6rem);
+  }
+
+
+  #jobModal .modal-facts {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+  }
+
+
+  #jobModal .modal-facts > div {
+    padding: 14px;
+  }
+
+
+  #jobModal .modal-copy {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+
+  #jobModal .modal-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  #jobModal .modal-actions .btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .page-hero-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+
+  .job-item {
+    padding: 20px;
+  }
+
+
+  .job-topline {
+    gap: 10px;
+
+    font-size: 0.61rem;
+  }
+
+
+  .job-item h3 {
+    font-size: 1.3rem;
+  }
+
+
+  .job-item > p {
+    font-size: 0.86rem;
+  }
+
+
+  #jobModal .modal-facts {
+    grid-template-columns: 1fr;
+  }
+
+
+  #jobModal .modal-panel {
+    padding: 23px 16px !important;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .job-item,
+  #jobModal .modal-panel {
+    transition: none;
+  }
+
+  .job-item:hover {
+    transform: none;
+  }
+}
