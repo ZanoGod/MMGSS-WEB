@@ -56,11 +56,8 @@
 
   function closeNavigation() {
     navLinks?.classList.remove("open");
-
     navToggle?.setAttribute("aria-expanded", "false");
-
     navToggle?.setAttribute("aria-label", translate("common.openNavigation", undefined, "Open navigation"));
-
     body.classList.remove("menu-open");
   }
 
@@ -325,18 +322,6 @@
       return;
     }
 
-    /*
-     * Job information is loaded from the stable job ID.
-     * Each role has a dedicated key namespace in the locale files:
-     *
-     *   recruitment.jobs.<jobId>.role
-     *   recruitment.jobs.<jobId>.location
-     *   recruitment.jobs.<jobId>.salary
-     *   recruitment.jobs.<jobId>.language
-     *   recruitment.jobs.<jobId>.duration
-     *   recruitment.jobs.<jobId>.summary
-     *   recruitment.jobs.<jobId>.requirements
-     */
 
     const job = button.closest(".job-item");
 

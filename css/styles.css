@@ -10,6 +10,7 @@
   --white: #fff;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 * {
   box-sizing: border-box;
 }
