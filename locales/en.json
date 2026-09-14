@@ -202,7 +202,9 @@
         "areas": [
           "IT Industry",
           "Factory Work",
-          "Hotel"
+          "Hotel",
+          "Travel Industry",
+          "Engineering"
         ]
       },
       "ssw": {
@@ -212,7 +214,10 @@
         "copy": "Support for candidates preparing for employment in designated skilled-worker fields in Japan.",
         "areas": [
           "Airport Ground Handling Service",
-          "Infrastructure & Equipment / Lifeline & Facilities"
+          "Infrastructure & Equipment / Lifeline & Facilities",
+          "Caregiving ( Kaigo )",
+          "Food Services",
+          "Food Manufacturing"
         ]
       },
       "intern": {
@@ -221,7 +226,15 @@
         "title2": "Training",
         "copy": "A practical training pathway for candidates who will gain workplace experience and technical skills in Japan.",
         "areas": [
-          "Food Manufacturing"
+          "Food Manufacturing",
+          "Hotel",
+          "Caregiving ( Kaigo )",
+          "Construction & Scaffolding",
+          "Garment Manufacturing",
+          "Meal Preparation & Food Services",
+          "Bread & Bakery Production",
+          "Bento & Confectionery Production",
+          "Machine Processing & Electrical Control Panels "
         ]
       }
     },
