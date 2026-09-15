@@ -17,7 +17,7 @@
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  
+
 </head>
 
 <body id="top" class="services-page">
@@ -55,13 +55,15 @@
         </span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-i18n-aria-label="common.openNavigation">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false"
+        data-i18n-aria-label="common.openNavigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation"
+        data-i18n-aria-label="common.primaryNavigation">
         <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">
           Home
         </a>
@@ -90,10 +92,16 @@
           Contact
         </a>
 
-        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
-          <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
-          <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
-          <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        <div class="language-selector" id="languageSelector" role="group" aria-label="Change language"
+          data-i18n-aria-label="common.changeLanguage">
+          <span class="language-pill-bg" id="languagePill" aria-hidden="true"></span>
+
+          <button class="language-btn" type="button" data-language="en" aria-pressed="true"><span
+              class="language-code">EN</span><span class="language-name" aria-hidden="true">English</span></button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false"><span
+              class="language-code">JP</span><span class="language-name" aria-hidden="true">日本語</span></button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false"><span
+              class="language-code">MM</span><span class="language-name" aria-hidden="true">မြန်မာ</span></button>
         </div>
       </nav>
 
@@ -161,9 +169,7 @@
     <!-- MAIN SERVICE PATHWAYS -->
     <section class="section services-pathways">
       <div class="container">
-
         <div class="section-heading reveal">
-
           <div>
             <div class="eyebrow" data-i18n="services.pathways.eyebrow">
               THREE PATHWAYS
@@ -336,77 +342,95 @@
         </div>
 
       </div>
-       <!-- Cart title -->
-      <div>
-        <h2>Payment & Receipt System </h2>
-        <p>Our service charges are as follows:</p>
-      </div>
+    </section>
 
-      <div class="cart-container">
-        
-        <!-- Card 1: Work Visa -->
-        <div class="cart-card">
-          <div class="cart-header">
-            <h3 data-i18n="visa_services.items.work.title">Professional Talent</h3>
-            <h4 data-i18n="visa_services.items.work.title1">(Work Visa)</h4>
-      
+    <!-- PAYMENT & RECEIPT -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Cart title -->
+        <div class="section-heading reveal">
+
+          <div class="payment-heading-content">
+            <div class="payment-eyebrow">
+              fees & payment
+            </div>
+            <h2>
+              PAYMENT
+              <span> & RECEIPT terms.</span>
+            </h2>
+            <p>
+              Our service charges are clearly outlined below.
+            </p>
+            <div class="payment-heading-line"></div>
           </div>
-    
-        <div class="price-box">
+        </div>
+
+        <div class="cart-container">
+          <!-- Card 1: Work Visa -->
+          <div class="cart-card">
+            <div class="cart-header">
+              <h3 data-i18n="visa_services.items.work.title">Professional Talent</h3>
+              <h4 data-i18n="visa_services.items.work.title1">(Work Visa)</h4>
+
+            </div>
+
+            <div class="price-box">
               <span class="price" data-i18n="visa_services.items.work.fee">USD 1,500–2,000</span>
-        </div>
-
-        <div class="cart-body">
-            <div class="payment-info">
-              <small>Payment Terms:</small>
-              <p data-i18n="visa_services.items.work.payment">Payment is accepted in two installments.</p>
             </div>
+
+            <div class="cart-body">
+              <div class="payment-info">
+                <small>Payment Terms:</small>
+                <p data-i18n="visa_services.items.work.payment">Payment is accepted in two installments.</p>
+              </div>
+            </div>
+
           </div>
 
-        </div>
+          <!-- Card 2: Tokutei Visa -->
+          <div class="cart-card">
+            <div class="cart-header">
+              <h3 data-i18n="visa_services.items.tokutei.title">Specified Skilled Worker</h3>
+              <h4 data-i18n="visa_services.items.tokutei.title1">(Tokutei Visa)</h4>
+            </div>
 
-        <!-- Card 2: Tokutei Visa -->
-        <div class="cart-card">
-          <div class="cart-header">
-            <h3 data-i18n="visa_services.items.tokutei.title">Specified Skilled Worker</h3>
-            <h4 data-i18n="visa_services.items.tokutei.title1">(Tokutei Visa)</h4>
-          </div>
-    
-          <div class="price-box">
+            <div class="price-box">
               <span class="price" data-i18n="visa_services.items.tokutei.fee">USD 1,500</span>
-          </div>
+            </div>
 
-          <div class="cart-body">
-            <div class="payment-info">
-              <small>Payment Terms:</small>
-              <p data-i18n="visa_services.items.tokutei.payment">Payment is accepted in two installments.</p>
+            <div class="cart-body">
+              <div class="payment-info">
+                <small>Payment Terms:</small>
+                <p data-i18n="visa_services.items.tokutei.payment">Payment is accepted in two installments.</p>
+              </div>
             </div>
           </div>
-        </div>  
 
-         <!-- Card 3: Training Visa -->
-        <div class="cart-card">
-          <div class="cart-header">
-            <h3 data-i18n="visa_services.items.training.title">•	Technical Intern Training  r</h3>
-            <h4 data-i18n="visa_services.items.training.title1">(Training Visa)</h4>
-          </div>
-    
-          <div class="price-box">
+          <!-- Card 3: Training Visa -->
+          <div class="cart-card">
+            <div class="cart-header">
+              <h3 data-i18n="visa_services.items.training.title">• Technical Intern Training r</h3>
+              <h4 data-i18n="visa_services.items.training.title1">(Training Visa)</h4>
+            </div>
+
+            <div class="price-box">
               <span class="price" data-i18n="visa_services.items.training.fee">USD 2,800</span>
-          </div>
-
-          <div class="cart-body">
-            <div class="payment-info">
-              <small>Payment Terms:</small>
-              <p data-i18n="visa_services.items.training.payment">Payment is accepted in two installments.</p>
             </div>
+
+            <div class="cart-body">
+              <div class="payment-info">
+                <small>Payment Terms:</small>
+                <p data-i18n="visa_services.items.training.payment">Payment is accepted in two installments.</p>
+              </div>
+            </div>
+
           </div>
-
-    </div>
-  </div>
-  </section>
+        </div>
 
 
+      </div>
+    </section>
     <!-- SUPPORT SERVICES -->
     <section class="section section-soft services-support">
       <div class="container">
@@ -554,7 +578,7 @@
 
       <div>
         © <span data-year></span><span data-i18n="footer.rights">
-        Myanmar GSS Co., Ltd. All Rights Reserved.</span>
+          Myanmar GSS Co., Ltd. All Rights Reserved.</span>
       </div>
 
       <a href="#top" data-i18n="footer.backToTop">
