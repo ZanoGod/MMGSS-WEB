@@ -17,7 +17,7 @@
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  
+
 </head>
 
 <body id="top" class="services-page">
@@ -55,13 +55,15 @@
         </span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false" data-i18n-aria-label="common.openNavigation">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false"
+        data-i18n-aria-label="common.openNavigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation"
+        data-i18n-aria-label="common.primaryNavigation">
         <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">
           Home
         </a>
@@ -90,10 +92,13 @@
           Contact
         </a>
 
-        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
-          <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
-          <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
-          <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        <div class="language-selector" id="languageSelector" role="group" aria-label="Change language"
+          data-i18n-aria-label="common.changeLanguage">
+          <span class="language-pill-bg" id="languagePill" aria-hidden="true"></span>
+
+          <button class="language-btn" type="button" data-language="en" aria-pressed="true"><span class="language-code">EN</span><span class="language-name" aria-hidden="true">English</span></button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false"><span class="language-code">JP</span><span class="language-name" aria-hidden="true">日本語</span></button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false"><span class="language-code">MM</span><span class="language-name" aria-hidden="true">မြန်မာ</span></button>
         </div>
       </nav>
 
@@ -132,7 +137,6 @@
 
           </div>
 
-
           <div class="services-hero-meta reveal delay-1">
 
             <div class="hero-meta-item">
@@ -156,7 +160,6 @@
 
       </div>
     </section>
-
 
     <!-- MAIN SERVICE PATHWAYS -->
     <section class="section services-pathways">
@@ -234,7 +237,7 @@
 
 
           <!-- SSW -->
-          <article class="service-card service-card-featured reveal delay-1">
+          <article class="service-card reveal delay-1">
 
             <div class="service-card-top">
               <div class="service-number">02</div>
@@ -486,7 +489,7 @@
 
       <div>
         © <span data-year></span><span data-i18n="footer.rights">
-        Myanmar GSS Co., Ltd. All Rights Reserved.</span>
+          Myanmar GSS Co., Ltd. All Rights Reserved.</span>
       </div>
 
       <a href="#top" data-i18n="footer.backToTop">

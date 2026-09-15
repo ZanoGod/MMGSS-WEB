@@ -50,6 +50,64 @@
     }
   });
 
+/* =========================================================
+   LANGUAGE SELECTOR
+   ========================================================= */
+
+function initLanguageSelector() {
+  const selector = document.querySelector('.language-selector');
+  const pill = document.querySelector('.language-pill-bg');
+  if (!selector || !pill) return;
+
+  const buttons = selector.querySelectorAll('.language-btn');
+
+  function updatePillPosition(activeBtn) {
+    if (!activeBtn) return;
+    pill.style.width = activeBtn.offsetWidth + 'px';
+    pill.style.transform = 'translateX(' + activeBtn.offsetLeft + 'px)';
+  }
+
+  function setActiveLanguage(btn) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', 'false'));
+    btn.setAttribute('aria-pressed', 'true');
+    updatePillPosition(btn);
+  }
+
+  const initial = selector.querySelector('.language-btn[aria-pressed="true"]') || buttons[0];
+  if (initial) setActiveLanguage(initial);
+
+  window.addEventListener('resize', function () {
+    const active = selector.querySelector('.language-btn[aria-pressed="true"]');
+    if (active) updatePillPosition(active);
+  });
+
+  return { updatePillPosition, setActiveLanguage };
+}
+
+function syncLanguageSelectorFromI18n() {
+  const selector = document.querySelector('.language-selector');
+  if (!selector) return;
+  
+  const activeBtn = selector.querySelector('.language-btn[aria-pressed="true"]');
+  if (activeBtn && window.languageSelector) {
+    window.languageSelector.setActiveLanguage(activeBtn);
+  }
+}
+
+document.addEventListener('i18n:ready', function () {
+  window.languageSelector = initLanguageSelector();
+});
+
+document.addEventListener('i18n:languagechanged', function (e) {
+  syncLanguageSelectorFromI18n();
+  if (window.languageSelector) {
+    const selector = document.querySelector('.language-selector');
+    const activeBtn = selector?.querySelector('.language-btn[aria-pressed="true"]');
+    if (activeBtn) {
+      window.languageSelector.updatePillPosition(activeBtn);
+    }
+  }
+});
   /* =========================================================
      MOBILE NAVIGATION
      ========================================================= */

@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --red: #c9002d;
   --red-dark: #8e001f;
   --red-soft: #fff1f4;
@@ -9,8 +9,25 @@
   --dark: #170207;
   --white: #fff;
   --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-}
+} */
 
+:root {
+  /* Image Palette */
+  --primary-white: #f4f4f4;       /* Base off-white / light surface */
+  --accent-orange: #fb9935;       /* Warm secondary accent */
+  --red:           #b90b0b;       /* Primary brand red */
+  --red-dark:      #8c0909;       /* Deep red / dark states */
+
+  /* Derived Neutrals & Tints */
+  --red-soft:      #fff1f3;       /* Soft light tint derived from #B90B0B */
+  --surface:       #f4f4f4;       /* Matched to off-white swatch */
+  --line:          #e6e2e0;       /* Neutral border line */
+  --ink:           #101216;       /* High-contrast text */
+  --muted:         #687078;       /* Subtle copy */
+  --dark:          #170207;       /* Dark theme panels */
+  --white:         #ffffff;       /* Pure white */
+  --ease:          cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 * {
   box-sizing: border-box;
 }
@@ -205,47 +222,45 @@ body.cursor-ready .cursor-glow {
   background: #222;
   margin: 4px;
 }
+
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 6px;
   margin-left: auto;
 }
+
 .nav-link {
   position: relative;
-  padding: 10px 11px;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;          
+  padding: 0 12px;
   font-size: 0.84rem;
   font-weight: 750;
   color: #4a4d50;
+  line-height: 1;
 }
+
+
 .nav-link:after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 50%;  
   bottom: 2px;
   width: 0;
   height: 2px;
+  bottom: 8px;
   background: var(--red);
   transform: translateX(-50%);
   transition: 0.25s var(--ease);
 }
+
 .nav-link:hover:after,
 .nav-link.active:after {
-  width: 42%;
+ width: calc(100% - 24px);
 }
-.nav-contact {
-  background: var(--red);
-  color: #fff;
-  border-radius: 999px;
-  padding: 10px 17px;
-}
-.nav-contact:after {
-  display: none;
-}
-.nav-contact:hover {
-  background: var(--red-dark);
-  color: #fff;
-}
+
 .hero {
   position: relative;
   min-height: 760px;
@@ -1116,104 +1131,284 @@ body.modal-open {
   }
 }
 
-/* Language selector — EN / 日本語 / မြန်မာ */
+/* =========================================================
+   LANGUAGE SELECTOR — ALIGNED SEGMENTED CONTROL
+   ========================================================= */
 .language-selector {
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
+  --lang-padding: 3px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch; /* Stretches buttons to fit full height */
+  box-sizing: border-box;
+  width: 162px;
+  height: 40px;
   margin-left: 8px;
-  padding: 3px;
+  padding: var(--lang-padding);
+  border: 1px solid #dfe3e6;
   border-radius: 999px;
-  border: 1px solid #d9dde1;
-  background: #fff;
-  box-shadow: 0 4px 14px #0000000a;
+  background: #f4f5f6;
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.045),
+    0 2px 7px rgba(0, 0, 0, 0.035);
+  isolation: isolate;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
   transition:
     border-color 0.2s ease,
+    background-color 0.2s ease,
     box-shadow 0.2s ease;
 }
+
 .language-selector:hover {
-  border-color: #b9bdc1;
-  box-shadow: 0 7px 20px #00000012;
+  border-color: #cdd2d6;
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.045),
+    0 5px 14px rgba(0, 0, 0, 0.07);
 }
-.language-selector:focus-within {
-  outline: 3px solid #c9002d33;
-  outline-offset: 3px;
-}
-.language-btn {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  color: #73797e;
-  min-width: 46px;
-  padding: 7px 10px;
+
+/* Active red pill */
+.language-pill-bg {
+  position: absolute;
+  z-index: 1;
+  top: var(--lang-padding);
+  bottom: var(--lang-padding);
+  left: 0; /* Let transform handle the exact horizontal placement */
+  height: calc(100% - (var(--lang-padding) * 2));
   border-radius: 999px;
+  background: var(--red, #c9002d);
+  box-shadow:
+    0 4px 12px rgba(201, 0, 45, 0.28),
+    0 1px 3px rgba(0, 0, 0, 0.12);
+  pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 0.28s cubic-bezier(0.34, 1.42, 0.64, 1),
+    width 0.2s ease;
+}
+
+/* Language buttons */
+.language-btn {
+  position: relative;
+  z-index: 2;
+  appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; /* Fill container height minus padding */
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #62686d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font:
-    700 0.66rem/1 "IBM Plex Sans",
+  font-family:
+    "IBM Plex Sans",
     "Myanmar Text",
     "Noto Sans Myanmar",
     Arial,
     sans-serif;
-  letter-spacing: 0.04em;
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    transform 0.2s ease;
 }
+
 .language-btn:hover {
-  color: #c9002d;
+  color: #15181b;
 }
+
+.language-btn:active {
+  transform: scale(0.96);
+  color: #ffffff;
+}
+
 .language-btn[aria-pressed="true"] {
-  background: #c9002d;
   color: #fff;
 }
+
+.language-code {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 800;
+  line-height: 1;
+}
+
+.language-name {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
 .language-btn:focus-visible {
-  outline: 3px solid #c9002d33;
-  outline-offset: 2px;
+  outline: 2px solid var(--red);
+  outline-offset: -2px;
 }
+
 .nav-shell.scrolled .language-selector {
-  border-color: #d3d7da;
+  border-color: #d5dade;
+  background: #eef0f2;
 }
-@media (max-width: 900px) {
+
+
+/* =========================================================
+   LANGUAGE SELECTOR — TABLET
+   ========================================================= */
+
+@media (min-width: 901px) and (max-width: 1200px) {
   .language-selector {
-    width: calc(100% - 12px);
-    margin: 8px 6px 0 6px;
-    justify-content: stretch;
+    width: 138px;
+    height: 38px;
+    margin-left: 5px;
+    padding: 3px;
   }
+
   .language-btn {
-    flex: 1;
-    min-width: 0;
-  }
-}
-@media (min-width: 900px) and (max-width: 1200px) {
-  .nav-shell .nav-inner {
-    gap: 10px;
-  }
-  .nav-shell .nav-links {
-    gap: 4px;
-  }
-  .nav-shell .nav-link {
-    padding: 8px 6px;
-    font-size: 0.8rem;
-  }
-  .nav-shell .brand-note {
-    font-size: 0.55rem;
-    letter-spacing: 0.18em;
-  }
-  .language-selector {
-    margin-left: 4px;
-  }
-  .language-btn {
-    min-width: 38px;
-    padding: 6px 8px;
+    height: 30px;
     font-size: 0.62rem;
   }
 }
+
+
+/* =========================================================
+   LANGUAGE SELECTOR — MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .language-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100%;
+    height: 44px;
+
+    margin: 10px 0 0;
+    padding: 3px;
+
+    justify-content: stretch;
+  }
+
+  .language-btn {
+    width: 100%;
+    height: 36px;
+
+    min-width: 0;
+    padding: 0 8px;
+
+    font-size: 0.7rem;
+  }
+
+  .language-name {
+    display: inline;
+    margin-left: 4px;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .language-name {
+    display: none;
+  }
+
+  .language-btn {
+    font-size: 0.68rem;
+  }
+}
+
+/* Japanese & Myanmar mobile adjustments */
+@media (max-width: 900px) {
+  html[lang="ja"] .language-btn,
+  html[lang="my"] .language-btn {
+    font-size: 0.68rem;
+    padding: 0 6px;
+  }
+
+  html[lang="ja"] .language-name,
+  html[lang="my"] .language-name {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 420px) {
+  html[lang="ja"] .language-btn,
+  html[lang="my"] .language-btn {
+    font-size: 0.65rem;
+  }
+}
+
+
 html[lang="ja"] body {
   font-family:
     "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
 }
 html[lang="my"] body {
   font-family:
-    "Myanmar Text", "Noto Sans Myanmar", "Padauk",
-    "IBM Plex Sans", Arial, sans-serif;
+    "Myanmar Text", "Noto Sans Myanmar", "Padauk", "IBM Plex Sans", Arial,
+    sans-serif;
+}
+
+/* =========================================================
+   NAV ALIGNMENT FIXES FOR JAPANESE & MYANMAR
+   ========================================================= */
+
+/* Japanese: wider characters need adjusted nav-link padding */
+html[lang="ja"] .nav-link {
+  padding: 0 10px;
+  font-size: 0.8rem;
+}
+
+/* Myanmar: taller glyphs need vertical alignment and padding adjustments */
+html[lang="my"] .nav-link {
+  padding: 0 10px;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+/* Ensure nav-inner maintains alignment with longer nav-link text in JA/MY */
+html[lang="ja"] .nav-inner,
+html[lang="my"] .nav-inner {
+  gap: 16px;
+}
+
+/* Language selector adjustments for JA/MY */
+html[lang="ja"] .language-selector,
+html[lang="my"] .language-selector {
+  width: 180px;
+}
+
+html[lang="ja"] .language-btn,
+html[lang="my"] .language-btn {
+  font-size: 0.65rem;
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  html[lang="ja"] .language-selector,
+  html[lang="my"] .language-selector {
+    width: 156px;
+  }
+
+  html[lang="ja"] .language-btn,
+  html[lang="my"] .language-btn {
+    font-size: 0.6rem;
+  }
 }
