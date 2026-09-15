@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -40,24 +41,36 @@
         </span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" type="button"
-              aria-label="Open navigation" aria-expanded="false" data-i18n-aria-label="common.openNavigation">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation" aria-expanded="false"
+        data-i18n-aria-label="common.openNavigation">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation"
+        data-i18n-aria-label="common.primaryNavigation">
         <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">Home</a>
         <a class="nav-link" data-page="about.html" href="about.html" data-i18n="nav.company">Company</a>
         <a class="nav-link" data-page="services.html" href="services.html" data-i18n="nav.services">Services</a>
-        <a class="nav-link" data-page="recruitment.html" href="recruitment.html" data-i18n="nav.recruitment">Recruitment</a>
+        <a class="nav-link" data-page="recruitment.html" href="recruitment.html"
+          data-i18n="nav.recruitment">Recruitment</a>
         <a class="nav-link" data-page="process.html" href="process.html" data-i18n="nav.process">Process</a>
         <a class="nav-link" data-page="activities.html" href="activities.html" data-i18n="nav.activities">Activities</a>
-        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="nav-link" data-page="contact.html" href="contact.html" data-i18n="nav.contact">Contact</a>
 
-        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
+        <!-- <div class="language-selector" role="group" aria-label="Change language"
+          data-i18n-aria-label="common.changeLanguage">
           <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
           <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
           <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        </div> -->
+
+        <div class="language-selector" id="languageSelector" role="group" aria-label="Change language"
+          data-i18n-aria-label="common.changeLanguage">
+          <span class="language-pill-bg" id="languagePill" aria-hidden="true"></span>
+
+          <button class="language-btn" type="button" data-language="en" aria-pressed="true"><span class="language-code">EN</span><span class="language-name" aria-hidden="true">English</span></button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false"><span class="language-code">JP</span><span class="language-name" aria-hidden="true">日本語</span></button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false"><span class="language-code">MM</span><span class="language-name" aria-hidden="true">မြန်မာ</span></button>
         </div>
       </nav>
     </div>
@@ -66,65 +79,43 @@
   <main>
     <section class="hero" tabindex="0" aria-label="Myanmar GSS hero" data-i18n-aria-label="home.hero.aria.media">
       <div class="hero-photo" aria-label="Myanmar GSS highlights" data-i18n-aria-label="home.hero.aria.highlights">
-        <div class="hero-slide active"
-             style="background-image:url('assets/images/carousel_1.jpg')"
-             role="img"
-             aria-label="Myanmar GSS training environment"
-             aria-hidden="false"
-             data-i18n-aria-label="home.hero.aria.slide1"></div>
+        <div class="hero-slide active" style="background-image:url('assets/images/carousel_1.jpg')" role="img"
+          aria-label="Myanmar GSS training environment" aria-hidden="false"
+          data-i18n-aria-label="home.hero.aria.slide1"></div>
 
-        <div class="hero-slide"
-             style="background-image:url('assets/images/carousel_2.jpg')"
-             role="img"
-             aria-label="Myanmar GSS training activity"
-             aria-hidden="true"
-             data-i18n-aria-label="home.hero.aria.slide2"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/carousel_2.jpg')" role="img"
+          aria-label="Myanmar GSS training activity" aria-hidden="true" data-i18n-aria-label="home.hero.aria.slide2">
+        </div>
 
-        <div class="hero-slide"
-             style="background-image:url('assets/images/carousel_3.jpg')"
-             role="img"
-             aria-label="Myanmar GSS people and activities"
-             aria-hidden="true"
-             data-i18n-aria-label="home.hero.aria.slide3"></div>
+        <div class="hero-slide" style="background-image:url('assets/images/carousel_3.jpg')" role="img"
+          aria-label="Myanmar GSS people and activities" aria-hidden="true"
+          data-i18n-aria-label="home.hero.aria.slide3"></div>
       </div>
 
       <div class="hero-grid" aria-hidden="true"></div>
 
-      <div class="hero-carousel-controls" aria-label="Hero image carousel" data-i18n-aria-label="home.hero.aria.carousel">
-        <button class="hero-carousel-arrow" type="button"
-                data-carousel-prev aria-label="Previous hero image" data-i18n-aria-label="home.hero.aria.previous">‹</button>
+      <div class="hero-carousel-controls" aria-label="Hero image carousel"
+        data-i18n-aria-label="home.hero.aria.carousel">
+        <button class="hero-carousel-arrow" type="button" data-carousel-prev aria-label="Previous hero image"
+          data-i18n-aria-label="home.hero.aria.previous">‹</button>
 
-        <div class="hero-carousel-dots" role="tablist" aria-label="Choose hero image" data-i18n-aria-label="home.hero.aria.dots">
-          <button class="hero-carousel-dot active"
-                  type="button"
-                  data-carousel-dot="0"
-                  role="tab"
-                  aria-selected="true"
-                  aria-label="Show hero image 1"
-                  data-i18n-aria-label="home.hero.aria.dot"
-                  data-i18n-options='{"number":"1"}'></button>
+        <div class="hero-carousel-dots" role="tablist" aria-label="Choose hero image"
+          data-i18n-aria-label="home.hero.aria.dots">
+          <button class="hero-carousel-dot active" type="button" data-carousel-dot="0" role="tab" aria-selected="true"
+            aria-label="Show hero image 1" data-i18n-aria-label="home.hero.aria.dot"
+            data-i18n-options='{"number":"1"}'></button>
 
-          <button class="hero-carousel-dot"
-                  type="button"
-                  data-carousel-dot="1"
-                  role="tab"
-                  aria-selected="false"
-                  aria-label="Show hero image 2"
-                  data-i18n-aria-label="home.hero.aria.dot"
-                  data-i18n-options='{"number":"2"}'></button>
+          <button class="hero-carousel-dot" type="button" data-carousel-dot="1" role="tab" aria-selected="false"
+            aria-label="Show hero image 2" data-i18n-aria-label="home.hero.aria.dot"
+            data-i18n-options='{"number":"2"}'></button>
 
-          <button class="hero-carousel-dot"
-                  type="button"
-                  data-carousel-dot="2"
-                  role="tab"
-                  aria-selected="false"
-                  aria-label="Show hero image 3"
-                  data-i18n-aria-label="home.hero.aria.dot"
-                  data-i18n-options='{"number":"3"}'></button>
+          <button class="hero-carousel-dot" type="button" data-carousel-dot="2" role="tab" aria-selected="false"
+            aria-label="Show hero image 3" data-i18n-aria-label="home.hero.aria.dot"
+            data-i18n-options='{"number":"3"}'></button>
         </div>
 
-        <button class="hero-carousel-arrow" type="button"
-                data-carousel-next aria-label="Next hero image" data-i18n-aria-label="home.hero.aria.next">›</button>
+        <button class="hero-carousel-arrow" type="button" data-carousel-next aria-label="Next hero image"
+          data-i18n-aria-label="home.hero.aria.next">›</button>
       </div>
 
       <div class="container hero-content">
@@ -167,7 +158,8 @@
         <div class="row g-5 align-items-center">
           <div class="col reveal">
             <div class="eyebrow" data-i18n="home.company.eyebrow">Company</div>
-            <h2 class="section-title" data-i18n="home.company.title">A people-first bridge between Myanmar and Japan.</h2>
+            <h2 class="section-title" data-i18n="home.company.title">A people-first bridge between Myanmar and Japan.
+            </h2>
             <p class="section-copy" data-i18n="home.company.copy">
               Myanmar GSS Co., Ltd. supports the connection between Japanese employers and Myanmar
               talent, from preparation in Myanmar to employment in Japan.
@@ -176,10 +168,8 @@
           </div>
 
           <div class="col reveal delay-1">
-            <img class="section-image"
-                 src="assets/gallery-main.png"
-                 alt="Myanmar GSS training and activities"
-                 data-i18n-alt="home.company.imageAlt">
+            <img class="section-image" src="assets/gallery-main.png" alt="Myanmar GSS training and activities"
+              data-i18n-alt="home.company.imageAlt">
           </div>
         </div>
       </div>
@@ -201,7 +191,8 @@
             <article class="service-card">
               <div class="number">01</div>
               <h3 data-i18n="home.services.talent.title">Highly skilled foreign talent</h3>
-              <p data-i18n="home.services.talent.copy">Connecting specialists with Japanese companies in technical, humanities and international-business roles.</p>
+              <p data-i18n="home.services.talent.copy">Connecting specialists with Japanese companies in technical,
+                humanities and international-business roles.</p>
               <a class="btn btn-red" href="services.html" data-i18n="home.services.cta">Learn more</a>
             </article>
           </div>
@@ -210,7 +201,8 @@
             <article class="service-card">
               <div class="number">02</div>
               <h3 data-i18n="home.services.ssw.title">Specified Skilled Workers</h3>
-              <p data-i18n="home.services.ssw.copy">Preparing candidates for designated sectors with language and skills-test support.</p>
+              <p data-i18n="home.services.ssw.copy">Preparing candidates for designated sectors with language and
+                skills-test support.</p>
               <a class="btn btn-red" href="services.html" data-i18n="home.services.cta">Learn more</a>
             </article>
           </div>
@@ -219,7 +211,8 @@
             <article class="service-card">
               <div class="number">03</div>
               <h3 data-i18n="home.services.intern.title">Technical Intern Trainees</h3>
-              <p data-i18n="home.services.intern.copy">Helping candidates build practical experience and long-term career foundations in Japan.</p>
+              <p data-i18n="home.services.intern.copy">Helping candidates build practical experience and long-term
+                career foundations in Japan.</p>
               <a class="btn btn-red" href="services.html" data-i18n="home.services.cta">Learn more</a>
             </article>
           </div>
@@ -259,10 +252,8 @@
           </div>
 
           <div class="col reveal delay-1">
-            <img class="section-image"
-                 src="assets/activity.png"
-                 alt="Myanmar GSS training activities"
-                 data-i18n-alt="home.activities.imageAlt">
+            <img class="section-image" src="assets/activity.png" alt="Myanmar GSS training activities"
+              data-i18n-alt="home.activities.imageAlt">
           </div>
         </div>
       </div>
@@ -280,7 +271,8 @@
           </div>
 
           <div class="col reveal delay-1">
-            <a class="btn btn-white contact-button" href="contact.html" data-i18n="home.contact.cta">Contact Myanmar GSS</a>
+            <a class="btn btn-white contact-button" href="contact.html" data-i18n="home.contact.cta">Contact Myanmar
+              GSS</a>
           </div>
         </div>
       </div>
@@ -289,15 +281,18 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span data-year></span><span data-i18n="footer.rights"> Myanmar GSS Co., Ltd. All Rights Reserved.</span></div>
+      <div>© <span data-year></span><span data-i18n="footer.rights"> Myanmar GSS Co., Ltd. All Rights Reserved.</span>
+      </div>
       <a href="#top" data-i18n="footer.backToTop">Back to top ↑</a>
     </div>
   </footer>
 
-  <button class="backtop" id="backTop" type="button" aria-label="Back to top" data-i18n-aria-label="common.backToTop">↑</button>
+  <button class="backtop" id="backTop" type="button" aria-label="Back to top"
+    data-i18n-aria-label="common.backToTop">↑</button>
 
   <script src="js/vendor/i18next.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>

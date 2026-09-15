@@ -46,11 +46,15 @@
         <a class="nav-link" data-page="activities.html" href="activities.html" data-i18n="nav.activities">Activities</a>
         <a class="nav-link nav-contact" data-page="contact.html" href="contact.html" data-i18n="nav.contact">Contact</a>
 
-        <div class="language-selector" role="group" aria-label="Change language" data-i18n-aria-label="common.changeLanguage">
-          <button class="language-btn" type="button" data-language="en" aria-pressed="false">EN</button>
-          <button class="language-btn" type="button" data-language="ja" aria-pressed="false">日本語</button>
-          <button class="language-btn" type="button" data-language="my" aria-pressed="false">မြန်မာ</button>
+        <div class="language-selector" id="languageSelector" role="group" aria-label="Change language"
+          data-i18n-aria-label="common.changeLanguage">
+          <span class="language-pill-bg" id="languagePill" aria-hidden="true"></span>
+
+          <button class="language-btn" type="button" data-language="en" aria-pressed="true"><span class="language-code">EN</span><span class="language-name" aria-hidden="true">English</span></button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false"><span class="language-code">JP</span><span class="language-name" aria-hidden="true">日本語</span></button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false"><span class="language-code">MM</span><span class="language-name" aria-hidden="true">မြန်မာ</span></button>
         </div>
+        
       </nav>
     </div>
   </header>
