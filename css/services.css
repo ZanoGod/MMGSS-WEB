@@ -526,6 +526,84 @@
   text-decoration: none;
 }
 
+/* Container for Grid Layout */
+.cart-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Individual Cart Card Style */
+.cart-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cart-header h3 {
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+}
+
+.cart-header p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.price-box {
+margin-bottom: 20px;
+  align-content: center;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #c9002b;
+}
+
+.payment-info {
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.payment-info small {
+  color: #64748b;
+  display: block;
+}
+
+.cart-btn {
+  width: 100%;
+  background: #ef536d;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.cart-btn:hover {
+  background: #c9002b;
+}
+
 
 /* =========================================================
    NAVIGATION FIX

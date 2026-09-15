@@ -56,6 +56,31 @@
       "description": "Contact Myanmar GSS Co., Ltd. in Kyaukkone, Yangon."
     }
   },
+
+  "visa_services": {
+    "title": "Visa Services",
+    "items": {
+      "work": {
+        "title": "Professional Talent",
+        "title1": "(Work Visa)",
+        "fee": "USD 1,500–2,000",
+        "payment": "Payment is accepted in two installments."
+      },
+      "tokutei": {
+        "title": "Specified Skilled Worker",
+        "title1": "(Tokutei Visa)",
+        "fee": "USD 1,500",
+        "payment": "Payment is accepted in two installments."
+      },
+      "training": {
+        "title": "Technical Intern Training ",
+        "title1": "(Training Visa)",
+        "fee": "USD 2,800",
+        "payment": "Payment is accepted in two installments."
+      }
+    }
+  },
+
   "home": {
     "hero": {
       "kicker": "Myanmar GSS Co., Ltd.",
@@ -207,6 +232,7 @@
           "Engineering"
         ]
       },
+
       "ssw": {
         "label": "SPECIFIED SKILLED WORKERS",
         "title1": "Specified",
