@@ -12,10 +12,14 @@
   <link rel="stylesheet" href="css/layout-fix.css">
   <link rel="stylesheet" href="css/home-carousel.css">
   <link rel="stylesheet" href="css/home-polish.css">
+  <link rel="stylesheet" href="css/footer.css">
 
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body id="top">
@@ -45,7 +49,7 @@
         data-i18n-aria-label="common.openNavigation">
         <span></span><span></span><span></span>
       </button>
-
+      
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation"
         data-i18n-aria-label="common.primaryNavigation">
         <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">Home</a>
@@ -68,9 +72,12 @@
           data-i18n-aria-label="common.changeLanguage">
           <span class="language-pill-bg" id="languagePill" aria-hidden="true"></span>
 
-          <button class="language-btn" type="button" data-language="en" aria-pressed="true"><span class="language-code">EN</span><span class="language-name" aria-hidden="true">English</span></button>
-          <button class="language-btn" type="button" data-language="ja" aria-pressed="false"><span class="language-code">JP</span><span class="language-name" aria-hidden="true">日本語</span></button>
-          <button class="language-btn" type="button" data-language="my" aria-pressed="false"><span class="language-code">MM</span><span class="language-name" aria-hidden="true">မြန်မာ</span></button>
+          <button class="language-btn" type="button" data-language="en" aria-pressed="true"><span
+              class="language-code">EN</span><span class="language-name" aria-hidden="true">English</span></button>
+          <button class="language-btn" type="button" data-language="ja" aria-pressed="false"><span
+              class="language-code">JP</span><span class="language-name" aria-hidden="true">日本語</span></button>
+          <button class="language-btn" type="button" data-language="my" aria-pressed="false"><span
+              class="language-code">MM</span><span class="language-name" aria-hidden="true">မြန်မာ</span></button>
         </div>
       </nav>
     </div>
@@ -279,6 +286,8 @@
     </section>
   </main>
 
+
+  <div id="footer-container"></div>
   <footer>
     <div class="container footer-inner">
       <div>© <span data-year></span><span data-i18n="footer.rights"> Myanmar GSS Co., Ltd. All Rights Reserved.</span>
@@ -289,7 +298,7 @@
 
   <button class="backtop" id="backTop" type="button" aria-label="Back to top"
     data-i18n-aria-label="common.backToTop">↑</button>
-
+  <script src="js/components.js"></script>
   <script src="js/vendor/i18next.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
