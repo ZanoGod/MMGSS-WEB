@@ -324,19 +324,39 @@ body.cursor-ready .cursor-glow {
 .eyebrow {
   color: var(--red);
 }
-.hero h1 {
+/* .hero h2 {
   max-width: 900px;
   margin: 1rem 0 1.3rem;
   font-size: clamp(3rem, 7vw, 6.8rem);
   letter-spacing: -0.07em;
+} */
+.hero h2 .red {
+  color: #f98a9ec7;
 }
-.hero h1 .red {
-  color: #ff6d88;
-}
-.hero-copy {
+
+.hero-copy, .hero-copy1 {
   max-width: 690px;
   color: #ffffffbd;
   font-size: 1.04rem;
+}
+
+.hero-highlights {
+  max-width: 1050px;
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #ffffff;
+}
+
+.hero-highlights li {
+  margin-bottom: 1rem;
+  padding-left: 0.2rem;
+  color: #ffffffbd;
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.hero-highlights li::marker {
+  color: #ffffff;
 }
 .hero-actions {
   display: flex;
