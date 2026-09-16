@@ -1,0 +1,39 @@
+/* Myanmar GSS Company page — aligned with the shared dark-red page system. */
+.about-page { --about-accent: var(--red, #b90b0b); --about-ink: var(--ink, #101216); --about-muted: var(--muted, #687078); --about-line: var(--line, #e6e2e0); }
+.about-page .page-hero { position:relative; isolation:isolate; overflow:hidden; padding:clamp(5.5rem,9vw,8rem) 0 clamp(4.5rem,7vw,6.5rem); color:#fff; background:radial-gradient(circle at 82% 18%,rgba(255,80,111,.22),transparent 29%),linear-gradient(135deg,#170207 0%,#4b0718 58%,#8e001f 100%); }
+.about-page .page-hero:after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; opacity:.1; background:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px); background-size:64px 64px; }
+.about-page .page-hero .container { position:relative; z-index:1; max-width:1180px; }
+.about-page .crumb { display:inline-flex; align-items:center; gap:.55rem; margin-bottom:1.1rem; color:#ff9aab; font-size:.76rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+.about-page .eyebrow { margin-bottom:.8rem; color:var(--about-accent); font-size:.76rem; font-weight:800; letter-spacing:.13em; line-height:1.5; text-transform:uppercase; }
+.about-page .page-hero .eyebrow { color:#ff9aab; }
+.about-page .page-hero h1 { max-width:900px; margin:0 0 1.25rem; color:#fff; font-size:clamp(2.8rem,6.7vw,5.6rem); font-weight:800; letter-spacing:-.07em; line-height:.99; }
+.about-page .page-hero p { max-width:760px; margin:0; color:rgba(255,255,255,.78); font-size:clamp(1rem,1.5vw,1.12rem); line-height:1.8; }
+.about-page main > .section { padding:clamp(3.75rem,7vw,6.25rem) 0; }
+.about-page .section-title { margin:0 0 1rem; color:var(--about-ink); font-size:clamp(1.8rem,3.2vw,2.8rem); font-weight:800; letter-spacing:-.045em; line-height:1.12; }
+.about-page .section-copy { max-width:650px; color:var(--about-muted); font-size:1.04rem; line-height:1.85; }
+.about-page .fact-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2rem; }
+.about-page .fact { min-width:0; padding:1.2rem 1.25rem; border:1px solid var(--about-line); border-left:3px solid var(--about-accent); border-radius:12px; background:#fff; box-shadow:0 10px 28px rgba(23,32,51,.045); transition:transform .25s ease,box-shadow .25s ease; }
+.about-page .fact:hover { transform:translateY(-3px); box-shadow:0 16px 34px rgba(23,32,51,.09); }
+.about-page .fact small { display:block; margin-bottom:.45rem; color:var(--about-muted); font-size:.73rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.about-page .fact strong { display:block; color:var(--about-ink); font-size:.98rem; line-height:1.5; }
+.about-page .profile { height:100%; overflow:hidden; border:1px solid var(--about-line); border-radius:18px; background:#fff; box-shadow:0 20px 55px rgba(23,32,51,.09); }
+.about-page .profile-head { display:flex; flex-direction:column; gap:.4rem; padding:1.5rem 1.6rem; color:#fff; background:linear-gradient(120deg,#170207,#8e001f); }
+.about-page .profile-head strong { font-size:1.12rem; line-height:1.4; }
+.about-page .profile-head span { color:rgba(255,255,255,.8); font-size:.9rem; }
+.about-page .profile-body { padding:.5rem 1.6rem 1rem; }
+.about-page .profile-row { display:grid; grid-template-columns:minmax(115px,.72fr) minmax(0,1.5fr); gap:1rem; padding:1.05rem 0; border-bottom:1px solid var(--about-line); }
+.about-page .profile-row:last-child { border-bottom:0; }
+.about-page .profile-label { color:var(--about-muted); font-size:.82rem; font-weight:800; }
+.about-page .profile-value { color:var(--about-ink); font-size:.91rem; line-height:1.65; overflow-wrap:anywhere; }
+.about-page .dark-panel { position:relative; overflow:hidden; color:#fff; background:linear-gradient(125deg,#170207,#35101a 65%,#4b0718); }
+.about-page .dark-panel:before { position:absolute; inset:0 0 auto auto; width:min(50vw,620px); height:100%; background:radial-gradient(ellipse at 100% 0%,rgba(197,34,61,.24),transparent 65%); content:""; pointer-events:none; }
+.about-page .dark-panel > .container { position:relative; z-index:1; }
+.about-page .dark-panel .section-title { color:#fff; }
+.about-page .about-message-visual { display:flex; align-items:center; justify-content:center; }
+.about-page .about-message-frame { display:flex; width:100%; min-height:260px; flex-direction:column; align-items:center; justify-content:center; gap:1.25rem; padding:2rem; border:1px solid rgba(255,255,255,.16); border-radius:18px; background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025)); }
+.about-page .about-message-frame img { width:min(190px,65%); height:auto; object-fit:contain; filter:drop-shadow(0 12px 22px rgba(0,0,0,.2)); }
+.about-page .about-message-caption { color:rgba(255,255,255,.82); font-size:.88rem; font-weight:700; letter-spacing:.04em; text-align:center; }
+.about-page .quote { margin:0 0 1.5rem; padding-left:1.25rem; border-left:3px solid #ff6d88; color:#fff; font-size:clamp(1.2rem,2.1vw,1.65rem); font-weight:700; line-height:1.55; }
+.about-page .dark-panel p { color:rgba(255,255,255,.76); font-size:.98rem; line-height:1.85; }
+@media(max-width:767px){ .about-page .fact-grid{grid-template-columns:1fr}.about-page .profile-row{grid-template-columns:1fr;gap:.35rem}.about-page .profile-head,.about-page .profile-body{padding-right:1.2rem;padding-left:1.2rem}.about-page .about-message-frame{min-height:210px}.about-page .page-hero{padding-top:5rem;padding-bottom:4rem}.about-page .page-hero h1{font-size:clamp(2.5rem,11vw,4rem)} }
+@media(prefers-reduced-motion:reduce){.about-page *,.about-page *:before,.about-page *:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

@@ -1,14 +1,21 @@
-
 /* =====================================================
    Myanmar GSS — Premium Image Carousel
-   Fade only | No 3D | No thumbnails
+   Glassmorphism UI/UX Edition
 ===================================================== */
 
 premium-carousel {
   --pc-bg: #121014;
   --pc-accent: #caa46a;
+  --pc-accent-glow: rgba(202, 164, 106, 0.45);
   --pc-duration: 750ms;
   --pc-radius: 20px;
+
+  /* Glassmorphic tokens */
+  --pc-glass-bg: rgba(25, 22, 28, 0.45);
+  --pc-glass-border: rgba(255, 255, 255, 0.18);
+  --pc-glass-highlight: rgba(255, 255, 255, 0.08);
+  --pc-glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --pc-glass-blur: blur(14px);
 
   display: block;
   width: 100%;
@@ -26,6 +33,7 @@ premium-carousel .pc {
   overflow: hidden;
   border-radius: var(--pc-radius);
   background: var(--pc-bg);
+  box-shadow: var(--pc-glass-shadow);
 }
 
 premium-carousel .stage {
@@ -51,7 +59,6 @@ premium-carousel .slide {
   visibility: hidden;
   pointer-events: none;
 
-  /* Explicitly disable 3D and movement */
   transform: none;
   filter: none;
 
@@ -89,14 +96,14 @@ premium-carousel .slide img {
 premium-carousel .dock {
   position: absolute;
   z-index: 5;
-  right: 16px;
-  bottom: 16px;
-  left: 16px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
 
   pointer-events: none;
 }
@@ -106,40 +113,70 @@ premium-carousel .dock > * {
 }
 
 /* ------------------------------
-   Arrow buttons
+   Arrow buttons & Icons
 ------------------------------ */
 
 premium-carousel .arrow {
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
 
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   padding: 0;
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--pc-glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.35); /* Top light refraction */
   border-radius: 50%;
 
-  background: rgba(30, 28, 32, 0.72);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    var(--pc-glass-bg) 100%
+  );
   color: #fff;
 
   font-family: inherit;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1;
+  text-align: center;
 
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--pc-glass-shadow);
+  backdrop-filter: var(--pc-glass-blur);
+  -webkit-backdrop-filter: var(--pc-glass-blur);
 
   transition:
+    transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
     background 200ms ease,
-    border-color 200ms ease;
+    border-color 200ms ease,
+    box-shadow 200ms ease;
 }
 
-premium-carousel .arrow:hover {
-  background: rgba(202, 164, 106, 0.85);
+/* Perfect alignment for child SVGs or icons */
+premium-carousel .arrow svg,
+premium-carousel .arrow i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+premium-carousel .arrow:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.04);
+  background: linear-gradient(
+    135deg,
+    rgba(202, 164, 106, 0.4) 0%,
+    rgba(202, 164, 106, 0.2) 100%
+  );
   border-color: var(--pc-accent);
+  box-shadow: 0 10px 24px 0 var(--pc-accent-glow);
+}
+
+premium-carousel .arrow:active:not(:disabled) {
+  transform: translateY(0) scale(0.96);
 }
 
 premium-carousel .arrow:focus-visible,
@@ -149,8 +186,9 @@ premium-carousel .dot:focus-visible {
 }
 
 premium-carousel .arrow:disabled {
-  opacity: 0.35;
+  opacity: 0.3;
   cursor: not-allowed;
+  transform: none;
 }
 
 /* ------------------------------
@@ -164,14 +202,20 @@ premium-carousel .indicators {
   gap: 8px;
 
   max-width: calc(100% - 120px);
-  padding: 10px 12px;
+  padding: 8px 14px;
 
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--pc-glass-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 999px;
 
-  background: rgba(30, 28, 32, 0.72);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    var(--pc-glass-bg) 100%
+  );
+  box-shadow: var(--pc-glass-shadow);
+  backdrop-filter: var(--pc-glass-blur);
+  -webkit-backdrop-filter: var(--pc-glass-blur);
 }
 
 premium-carousel .dot {
@@ -183,40 +227,49 @@ premium-carousel .dot {
   border: 0;
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.35);
   cursor: pointer;
 
   transition:
-    width 250ms ease,
-    background 250ms ease;
+    width 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 250ms ease,
+    box-shadow 250ms ease;
 }
 
 premium-carousel .dot:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.75);
 }
 
 premium-carousel .dot.is-active {
-  width: 26px;
+  width: 24px;
   background: var(--pc-accent);
+  box-shadow: 0 0 10px var(--pc-accent-glow);
 }
 
 /* ------------------------------
-   Optional caption
+   Optional caption (Glass pill)
 ------------------------------ */
 
 premium-carousel .caption {
   position: absolute;
   z-index: 3;
-  right: 24px;
-  bottom: 82px;
-  left: 24px;
+  bottom: 84px;
+  left: 20px;
 
   margin: 0;
+  padding: 8px 16px;
+  max-width: 80%;
+
+  border: 1px solid var(--pc-glass-border);
+  border-radius: 12px;
+  background: var(--pc-glass-bg);
+  backdrop-filter: var(--pc-glass-blur);
+  -webkit-backdrop-filter: var(--pc-glass-blur);
+  box-shadow: var(--pc-glass-shadow);
 
   color: #fff;
-  font-size: 15px;
-  line-height: 1.5;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  line-height: 1.4;
 
   opacity: 0;
   visibility: hidden;
@@ -261,37 +314,43 @@ premium-carousel .sr-only {
   }
 
   premium-carousel .dock {
-    right: 10px;
-    bottom: 10px;
-    left: 10px;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
     gap: 8px;
   }
 
   premium-carousel .arrow {
     width: 38px;
     height: 38px;
-    font-size: 22px;
+    font-size: 16px;
+  }
+
+  premium-carousel .arrow svg,
+  premium-carousel .arrow i {
+    width: 15px;
+    height: 15px;
   }
 
   premium-carousel .indicators {
     gap: 6px;
-    padding: 8px 10px;
+    padding: 6px 10px;
   }
 
   premium-carousel .dot {
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
   }
 
   premium-carousel .dot.is-active {
-    width: 20px;
+    width: 18px;
   }
 
   premium-carousel .caption {
-    right: 16px;
-    bottom: 68px;
-    left: 16px;
-    font-size: 13px;
+    left: 12px;
+    bottom: 64px;
+    max-width: calc(100% - 24px);
+    font-size: 12px;
   }
 }
 
@@ -306,5 +365,6 @@ premium-carousel .sr-only {
   premium-carousel .dot,
   premium-carousel .caption {
     transition: none !important;
+    transform: none !important;
   }
 }
