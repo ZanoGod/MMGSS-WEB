@@ -1138,10 +1138,10 @@ body.modal-open {
   --lang-padding: 3px;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: stretch; /* Stretches buttons to fit full height */
-  box-sizing: border-box;
-  width: 162px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  flex: 0 0 auto;
+  width: 100px;
   height: 40px;
   margin-left: 8px;
   padding: var(--lang-padding);
@@ -1168,18 +1168,19 @@ body.modal-open {
     0 5px 14px rgba(0, 0, 0, 0.07);
 }
 
-/* Active red pill */
+/* Active red pill: JP is the first/primary language. */
 .language-pill-bg {
   position: absolute;
   z-index: 1;
   top: var(--lang-padding);
   bottom: var(--lang-padding);
-  left: 0; /* Let transform handle the exact horizontal placement */
+  left: var(--lang-padding);
+  width: calc(50% - var(--lang-padding));
   height: calc(100% - (var(--lang-padding) * 2));
   border-radius: 999px;
-  background: var(--red, #c9002d);
+  background: var(--red);
   box-shadow:
-    0 4px 12px rgba(201, 0, 45, 0.28),
+    0 4px 12px rgba(185, 11, 11, 0.24),
     0 1px 3px rgba(0, 0, 0, 0.12);
   pointer-events: none;
   transform: translate3d(0, 0, 0);
@@ -1188,14 +1189,13 @@ body.modal-open {
     width 0.2s ease;
 }
 
-/* Language buttons */
 .language-btn {
   position: relative;
   z-index: 2;
   appearance: none;
   box-sizing: border-box;
   width: 100%;
-  height: 100%; /* Fill container height minus padding */
+  height: 100%;
   min-width: 0;
   margin: 0;
   padding: 0;
@@ -1209,8 +1209,9 @@ body.modal-open {
   cursor: pointer;
   font-family:
     "IBM Plex Sans",
-    "Myanmar Text",
-    "Noto Sans Myanmar",
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
     Arial,
     sans-serif;
   font-size: 0.68rem;
@@ -1240,7 +1241,6 @@ body.modal-open {
   display: block;
   margin: 0;
   padding: 0;
-
   font-weight: 800;
   line-height: 1;
 }
@@ -1249,7 +1249,6 @@ body.modal-open {
   display: none;
   margin: 0;
   padding: 0;
-
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
@@ -1292,7 +1291,7 @@ body.modal-open {
 @media (max-width: 900px) {
   .language-selector {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     width: 100%;
     height: 44px;
@@ -1335,23 +1334,20 @@ body.modal-open {
   }
 }
 
-/* Japanese & Myanmar mobile adjustments */
+/* Japanese mobile adjustments */
 @media (max-width: 900px) {
-  html[lang="ja"] .language-btn,
-  html[lang="my"] .language-btn {
+  html[lang="ja"] .language-btn {
     font-size: 0.68rem;
     padding: 0 6px;
   }
 
-  html[lang="ja"] .language-name,
-  html[lang="my"] .language-name {
+  html[lang="ja"] .language-name {
     font-size: 0.68rem;
   }
 }
 
 @media (max-width: 420px) {
-  html[lang="ja"] .language-btn,
-  html[lang="my"] .language-btn {
+  html[lang="ja"] .language-btn {
     font-size: 0.65rem;
   }
 }
@@ -1390,25 +1386,14 @@ html[lang="my"] .nav-inner {
   gap: 16px;
 }
 
-/* Language selector adjustments for JA/MY */
-html[lang="ja"] .language-selector,
-html[lang="my"] .language-selector {
-  width: 180px;
-}
-
+/* Language-specific navigation typography. */
 html[lang="ja"] .language-btn,
 html[lang="my"] .language-btn {
   font-size: 0.65rem;
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  html[lang="ja"] .language-selector,
-  html[lang="my"] .language-selector {
-    width: 156px;
-  }
-
-  html[lang="ja"] .language-btn,
-  html[lang="my"] .language-btn {
+  html[lang="ja"] .language-btn {
     font-size: 0.6rem;
   }
 }

@@ -20,12 +20,14 @@
      ========================================================= */
 
   const STORAGE_KEY = "mmgss-language";
-  const DEFAULT_LANG = "en";
-  const SUPPORTED_LANGS = ["en", "ja", "my"];
+  const DEFAULT_LANG = "ja";
+  // Myanmar is intentionally disabled for now; keep this commented for later re-enable.
+  // const SUPPORTED_LANGS = ["en", "ja", "my"];
+  const SUPPORTED_LANGS = ["ja", "en"];
   const LOCALES = {
     en: "locales/en.json",
     ja: "locales/ja.json",
-    my: "locales/my.json",
+    // my: "locales/my.json",
   };
 
   /* Title + meta description live under these keys per page. */
