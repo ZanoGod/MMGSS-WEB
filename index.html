@@ -9,10 +9,8 @@
 
 
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/layout-fix.css">
-  <link rel="stylesheet" href="css/home-carousel.css">
-  <link rel="stylesheet" href="css/home-polish.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/premium-carousel.css">
 
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
@@ -174,21 +172,25 @@
         <div class="row g-5 align-items-center">
           <div class="col reveal">
             <div class="eyebrow" data-i18n="home.company.eyebrow">Company</div>
-            <h2 class="section-title" data-i18n="home.company.title">A people-first bridge between Myanmar and Japan.
+            <h2 class="section-title" data-i18n="home.company.title">Learn. Prepare. Connect. Succeed.
             </h2>
             <p class="section-copy" data-i18n="home.company.copy">
-              Myanmar GSS Co., Ltd. supports the connection between Japanese employers and Myanmar
-              talent, from preparation in Myanmar to employment in Japan.
+              Start your journey toward a brighter future in Japan with Myanmar GSS.
             </p>
             <a class="btn btn-red" href="about.html" data-i18n="home.company.cta">Discover our company</a>
           </div>
 
           <div class="col reveal delay-1">
-            <img class="section-image" src="assets/gallery-main.png" alt="Myanmar GSS training and activities"
-              data-i18n-alt="home.company.imageAlt">
+            <premium-carousel autoplay interval="5000" aspect="16/9">
+              <img src="assets/images/home/home_carousel_1.jpg" alt="Trainees in a classroom session at Myanmar GSS"
+                data-caption="">
+              <img src="assets/images/home/home_carousel_2.jpg" alt="Group orientation activity for departing trainees"
+                data-caption="">
+              <img src="assets/images/home/home_carousel_3.jpg" alt="Trainees gathered for a group activity"
+                data-caption="">
+            </premium-carousel>
           </div>
         </div>
-      </div>
     </section>
 
     <section class="section section-soft">
@@ -286,6 +288,7 @@
   <script src="js/vendor/i18next.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/premium-carousel.js" defer></script>
 </body>
 
 </html>

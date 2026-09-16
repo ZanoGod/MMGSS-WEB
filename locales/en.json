@@ -56,7 +56,6 @@
       "description": "Contact Myanmar GSS Co., Ltd. in Kyaukkone, Yangon."
     }
   },
-
   "visa_services": {
     "title": "Visa Services",
     "items": {
@@ -80,15 +79,13 @@
       }
     }
   },
-
   "home": {
     "hero": {
       "kicker": "Myanmar GSS Co., Ltd.",
       "title1": "Your Future in Japan Starts Here",
-      "title2": "Connecting Myanmar's Talent with Trusted Opportunities in Japan.",
+      "title2": "Connecting Myanmar's Talent with Trusted Opportunities in Japan",
       "title3": "Welcome to Myanmar GSS!",
       "copy": "Myanmar GSS connects talented and motivated people from Myanmar with trusted employment opportunities in Japan.",
-      "copy1": "We support candidates throughout their journey — from learning and preparation to connecting with the right opportunities for their future.",
       "explore": "Explore our services",
       "talkToTeam": "Talk to our team",
       "facts": {
@@ -110,12 +107,13 @@
         "next": "Next hero image",
         "dots": "Choose hero image",
         "dot": "Show hero image {{number}}"
-      }
+      },
+      "copy1": "We support candidates throughout their journey — from learning and preparation to connecting with the right opportunities for their future."
     },
     "company": {
       "eyebrow": "Company",
-      "title": "A people-first bridge between Myanmar and Japan.",
-      "copy": "Myanmar GSS Co., Ltd. supports the connection between Japanese employers and Myanmar talent, from preparation in Myanmar to employment in Japan.",
+      "title": "Learn. Prepare. Connect. Succeed.",
+      "copy": "Start your journey toward a brighter future in Japan with Myanmar GSS.",
       "cta": "Discover our company",
       "imageAlt": "Myanmar GSS training and activities"
     },
@@ -234,7 +232,6 @@
           "Engineering"
         ]
       },
-
       "ssw": {
         "label": "SPECIFIED SKILLED WORKERS",
         "title1": "Specified",

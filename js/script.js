@@ -774,11 +774,296 @@ document.addEventListener('i18n:languagechanged', function (e) {
     }
   });
 
-  /* =========================================================
-     INITIALIZE CAROUSEL
-     ========================================================= */
+/* =========================================================
+   INITIALIZE HERO CAROUSEL
+   ========================================================= */
 
-  showSlide(0);
+showSlide(0);
+startCarousel();
 
-  startCarousel();
+
+/* =========================================================
+   COMPANY IMAGE CAROUSEL
+   ========================================================= */
+
+const companyCarousel = $(".company-carousel");
+
+if (companyCarousel) {
+
+  const companySlides = $$(".company-slide", companyCarousel);
+  const companyDots = $$(".company-carousel-dot", companyCarousel);
+
+  const companyPrev = $(".company-prev", companyCarousel);
+  const companyNext = $(".company-next", companyCarousel);
+
+  let companySlideIndex = 0;
+  let companyCarouselTimer = null;
+
+  const COMPANY_AUTOPLAY_DELAY = 5000;
+
+
+  /* -------------------------------------------------------
+     Show company slide
+     ------------------------------------------------------- */
+
+  function showCompanySlide(index) {
+
+    if (!companySlides.length) {
+      return;
+    }
+
+    companySlideIndex =
+      (index + companySlides.length) % companySlides.length;
+
+
+    /* Activate image */
+
+    companySlides.forEach((slide, i) => {
+
+      slide.classList.toggle(
+        "active",
+        i === companySlideIndex
+      );
+
+    });
+
+
+    /* Update dots */
+
+    companyDots.forEach((dot, i) => {
+
+      const selected = i === companySlideIndex;
+
+      dot.classList.toggle("active", selected);
+
+      dot.setAttribute(
+        "aria-current",
+        selected ? "true" : "false"
+      );
+
+    });
+
+  }
+
+
+  /* -------------------------------------------------------
+     Stop autoplay
+     ------------------------------------------------------- */
+
+  function stopCompanyCarousel() {
+
+    if (companyCarouselTimer) {
+
+      clearInterval(companyCarouselTimer);
+
+      companyCarouselTimer = null;
+
+    }
+
+  }
+
+
+  /* -------------------------------------------------------
+     Start autoplay
+     ------------------------------------------------------- */
+
+  function startCompanyCarousel() {
+
+    stopCompanyCarousel();
+
+
+    if (companySlides.length < 2) {
+      return;
+    }
+
+
+    /* Respect reduced motion */
+
+    if (
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches
+    ) {
+      return;
+    }
+
+
+    companyCarouselTimer = setInterval(() => {
+
+      showCompanySlide(companySlideIndex + 1);
+
+    }, COMPANY_AUTOPLAY_DELAY);
+
+  }
+
+
+  /* -------------------------------------------------------
+     Previous
+     ------------------------------------------------------- */
+
+  companyPrev?.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    showCompanySlide(companySlideIndex - 1);
+
+    startCompanyCarousel();
+
+  });
+
+
+  /* -------------------------------------------------------
+     Next
+     ------------------------------------------------------- */
+
+  companyNext?.addEventListener("click", (event) => {
+
+    event.preventDefault();
+
+    showCompanySlide(companySlideIndex + 1);
+
+    startCompanyCarousel();
+
+  });
+
+
+  /* -------------------------------------------------------
+     Dots
+     ------------------------------------------------------- */
+
+  companyDots.forEach((dot, index) => {
+
+    dot.addEventListener("click", (event) => {
+
+      event.preventDefault();
+
+      showCompanySlide(index);
+
+      startCompanyCarousel();
+
+    });
+
+  });
+
+
+  /* -------------------------------------------------------
+     Pause on hover
+     ------------------------------------------------------- */
+
+  companyCarousel.addEventListener(
+    "mouseenter",
+    stopCompanyCarousel
+  );
+
+
+  /* -------------------------------------------------------
+     Resume after hover
+     ------------------------------------------------------- */
+
+  companyCarousel.addEventListener(
+    "mouseleave",
+    startCompanyCarousel
+  );
+
+
+  /* -------------------------------------------------------
+     Pause while focused
+     ------------------------------------------------------- */
+
+  companyCarousel.addEventListener(
+    "focusin",
+    stopCompanyCarousel
+  );
+
+
+  /* -------------------------------------------------------
+     Resume after focus
+     ------------------------------------------------------- */
+
+  companyCarousel.addEventListener(
+    "focusout",
+    (event) => {
+
+      if (
+        !companyCarousel.contains(
+          event.relatedTarget
+        )
+      ) {
+
+        startCompanyCarousel();
+
+      }
+
+    }
+  );
+
+
+  /* -------------------------------------------------------
+     Touch / swipe support
+     ------------------------------------------------------- */
+
+  let companyTouchStartX = 0;
+
+
+  companyCarousel.addEventListener(
+    "touchstart",
+    (event) => {
+
+      if (!event.changedTouches.length) {
+        return;
+      }
+
+      companyTouchStartX =
+        event.changedTouches[0].clientX;
+
+      stopCompanyCarousel();
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  companyCarousel.addEventListener(
+    "touchend",
+    (event) => {
+
+      if (!event.changedTouches.length) {
+        return;
+      }
+
+      const endX =
+        event.changedTouches[0].clientX;
+
+      const distance =
+        endX - companyTouchStartX;
+
+
+      if (Math.abs(distance) > 45) {
+
+        showCompanySlide(
+          companySlideIndex +
+          (distance < 0 ? 1 : -1)
+        );
+
+      }
+
+
+      startCompanyCarousel();
+
+    },
+    {
+      passive: true
+    }
+  );
+
+
+  /* -------------------------------------------------------
+     Initialize
+     ------------------------------------------------------- */
+
+  showCompanySlide(0);
+  startCompanyCarousel();
+}
 })();
