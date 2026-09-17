@@ -22,10 +22,26 @@
     "activities": "Activities",
     "contact": "Contact"
   },
+
   "footer": {
-    "rights": " Myanmar GSS Co., Ltd. All Rights Reserved.",
-    "backToTop": "Back to top ↑"
+    "description": "Connecting Myanmar talent with opportunities in Japan through education, skills development and employment support.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "rights": "Myanmar GSS Co., Ltd. All Rights Reserved.",
+    "backToTop": "Back to top ↑",
+    "nav": {
+      "home": "Home",
+      "company": "Company",
+      "services": "Services",
+      "recruitment": "Recruitment",
+      "process": "Process",
+      "activities": "Activities",
+      "contact": "Contact"
+    }
   },
+
   "pages": {
     "home": {
       "title": "Myanmar GSS | Home",
@@ -178,7 +194,7 @@
       },
       "card": {
         "heading": "Overseas Employment Agency",
-        "company" : "Myanmar GSS Co., Ltd.",
+        "company": "Myanmar GSS Co., Ltd.",
         "companyLabel": "Company name",
         "companyValue": "Myanmar GSS Co., Ltd. (Licence No. 066/2026)",
         "established": "Established",

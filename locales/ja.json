@@ -22,9 +22,24 @@
     "activities": "活動",
     "contact": "お問い合わせ"
   },
+
   "footer": {
-    "rights": " Myanmar GSS Co., Ltd. All Rights Reserved.",
-    "backToTop": "トップへ戻る ↑"
+    "description": "教育、技能開発、就労支援を通じて、ミャンマーの人材と日本の就労機会をつなぎます。",
+    "navigation": "サイトナビゲーション",
+    "services": "サービス",
+    "contact": "お問い合わせ",
+    "privacy": "プライバシーポリシー",
+    "rights": "Myanmar GSS Co., Ltd. All Rights Reserved.",
+    "backToTop": "トップへ戻る ↑",
+    "nav": {
+      "home": "ホーム",
+      "company": "会社情報",
+      "services": "サービス",
+      "recruitment": "採用情報",
+      "process": "手続き",
+      "activities": "活動",
+      "contact": "お問い合わせ"
+    }
   },
   "pages": {
     "home": {
@@ -200,11 +215,7 @@
         "title1": "高度",
         "title2": "外国人材",
         "copy": "就労ビザのルートで日本の就労を目指す外国人人材向けの専門職の機会です。",
-        "areas": [
-          "IT業界",
-          "工場勤務",
-          "ホテル"
-        ]
+        "areas": ["IT業界", "工場勤務", "ホテル"]
       },
       "ssw": {
         "label": "特定技能",
@@ -221,9 +232,7 @@
         "title1": "技能実習",
         "title2": "制度",
         "copy": "日本で実務経験と技術を身につける候補者のための実践的な研修ルートです。",
-        "areas": [
-          "食品製造"
-        ]
+        "areas": ["食品製造"]
       }
     },
     "support": {

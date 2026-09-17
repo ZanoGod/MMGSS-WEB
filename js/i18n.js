@@ -39,6 +39,7 @@
     "process.html": "pages.process",
     "activities.html": "pages.activities",
     "contact.html": "pages.contact",
+    "footer.html": "pages.footer",
   };
 
   const ATTRIBUTE_LABELS = ["placeholder", "title", "alt", "aria-label"];

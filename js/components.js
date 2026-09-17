@@ -10,9 +10,7 @@ async function loadComponent(selector, file) {
     const response = await fetch(file);
 
     if (!response.ok) {
-      throw new Error(
-        `Failed to load component: ${file}`
-      );
+      throw new Error(`Failed to load component: ${file}`);
     }
 
     element.innerHTML = await response.text();
@@ -20,12 +18,12 @@ async function loadComponent(selector, file) {
     // Notify other scripts that component is ready
     element.dispatchEvent(
       new CustomEvent("componentLoaded", {
-        detail: {
-          file: file
-        }
-      })
+        bubbles: true,
+        detail: { file },
+      }),
     );
 
+    window.MMGSSI18n?.translate();
   } catch (error) {
     console.error(error);
   }
@@ -35,10 +33,5 @@ async function loadComponent(selector, file) {
  * Load footer
  */
 document.addEventListener("DOMContentLoaded", () => {
-
-  loadComponent(
-    "#footer-container",
-    "footer.html"
-  );
-
+  loadComponent("#footer-container", "footer.html");
 });
