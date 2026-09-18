@@ -28,8 +28,8 @@ try {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
 
-    $mail->Username = 'no-reply@goldensupportservice.com';
-    $mail->Password = 'dD7TdiUZdB9hdBg';
+    $mail->Username = getenv('MMGSS_SMTP_USERNAME') ?: '';
+    $mail->Password = getenv('MMGSS_SMTP_PASSWORD') ?: '';
 
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port = 587;

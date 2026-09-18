@@ -20,25 +20,33 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $mail = new PHPMailer(true);
 
+$smtpUsername = getenv('MMGSS_SMTP_USERNAME') ?: '';
+$smtpPassword = getenv('MMGSS_SMTP_PASSWORD') ?: '';
+$recipient = getenv('MMGSS_CONTACT_RECIPIENT') ?: '';
+
+if ($smtpUsername === '' || $smtpPassword === '' || $recipient === '') {
+    http_response_code(500);
+    exit('The contact form is not configured yet. Please contact the company directly.');
+}
+
 try {
     // Enable verbose output to troubleshoot if it still fails
     // $mail->SMTPDebug = 2;
 
     $mail->isSMTP();
     
-    // UPDATE THIS: Use your web host's SMTP server
-    $mail->Host       = 'smtp.gmail.com'; 
+    $mail->Host       = getenv('MMGSS_SMTP_HOST') ?: 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'seteam@nicemyanmartravel.com';
-    $mail->Password   = 'qlehuebwetorzpkx'; 
+    $mail->Username   = $smtpUsername;
+    $mail->Password   = $smtpPassword;
 
     // Common cPanel SSL Settings (Port 465 + SMTPS)
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
     $mail->Port       = 465;
 
     // Senders must match the authenticated Username
-    $mail->setFrom('seteam@nicemyanmartravel.com', 'My Website');
-    $mail->addAddress('thwel4186@gmail.com');
+    $mail->setFrom($smtpUsername, 'Myanmar GSS Website');
+    $mail->addAddress($recipient);
     $mail->addReplyTo($email, $name);
 
     $mail->isHTML(true);
@@ -62,5 +70,6 @@ try {
     echo "Message sent successfully!";
 
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: " . $mail->ErrorInfo;
+    http_response_code(500);
+    echo 'Message could not be sent. Please try again later.';
 }

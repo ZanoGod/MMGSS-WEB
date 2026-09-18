@@ -31,21 +31,14 @@
 }
 
 /* =========================================================
-   HERO
+   HERO - Uses unified system from styles.css
+   Page-specific background & grid layout for meta items
    ========================================================= */
 
 .services-hero {
-  position: relative !important;
-  display: block !important;
-  width: 100% !important;
-  min-height: 510px;
-  overflow: hidden !important;
-  padding: 128px 0 90px !important;
-
   background:
     radial-gradient(circle at 82% 20%, rgba(201, 0, 43, 0.25), transparent 34%),
     linear-gradient(125deg, #120608 0%, #250910 58%, #3c0b17 100%) !important;
-
   color: #fff !important;
 }
 
@@ -91,30 +84,11 @@
 }
 
 .services-hero .crumb {
-  margin: 0 0 28px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  color: #ef536d;
 }
 
 .services-hero .eyebrow {
-  margin-bottom: 18px;
   color: #ef536d !important;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-}
-
-.services-hero h1 {
-  margin: 0 !important;
-  max-width: 780px;
-  color: #fff !important;
-  font-size: clamp(3.2rem, 6vw, 5.9rem) !important;
-  line-height: 0.94 !important;
-  letter-spacing: -0.055em !important;
-  font-weight: 800 !important;
 }
 
 .services-hero h1 span {
@@ -122,11 +96,7 @@
 }
 
 .services-hero-copy > p {
-  max-width: 690px;
-  margin: 28px 0 0;
   color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 0.96rem;
-  line-height: 1.8;
 }
 
 .services-hero-meta {

@@ -1,0 +1,91 @@
+/* Myanmar GSS — Activities page */
+.activities-page {
+  color: var(--ink, #101216);
+}
+.activities-page .page-hero {
+  background: linear-gradient(120deg, #170207, #680d21 68%, #b90b0b);
+}
+.activities-page .page-hero .crumb {
+  color: #ffb5c3;
+}
+.activities-page .eyebrow {
+  color: var(--red, #b90b0b);
+}
+.activities-page .section {
+  padding: clamp(3rem, 7vw, 6rem) 0;
+}
+.activities-page .g-3 {
+  gap: 1.25rem;
+}
+.activities-page .row > .col-12 {
+  grid-column: 1 / -1;
+  min-width: 0;
+}
+.activities-page .gallery-box {
+  position: relative;
+  min-height: 260px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f4f4f4;
+  box-shadow: 0 12px 36px #10121612;
+}
+.activities-page .gallery-box img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.activities-page .gallery-box:hover img {
+  transform: scale(1.035);
+}
+.activities-page .gallery-label {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 1rem 1.25rem;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(transparent, #170207d9);
+}
+.activities-page .gallery-copy {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  height: 100%;
+  border: 1px solid var(--line, #e6e2e0);
+  border-radius: 18px;
+  background: #fff;
+}
+.activities-page .gallery-copy h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+.activities-page .section-copy {
+  color: var(--muted, #687078);
+  line-height: 1.85;
+}
+.activities-page .activities-learning-image {
+  display: block;
+  width: 100%;
+  min-height: 440px;
+  border-radius: 18px;
+  box-shadow: 0 12px 36px #10121612;
+  object-fit: cover;
+}
+.activities-page .eyebrow {
+  color: var(--red, #b90b0b);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .activities-page .gallery-box,
+  .activities-page .gallery-box img {
+    min-height: 220px;
+  }
+  .activities-page .gallery-copy {
+    padding: 1.25rem;
+  }
+  .activities-page .activities-learning-image {
+    min-height: 280px;
+  }
+}
