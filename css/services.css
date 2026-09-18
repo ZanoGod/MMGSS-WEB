@@ -31,14 +31,21 @@
 }
 
 /* =========================================================
-   HERO - Uses unified system from styles.css
-   Page-specific background & grid layout for meta items
+   HERO
    ========================================================= */
 
 .services-hero {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  min-height: 510px;
+  overflow: hidden !important;
+  padding: 128px 0 90px !important;
+
   background:
     radial-gradient(circle at 82% 20%, rgba(201, 0, 43, 0.25), transparent 34%),
     linear-gradient(125deg, #120608 0%, #250910 58%, #3c0b17 100%) !important;
+
   color: #fff !important;
 }
 
@@ -84,11 +91,30 @@
 }
 
 .services-hero .crumb {
-  color: #ef536d;
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .services-hero .eyebrow {
+  margin-bottom: 18px;
   color: #ef536d !important;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.services-hero h1 {
+  margin: 0 !important;
+  max-width: 780px;
+  color: #fff !important;
+  font-size: clamp(3.2rem, 6vw, 5.9rem) !important;
+  line-height: 0.94 !important;
+  letter-spacing: -0.055em !important;
+  font-weight: 800 !important;
 }
 
 .services-hero h1 span {
@@ -96,7 +122,11 @@
 }
 
 .services-hero-copy > p {
+  max-width: 690px;
+  margin: 28px 0 0;
   color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 0.96rem;
+  line-height: 1.8;
 }
 
 .services-hero-meta {
@@ -1695,5 +1725,29 @@
   .detail-icon {
     width: 40px;
     height: 40px;
+  }
+}
+
+/* Final compact, white hero typography */
+.services-hero h1,
+.services-hero h1 span {
+  color: #fff !important;
+  max-width: 24ch !important;
+  font-size: clamp(2.65rem, 4vw, 4rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.04em !important;
+}
+
+@media (max-width: 900px) {
+  .services-hero h1,
+  .services-hero h1 span {
+    font-size: clamp(2.35rem, 6vw, 3.35rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-hero h1,
+  .services-hero h1 span {
+    font-size: clamp(2rem, 9vw, 2.75rem) !important;
   }
 }

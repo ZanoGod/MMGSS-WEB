@@ -23,12 +23,7 @@ async function loadComponent(selector, file) {
       }),
     );
 
-    window.MMGSSI18n?.translate(element);
-
-    // The footer is injected after the main script runs.
-    element.querySelectorAll("[data-year]").forEach((year) => {
-      year.textContent = new Date().getFullYear();
-    });
+    window.MMGSSI18n?.translate();
   } catch (error) {
     console.error(error);
   }

@@ -89,3 +89,206 @@
     min-height: 280px;
   }
 }
+
+
+/* =========================================================
+   Activities page layout + compact hero typography
+   Uses the existing stylesheet system; no new design system.
+   ========================================================= */
+
+.activities-page {
+  overflow-x: hidden;
+}
+
+.activities-page .page-hero {
+  padding: clamp(4.5rem, 8vw, 7rem) 0 clamp(3.5rem, 6vw, 5.5rem);
+}
+
+.activities-page .page-hero .container {
+  max-width: 1180px;
+}
+
+.activities-page .page-hero h1,
+.activities-page .page-hero h1 span {
+  max-width: 22ch !important;
+  margin: 0.65rem 0 1.15rem;
+  color: #fff !important;
+  font-size: clamp(2.15rem, 4.2vw, 3.65rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em !important;
+  text-wrap: balance;
+}
+
+.activities-page .page-hero p {
+  max-width: 62ch;
+  color: #fff !important;
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.activities-page .page-hero .crumb,
+.activities-page .page-hero .eyebrow {
+  color: #fff !important;
+}
+
+.activities-page main > .section > .container {
+  width: min(100% - 2rem, 1180px);
+  margin-inline: auto;
+}
+
+.activities-page .activities-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.82fr);
+  align-items: stretch;
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.activities-page .activities-intro-grid > .col,
+.activities-page .activities-intro-grid > .col > .row {
+  min-width: 0;
+}
+
+.activities-page .activities-intro-grid > .col:last-child > .row {
+  display: grid;
+  grid-template-rows: minmax(180px, 0.85fr) auto;
+  gap: 1.25rem;
+  height: 100%;
+}
+
+.activities-page .activities-intro-grid .gallery-box {
+  min-width: 0;
+}
+
+.activities-page .activities-intro-grid > .col:first-child .gallery-box,
+.activities-page .activities-intro-grid > .col:first-child .gallery-box img {
+  min-height: 520px;
+}
+
+.activities-page .activities-intro-grid > .col:last-child .gallery-box,
+.activities-page .activities-intro-grid > .col:last-child .gallery-box img {
+  min-height: 210px;
+}
+
+.activities-page .gallery-copy {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.activities-page .gallery-copy h2 {
+  max-width: 14ch;
+  color: var(--ink, #101216);
+  font-size: clamp(1.65rem, 2.8vw, 2.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.activities-page .gallery-copy .section-copy {
+  max-width: 48ch;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.activities-page .activities-learning-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.activities-page .activities-learning-grid > .col {
+  min-width: 0;
+}
+
+.activities-page .activities-learning-grid .section-title {
+  max-width: 16ch;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.activities-page .activities-learning-grid .section-copy {
+  max-width: 58ch;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.activities-page .activities-learning-media img,
+.activities-page .activities-learning-image {
+  display: block;
+  width: 100%;
+  min-height: 360px !important;
+  max-height: 560px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 12px 36px #10121612;
+}
+
+@media (max-width: 900px) {
+  .activities-page .activities-intro-grid,
+  .activities-page .activities-learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activities-page .activities-intro-grid > .col:first-child .gallery-box,
+  .activities-page .activities-intro-grid > .col:first-child .gallery-box img {
+    min-height: 420px;
+  }
+
+  .activities-page .activities-intro-grid > .col:last-child > .row {
+    grid-template-rows: auto auto;
+  }
+
+  .activities-page .activities-learning-grid .section-title {
+    max-width: 22ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .activities-page .page-hero {
+    padding: 3.75rem 0 3rem;
+  }
+
+  .activities-page .page-hero h1,
+  .activities-page .page-hero h1 span {
+    max-width: 18ch !important;
+    font-size: clamp(1.85rem, 8.5vw, 2.65rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .activities-page .page-hero p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .activities-page main > .section > .container {
+    width: min(100% - 1.25rem, 1180px);
+  }
+
+  .activities-page .activities-intro-grid > .col:first-child .gallery-box,
+  .activities-page .activities-intro-grid > .col:first-child .gallery-box img {
+    min-height: 300px;
+  }
+
+  .activities-page .activities-intro-grid > .col:last-child .gallery-box,
+  .activities-page .activities-intro-grid > .col:last-child .gallery-box img {
+    min-height: 220px;
+  }
+
+  .activities-page .gallery-copy {
+    padding: 1.15rem;
+  }
+
+  .activities-page .gallery-copy h2 {
+    max-width: 100%;
+    font-size: 1.8rem;
+  }
+
+  .activities-page .activities-learning-media img,
+  .activities-page .activities-learning-image {
+    min-height: 260px !important;
+  }
+}

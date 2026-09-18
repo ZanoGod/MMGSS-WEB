@@ -5,11 +5,13 @@
 
 
 /* =========================================================
-   PAGE HERO - Uses unified system from styles.css
-   Page-specific background only
+   PAGE HERO
    ========================================================= */
 
 .page-hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
   background:
     radial-gradient(
       circle at 80% 20%,
@@ -30,14 +32,104 @@
   inset: 0;
   pointer-events: none;
   opacity: 0.10;
+
   background:
-    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    linear-gradient(
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px
+    );
+
   background-size: 64px 64px;
 }
 
-.page-hero .crumb {
-  color: #ffb5c3;
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  padding: 110px 24px 92px;
+  box-sizing: border-box;
+}
+
+.page-hero h1 {
+  margin: 10px 0 20px;
+
+  font-size: clamp(3rem, 7vw, 6.2rem);
+  line-height: 0.98;
+
+  letter-spacing: -0.075em;
+}
+
+.page-hero h1 span {
+  color: #ff6d88;
+}
+
+.page-hero p {
+  max-width: 740px;
+
+  margin: 0;
+
+  color: rgba(255,255,255,0.78);
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   HERO META
+   ========================================================= */
+
+.page-hero-meta {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.page-hero-meta > span,
+.page-hero-meta > a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+
+  font-size: 0.76rem;
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+.page-hero-meta > a:hover {
+  background: #fff;
+  color: #170207;
 }
 
 
@@ -645,5 +737,28 @@ footer {
 
   .process-card:hover {
     transform: none;
+  }
+}
+/* Final compact, white hero typography */
+.page-hero h1,
+.page-hero h1 span {
+  color: #fff !important;
+  max-width: 24ch !important;
+  font-size: clamp(2.65rem, 4vw, 4rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.04em !important;
+}
+
+@media (max-width: 900px) {
+  .page-hero h1,
+  .page-hero h1 span {
+    font-size: clamp(2.35rem, 6vw, 3.35rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-hero h1,
+  .page-hero h1 span {
+    font-size: clamp(2rem, 9vw, 2.75rem) !important;
   }
 }
