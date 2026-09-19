@@ -90,7 +90,7 @@ h4 {
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: var(--dark);
+  background: var(--red-soft);
   display: grid;
   place-items: center;
   transition:
@@ -110,8 +110,8 @@ h4 {
 }
 
 .loader-logo {
-  width: 88px;
-  height: 58px;
+  width: 120px;
+  height: 80px;
   margin: auto auto 18px;
   overflow: hidden;
 }

@@ -50,64 +50,72 @@
     }
   });
 
-/* =========================================================
+  /* =========================================================
    LANGUAGE SELECTOR
    ========================================================= */
 
-function initLanguageSelector() {
-  const selector = document.querySelector('.language-selector');
-  const pill = document.querySelector('.language-pill-bg');
-  if (!selector || !pill) return;
+  function initLanguageSelector() {
+    const selector = document.querySelector(".language-selector");
+    const pill = document.querySelector(".language-pill-bg");
+    if (!selector || !pill) return;
 
-  const buttons = selector.querySelectorAll('.language-btn');
+    const buttons = selector.querySelectorAll(".language-btn");
 
-  function updatePillPosition(activeBtn) {
-    if (!activeBtn) return;
-    pill.style.width = activeBtn.offsetWidth + 'px';
-    pill.style.transform = 'translateX(' + activeBtn.offsetLeft + 'px)';
+    function updatePillPosition(activeBtn) {
+      if (!activeBtn) return;
+      pill.style.width = activeBtn.offsetWidth + "px";
+      pill.style.transform = "translateX(" + activeBtn.offsetLeft + "px)";
+    }
+
+    function setActiveLanguage(btn) {
+      buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
+      btn.setAttribute("aria-pressed", "true");
+      updatePillPosition(btn);
+    }
+
+    const initial =
+      selector.querySelector('.language-btn[aria-pressed="true"]') ||
+      buttons[0];
+    if (initial) setActiveLanguage(initial);
+
+    window.addEventListener("resize", function () {
+      const active = selector.querySelector(
+        '.language-btn[aria-pressed="true"]',
+      );
+      if (active) updatePillPosition(active);
+    });
+
+    return { updatePillPosition, setActiveLanguage };
   }
 
-  function setActiveLanguage(btn) {
-    buttons.forEach(b => b.setAttribute('aria-pressed', 'false'));
-    btn.setAttribute('aria-pressed', 'true');
-    updatePillPosition(btn);
-  }
+  function syncLanguageSelectorFromI18n() {
+    const selector = document.querySelector(".language-selector");
+    if (!selector) return;
 
-  const initial = selector.querySelector('.language-btn[aria-pressed="true"]') || buttons[0];
-  if (initial) setActiveLanguage(initial);
-
-  window.addEventListener('resize', function () {
-    const active = selector.querySelector('.language-btn[aria-pressed="true"]');
-    if (active) updatePillPosition(active);
-  });
-
-  return { updatePillPosition, setActiveLanguage };
-}
-
-function syncLanguageSelectorFromI18n() {
-  const selector = document.querySelector('.language-selector');
-  if (!selector) return;
-  
-  const activeBtn = selector.querySelector('.language-btn[aria-pressed="true"]');
-  if (activeBtn && window.languageSelector) {
-    window.languageSelector.setActiveLanguage(activeBtn);
-  }
-}
-
-document.addEventListener('i18n:ready', function () {
-  window.languageSelector = initLanguageSelector();
-});
-
-document.addEventListener('i18n:languagechanged', function (e) {
-  syncLanguageSelectorFromI18n();
-  if (window.languageSelector) {
-    const selector = document.querySelector('.language-selector');
-    const activeBtn = selector?.querySelector('.language-btn[aria-pressed="true"]');
-    if (activeBtn) {
-      window.languageSelector.updatePillPosition(activeBtn);
+    const activeBtn = selector.querySelector(
+      '.language-btn[aria-pressed="true"]',
+    );
+    if (activeBtn && window.languageSelector) {
+      window.languageSelector.setActiveLanguage(activeBtn);
     }
   }
-});
+
+  document.addEventListener("i18n:ready", function () {
+    window.languageSelector = initLanguageSelector();
+  });
+
+  document.addEventListener("i18n:languagechanged", function (e) {
+    syncLanguageSelectorFromI18n();
+    if (window.languageSelector) {
+      const selector = document.querySelector(".language-selector");
+      const activeBtn = selector?.querySelector(
+        '.language-btn[aria-pressed="true"]',
+      );
+      if (activeBtn) {
+        window.languageSelector.updatePillPosition(activeBtn);
+      }
+    }
+  });
   /* =========================================================
      MOBILE NAVIGATION
      ========================================================= */
@@ -115,7 +123,10 @@ document.addEventListener('i18n:languagechanged', function (e) {
   function closeNavigation() {
     navLinks?.classList.remove("open");
     navToggle?.setAttribute("aria-expanded", "false");
-    navToggle?.setAttribute("aria-label", translate("common.openNavigation", undefined, "Open navigation"));
+    navToggle?.setAttribute(
+      "aria-label",
+      translate("common.openNavigation", undefined, "Open navigation"),
+    );
     body.classList.remove("menu-open");
   }
 
@@ -128,7 +139,11 @@ document.addEventListener('i18n:languagechanged', function (e) {
 
     navToggle.setAttribute(
       "aria-label",
-      translate(open ? "common.closeNavigation" : "common.openNavigation", undefined, open ? "Close navigation" : "Open navigation"),
+      translate(
+        open ? "common.closeNavigation" : "common.openNavigation",
+        undefined,
+        open ? "Close navigation" : "Open navigation",
+      ),
     );
 
     body.classList.toggle("menu-open", open);
@@ -380,7 +395,6 @@ document.addEventListener('i18n:languagechanged', function (e) {
       return;
     }
 
-
     const job = button.closest(".job-item");
 
     const jobId = button.dataset.job || job?.dataset.jobId || "";
@@ -390,7 +404,11 @@ document.addEventListener('i18n:languagechanged', function (e) {
     if (modalRole) {
       modalRole.textContent = jobId
         ? translate(`recruitment.jobs.${jobId}.role`)
-        : translate("recruitment.modal.fallbackRole", undefined, "Role details");
+        : translate(
+            "recruitment.modal.fallbackRole",
+            undefined,
+            "Role details",
+          );
     }
 
     /* Type */
@@ -400,7 +418,11 @@ document.addEventListener('i18n:languagechanged', function (e) {
 
       modalType.textContent = typeKey
         ? translate(typeKey)
-        : translate("recruitment.modal.eyebrow", undefined, "Recruitment opportunity");
+        : translate(
+            "recruitment.modal.eyebrow",
+            undefined,
+            "Recruitment opportunity",
+          );
     }
 
     /* Modal information */
@@ -416,7 +438,13 @@ document.addEventListener('i18n:languagechanged', function (e) {
         ? translate(`recruitment.jobs.${jobId}.${jobValueKeys[field]}`)
         : "";
 
-      element.textContent = value || translate("common.detailsOnRequest", undefined, "Details available on request");
+      element.textContent =
+        value ||
+        translate(
+          "common.detailsOnRequest",
+          undefined,
+          "Details available on request",
+        );
     });
 
     /* Show modal */
@@ -774,296 +802,208 @@ document.addEventListener('i18n:languagechanged', function (e) {
     }
   });
 
-/* =========================================================
+  /* =========================================================
    INITIALIZE HERO CAROUSEL
    ========================================================= */
 
-showSlide(0);
-startCarousel();
+  showSlide(0);
+  startCarousel();
 
-
-/* =========================================================
+  /* =========================================================
    COMPANY IMAGE CAROUSEL
    ========================================================= */
 
-const companyCarousel = $(".company-carousel");
+  const companyCarousel = $(".company-carousel");
 
-if (companyCarousel) {
+  if (companyCarousel) {
+    const companySlides = $$(".company-slide", companyCarousel);
+    const companyDots = $$(".company-carousel-dot", companyCarousel);
 
-  const companySlides = $$(".company-slide", companyCarousel);
-  const companyDots = $$(".company-carousel-dot", companyCarousel);
+    const companyPrev = $(".company-prev", companyCarousel);
+    const companyNext = $(".company-next", companyCarousel);
 
-  const companyPrev = $(".company-prev", companyCarousel);
-  const companyNext = $(".company-next", companyCarousel);
+    let companySlideIndex = 0;
+    let companyCarouselTimer = null;
 
-  let companySlideIndex = 0;
-  let companyCarouselTimer = null;
+    const COMPANY_AUTOPLAY_DELAY = 5000;
 
-  const COMPANY_AUTOPLAY_DELAY = 5000;
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Show company slide
      ------------------------------------------------------- */
 
-  function showCompanySlide(index) {
+    function showCompanySlide(index) {
+      if (!companySlides.length) {
+        return;
+      }
 
-    if (!companySlides.length) {
-      return;
+      companySlideIndex = (index + companySlides.length) % companySlides.length;
+
+      /* Activate image */
+
+      companySlides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === companySlideIndex);
+      });
+
+      /* Update dots */
+
+      companyDots.forEach((dot, i) => {
+        const selected = i === companySlideIndex;
+
+        dot.classList.toggle("active", selected);
+
+        dot.setAttribute("aria-current", selected ? "true" : "false");
+      });
     }
 
-    companySlideIndex =
-      (index + companySlides.length) % companySlides.length;
-
-
-    /* Activate image */
-
-    companySlides.forEach((slide, i) => {
-
-      slide.classList.toggle(
-        "active",
-        i === companySlideIndex
-      );
-
-    });
-
-
-    /* Update dots */
-
-    companyDots.forEach((dot, i) => {
-
-      const selected = i === companySlideIndex;
-
-      dot.classList.toggle("active", selected);
-
-      dot.setAttribute(
-        "aria-current",
-        selected ? "true" : "false"
-      );
-
-    });
-
-  }
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Stop autoplay
      ------------------------------------------------------- */
 
-  function stopCompanyCarousel() {
+    function stopCompanyCarousel() {
+      if (companyCarouselTimer) {
+        clearInterval(companyCarouselTimer);
 
-    if (companyCarouselTimer) {
-
-      clearInterval(companyCarouselTimer);
-
-      companyCarouselTimer = null;
-
+        companyCarouselTimer = null;
+      }
     }
 
-  }
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Start autoplay
      ------------------------------------------------------- */
 
-  function startCompanyCarousel() {
+    function startCompanyCarousel() {
+      stopCompanyCarousel();
 
-    stopCompanyCarousel();
+      if (companySlides.length < 2) {
+        return;
+      }
 
+      /* Respect reduced motion */
 
-    if (companySlides.length < 2) {
-      return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+      }
+
+      companyCarouselTimer = setInterval(() => {
+        showCompanySlide(companySlideIndex + 1);
+      }, COMPANY_AUTOPLAY_DELAY);
     }
 
-
-    /* Respect reduced motion */
-
-    if (
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches
-    ) {
-      return;
-    }
-
-
-    companyCarouselTimer = setInterval(() => {
-
-      showCompanySlide(companySlideIndex + 1);
-
-    }, COMPANY_AUTOPLAY_DELAY);
-
-  }
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Previous
      ------------------------------------------------------- */
 
-  companyPrev?.addEventListener("click", (event) => {
+    companyPrev?.addEventListener("click", (event) => {
+      event.preventDefault();
 
-    event.preventDefault();
+      showCompanySlide(companySlideIndex - 1);
 
-    showCompanySlide(companySlideIndex - 1);
+      startCompanyCarousel();
+    });
 
-    startCompanyCarousel();
-
-  });
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Next
      ------------------------------------------------------- */
 
-  companyNext?.addEventListener("click", (event) => {
+    companyNext?.addEventListener("click", (event) => {
+      event.preventDefault();
 
-    event.preventDefault();
+      showCompanySlide(companySlideIndex + 1);
 
-    showCompanySlide(companySlideIndex + 1);
+      startCompanyCarousel();
+    });
 
-    startCompanyCarousel();
-
-  });
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Dots
      ------------------------------------------------------- */
 
-  companyDots.forEach((dot, index) => {
+    companyDots.forEach((dot, index) => {
+      dot.addEventListener("click", (event) => {
+        event.preventDefault();
 
-    dot.addEventListener("click", (event) => {
+        showCompanySlide(index);
 
-      event.preventDefault();
-
-      showCompanySlide(index);
-
-      startCompanyCarousel();
-
+        startCompanyCarousel();
+      });
     });
 
-  });
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Pause on hover
      ------------------------------------------------------- */
 
-  companyCarousel.addEventListener(
-    "mouseenter",
-    stopCompanyCarousel
-  );
+    companyCarousel.addEventListener("mouseenter", stopCompanyCarousel);
 
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Resume after hover
      ------------------------------------------------------- */
 
-  companyCarousel.addEventListener(
-    "mouseleave",
-    startCompanyCarousel
-  );
+    companyCarousel.addEventListener("mouseleave", startCompanyCarousel);
 
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Pause while focused
      ------------------------------------------------------- */
 
-  companyCarousel.addEventListener(
-    "focusin",
-    stopCompanyCarousel
-  );
+    companyCarousel.addEventListener("focusin", stopCompanyCarousel);
 
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Resume after focus
      ------------------------------------------------------- */
 
-  companyCarousel.addEventListener(
-    "focusout",
-    (event) => {
-
-      if (
-        !companyCarousel.contains(
-          event.relatedTarget
-        )
-      ) {
-
+    companyCarousel.addEventListener("focusout", (event) => {
+      if (!companyCarousel.contains(event.relatedTarget)) {
         startCompanyCarousel();
-
       }
+    });
 
-    }
-  );
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Touch / swipe support
      ------------------------------------------------------- */
 
-  let companyTouchStartX = 0;
+    let companyTouchStartX = 0;
 
+    companyCarousel.addEventListener(
+      "touchstart",
+      (event) => {
+        if (!event.changedTouches.length) {
+          return;
+        }
 
-  companyCarousel.addEventListener(
-    "touchstart",
-    (event) => {
+        companyTouchStartX = event.changedTouches[0].clientX;
 
-      if (!event.changedTouches.length) {
-        return;
-      }
+        stopCompanyCarousel();
+      },
+      {
+        passive: true,
+      },
+    );
 
-      companyTouchStartX =
-        event.changedTouches[0].clientX;
+    companyCarousel.addEventListener(
+      "touchend",
+      (event) => {
+        if (!event.changedTouches.length) {
+          return;
+        }
 
-      stopCompanyCarousel();
+        const endX = event.changedTouches[0].clientX;
 
-    },
-    {
-      passive: true
-    }
-  );
+        const distance = endX - companyTouchStartX;
 
+        if (Math.abs(distance) > 45) {
+          showCompanySlide(companySlideIndex + (distance < 0 ? 1 : -1));
+        }
 
-  companyCarousel.addEventListener(
-    "touchend",
-    (event) => {
+        startCompanyCarousel();
+      },
+      {
+        passive: true,
+      },
+    );
 
-      if (!event.changedTouches.length) {
-        return;
-      }
-
-      const endX =
-        event.changedTouches[0].clientX;
-
-      const distance =
-        endX - companyTouchStartX;
-
-
-      if (Math.abs(distance) > 45) {
-
-        showCompanySlide(
-          companySlideIndex +
-          (distance < 0 ? 1 : -1)
-        );
-
-      }
-
-
-      startCompanyCarousel();
-
-    },
-    {
-      passive: true
-    }
-  );
-
-
-  /* -------------------------------------------------------
+    /* -------------------------------------------------------
      Initialize
      ------------------------------------------------------- */
 
-  showCompanySlide(0);
-  startCompanyCarousel();
-}
+    showCompanySlide(0);
+    startCompanyCarousel();
+  }
 })();
