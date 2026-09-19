@@ -771,6 +771,246 @@ premium-carousel .dot.is-active {
   position: relative;
 }
 
+
+
+/* =========================================================
+   MGSS HERO CAROUSEL CONTROLS
+   Minimal floating controls + individual glass buttons
+   No outer container / no surrounding border
+   ========================================================= */
+
+/* Controls wrapper — transparent, no box */
+.hero-carousel-controls {
+  position: absolute;
+  z-index: 10;
+  right: clamp(20px, 5vw, 72px);
+  bottom: clamp(20px, 4vw, 48px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* =========================================================
+   PREVIOUS / NEXT — individual glass buttons
+   ========================================================= */
+
+.hero-carousel-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 46px;
+
+  width: 46px;
+  min-width: 46px;
+  height: 46px;
+  min-height: 46px;
+
+  padding: 0;
+  margin: 0;
+
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50%;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+/* Bootstrap Icons */
+.hero-carousel-arrow i {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Hover */
+.hero-carousel-arrow:hover {
+  color: #ffffff;
+  background: rgba(169, 0, 47, 0.88);
+  border-color: rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  transform: translateY(-2px);
+}
+
+/* Press */
+.hero-carousel-arrow:active {
+  transform: scale(0.94);
+}
+
+/* Keyboard focus */
+.hero-carousel-arrow:focus-visible,
+.hero-carousel-dot:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   DOTS — clean indicators without a background container
+   ========================================================= */
+
+.hero-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Individual dot */
+.hero-carousel-dot {
+  display: block;
+  flex: 0 0 9px;
+
+  width: 9px;
+  min-width: 9px;
+  height: 9px;
+  min-height: 9px;
+
+  padding: 0;
+  margin: 0;
+
+  background: rgba(255, 255, 255, 0.55);
+  border: 0;
+  border-radius: 999px;
+
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22);
+
+  cursor: pointer;
+
+  transition:
+    width 220ms ease,
+    flex-basis 220ms ease,
+    background-color 220ms ease,
+    opacity 220ms ease;
+}
+
+/* Active slide */
+.hero-carousel-dot.active {
+  flex-basis: 25px;
+  width: 25px;
+
+  background: #ffffff;
+  opacity: 1;
+}
+
+/* Dot hover */
+.hero-carousel-dot:hover {
+  background: #ffb4c4;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .hero-carousel-controls {
+    right: 20px;
+    bottom: 22px;
+    gap: 12px;
+  }
+
+  .hero-carousel-arrow {
+    flex-basis: 42px;
+    width: 42px;
+    min-width: 42px;
+    height: 42px;
+    min-height: 42px;
+  }
+
+  .hero-carousel-dots {
+    gap: 7px;
+  }
+
+  .hero-carousel-dot.active {
+    flex-basis: 22px;
+    width: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-carousel-controls {
+    right: 14px;
+    bottom: 16px;
+    gap: 10px;
+  }
+
+  .hero-carousel-arrow {
+    flex-basis: 38px;
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    min-height: 38px;
+  }
+
+  .hero-carousel-arrow i {
+    font-size: 13px;
+  }
+
+  .hero-carousel-dots {
+    gap: 6px;
+  }
+
+  .hero-carousel-dot {
+    flex-basis: 7px;
+    width: 7px;
+    min-width: 7px;
+    height: 7px;
+    min-height: 7px;
+  }
+
+  .hero-carousel-dot.active {
+    flex-basis: 18px;
+    width: 18px;
+  }
+}
+
+/* UNUSED: Previous pill/container styling is superseded by this
+   carousel visual and interaction regression testing is complete. */
+
+/* 
 .hero-carousel-controls {
   z-index: 30;
   display: flex !important;
@@ -816,4 +1056,4 @@ premium-carousel .dot.is-active {
     right: 12px;
     bottom: 12px;
   }
-}
+} */

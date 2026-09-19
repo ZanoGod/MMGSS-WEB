@@ -3,6 +3,7 @@
    Myanmar GSS — Premium Image Carousel
    Separate CSS + JavaScript
    Fade only | No thumbnails | No 3D
+   Uses Bootstrap Icons for previous/next controls
 ===================================================== */
 
 (() => {
@@ -165,7 +166,11 @@
       this.prevBtn.type = "button";
       this.prevBtn.className = "arrow prev";
       this.prevBtn.setAttribute("aria-label", "Previous slide");
-      this.prevBtn.innerHTML = "&lsaquo;";
+      // Bootstrap Icons (requires bootstrap-icons CSS on the page).
+      const prevIcon = document.createElement("i");
+      prevIcon.className = "bi bi-chevron-left";
+      prevIcon.setAttribute("aria-hidden", "true");
+      this.prevBtn.appendChild(prevIcon);
 
       this.indicatorsEl = document.createElement("div");
       this.indicatorsEl.className = "indicators";
@@ -179,7 +184,11 @@
       this.nextBtn.type = "button";
       this.nextBtn.className = "arrow next";
       this.nextBtn.setAttribute("aria-label", "Next slide");
-      this.nextBtn.innerHTML = "&rsaquo;";
+      // Bootstrap Icons (requires bootstrap-icons CSS on the page).
+      const nextIcon = document.createElement("i");
+      nextIcon.className = "bi bi-chevron-right";
+      nextIcon.setAttribute("aria-hidden", "true");
+      this.nextBtn.appendChild(nextIcon);
 
       this.dock.append(
         this.prevBtn,

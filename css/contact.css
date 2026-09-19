@@ -1,0 +1,7 @@
+/* Contact page-specific styles.
+   Keep shared typography, colors, controls, and spacing in styles.css. */
+.contact-page .contact-card { border-radius: var(--mgss-radius-md); }
+.contact-page .contact-form button,
+.contact-page .contact-form .btn { min-height: 48px; }
+/* UNUSED: no prior contact.css existed in the supplied project; this file is
+   intentionally a minimal page-scoped extension point, not a replacement. */
