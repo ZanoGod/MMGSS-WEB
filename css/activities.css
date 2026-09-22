@@ -59,6 +59,11 @@
   margin: 0.5rem 0 1rem;
   font-size: clamp(1.8rem, 3vw, 2.7rem);
 }
+
+.gallery-photo {
+  width: 100%;
+  /* position: relative; */
+}
 .activities-page .section-copy {
   color: var(--muted, #687078);
   line-height: 1.85;
