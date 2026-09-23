@@ -132,7 +132,16 @@
     nodes.forEach((element) => {
       const key = element.getAttribute("data-i18n").trim();
       if (!key) return;
-      element.textContent = t(key, readOptions(element));
+      // element.textContent = t(key, readOptions(element));
+
+      // My fixing (Save the original HTML text as a permanent fallback)
+      if (!element.dataset.i18nFallback) {
+            element.dataset.i18nFallback = element.textContent.trim();
+          }
+      const fallback = element.textContent.trim();
+      const translation = t(key, readOptions(element), fallback);
+
+      element.textContent = translation;
     });
   }
 
