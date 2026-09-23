@@ -1,15 +1,36 @@
-# MMGSS - Apache / cPanel clean URLs
-RewriteEngine On
+# =========================================================
+# Myanmar GSS — Apache / cPanel clean URLs
+# =========================================================
+
 Options -MultiViews
+RewriteEngine On
 
-# Redirect direct .html requests to clean URLs.
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(?:[\s?]|$) [NC]
-RewriteRule ^(.+)\.html$ $1 [R=301,L,NE]
+# ---------------------------------------------------------
+# 1. Redirect direct .html URLs to clean URLs
+#    /about.html -> /about
+# ---------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(?:[?\s]|$) [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
 
-# Internally map clean URLs to their .html files.
+# ---------------------------------------------------------
+# 2. Remove trailing slash from clean page URLs
+#    /about/ -> /about
+#    (real directories are left alone)
+# ---------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L,NE]
+
+# ---------------------------------------------------------
+# 3. Internally map clean URLs to .html files
+#    /about -> /about.html
+#    /services -> /services.html
+# ---------------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
 
+# ---------------------------------------------------------
+# 4. Home page
+# ---------------------------------------------------------
 DirectoryIndex index.html
