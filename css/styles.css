@@ -2483,7 +2483,7 @@ body {
   box-shadow: none;
 }
 
-.contact-form .form-field:nth-child(4),
+.contact-form .form-field:nth-child(5),
 .contact-form .btn,
 .contact-form .form-note {
   grid-column: 1 / -1;
