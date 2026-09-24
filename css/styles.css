@@ -361,6 +361,11 @@ body.cursor-ready .cursor-glow {
   color: var(--red);
 }
 
+.p_eyebrow {
+    color: var(--black);
+    font-weight: bold;
+}
+
 .hero h2 .red {
   color: #ffbac6;
 }

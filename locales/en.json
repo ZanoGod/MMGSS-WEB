@@ -159,7 +159,7 @@
     },
     "activities": {
       "eyebrow": "Activities",
-      "title": "People in motion.",
+      "title": "Supporting Every Step to Japan",
       "copy": "Training, preparation and departure are all part of the journey from Myanmar to Japan.",
       "cta": "View activities",
       "imageAlt": "Myanmar GSS training activities"
@@ -603,9 +603,8 @@
   },
   "process": {
     "hero": {
-      "eyebrow": "Our recruitment process",
-      "title1": "From job order to",
-      "title2": "departure to Japan.",
+      "eyebrow": "From Job Order to Japan",
+      "title1": "Our Recruitment Process",
       "copy": "A structured 15-step recruitment and employment-support process designed to guide candidates and Japanese employers from the first job order through post-arrival support.",
       "stepsLabel": "15 steps",
       "route": "Myanmar ↔ Japan",
