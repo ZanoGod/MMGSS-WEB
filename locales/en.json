@@ -458,15 +458,15 @@
       "job8": {
         "role": "Food Manufacturing",
         "type": "Specified Skilled Worker",
-        "summary": "Production work in a ready-made meal manufacturing environment.",
+        "summary": "Production for a food manufacturing environment(Ready-Made Meal Manufacturing Work, (Read-Made Meal Processing) Food Industry).",
         "cardLocation": "Hokkaido",
         "cardLanguage": "N4",
-        "cardSalary": "160,000–200,000 Yen",
-        "location": "Kitahiroshima-shi, Hokkaido, Japan",
-        "salary": "160,000 Yen – 200,000 Yen",
+        "cardSalary": "160,000–190,000 Yen",
+        "location": "Hokkaido, Japan",
+        "salary": "160,000 Yen – 190,000 Yen",
         "language": "N4",
-        "duration": "5 Year Contract",
-        "requirements": "Japanese Language Level N4 or JFT A2; high school passed or above; must pass the Specified Skilled Worker Test (Food Industry)."
+        "duration": "3 Year Contract",
+        "requirements": "Japanese Language Basic Level and working experience."
       },
       "job9": {
         "role": "Airport Ground Handling Services",
