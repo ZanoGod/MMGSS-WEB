@@ -207,6 +207,11 @@
         "businessValue": "Foreign talent placement, education and employment support for Japan"
       }
     },
+    "presentation" : {
+        "heading" : "Company Profile",
+        "title" : "Message from company",
+        "copy" : "The value of working in Japan goes beyond income.The knowledge, skills, and experience people gain can return with them to Myanmar—creating new opportunities,strengthening communities, and contributing to a better future."
+    },
     "message": {
       "eyebrow": "Representative message",
       "title": "Passing opportunity forward.",
