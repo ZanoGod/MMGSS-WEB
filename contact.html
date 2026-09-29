@@ -159,8 +159,29 @@
                 <input id="contactPhone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number">
               </div>
               <div class="form-field">
-                <label for="contactSubject">I'm interested in</label>
-                <input id="contactSubject" name="subject" type="text" required placeholder="Please fill in your questions">
+                <label for="interest">I'm interested in</label>
+                <select id="interest" name="interest" required>
+                  <option value="" disabled selected>
+                    Please select an option
+                  </option>
+                  <option value="travel-industry-worker">Travel Industry Worker</option>
+                  <option value="engineering">Engineering</option>
+                  <option value="it-industry">IT Industry</option>
+                  <option value="factory-work">Factory Work</option>
+                  <option value="hotel-operations">Hotel Operations</option>
+                  <option value="caregiving">Caregiving</option>
+                  <option value="food-=services">Food Services</option>
+                  <option value="food-manufacturing">Food Manufacturing</option>
+                  <option value="airport-ground-handling-services">Airport Ground Handling Services</option>
+                  <option value="infrastructure-&-equipment">Infrastructure & Equipment</option>
+                  <option value="garment-manufacturing">Garment Manufacturing</option>
+                  <option value="construction-&-scaffolding">Construction & Scaffolding</option>
+                  <option value="meal-preparation-&-food-service">Meal Preparation & Food Service</option>
+                  <option value="bread-&-bakery-production">Bread & Bakery Production</option>
+                  <option value="bento-&-confectionery-production">Bento & Confectionery Production</option>
+                  <option value="machine-processing-&-electrical-control-panels">Machine Processing & Electrical Control Panels</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
               <button class="btn btn-red" type="submit">Send inquiry</button>
               <p class="form-note">Your inquiry will be sent securely to Myanmar GSS. Please provide accurate contact details.</p>

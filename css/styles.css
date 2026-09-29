@@ -2265,7 +2265,7 @@ body {
 .contact-form select {
   box-sizing: border-box;
   width: 100%;
-  min-height: 46px;
+  min-height: 40px;
   padding: 12px 14px;
   border: 1px solid #d9cbd0;
   border-radius: 10px;
@@ -2274,6 +2274,7 @@ body {
   font: inherit;
   line-height: 1.4;
   opacity: 1;
+  cursor: pointer;
 }
 
 .contact-form input::placeholder,
