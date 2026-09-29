@@ -204,7 +204,12 @@
         "capital": "Capital",
         "capitalValue": "MMK 50,000,000",
         "business": "Business",
-        "businessValue": "Foreign talent placement, education and employment support for Japan"
+        "businessValue": "Foreign talent placement, education and employment support for Japan",
+        "company1": "Traism Co.,Ltd.",
+        "companyvalue1" : "Traism Co., Ltd.",
+        "addressValue1" : "3rd floor, Horikawa Building, 1-2-10 Minato, Chuo-ku, Tokyo",
+        "director" : "Representative Director",
+        "name" : "Hiroshi Sato"
       }
     },
     "presentation" : {
