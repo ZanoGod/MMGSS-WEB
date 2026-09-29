@@ -34,7 +34,7 @@
 
   <header class="nav-shell">
     <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="Myanmar GSS home" data-i18n-aria-label="common.brandHome">
+      <a class="brand" href="/" aria-label="Myanmar GSS home" data-i18n-aria-label="common.brandHome">
         <span class="brand-logo-wrap"><img class="brand-logo" src="assets/logo.png" alt="Myanmar GSS logo" data-i18n-alt="header.brandName"></span>
         <span class="brand-copy"><span class="brand-name" data-i18n="header.brandName">Myanmar GSS</span><span class="brand-note" data-i18n="header.brandNoteGlobal">Overseas Employment Agency</span></span>
       </a>
@@ -42,13 +42,13 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation" data-i18n-aria-label="common.primaryNavigation">
-        <a class="nav-link" data-page="index.html" href="index.html" data-i18n="nav.home">Home</a>
-        <a class="nav-link" data-page="about.html" href="about.html" data-i18n="nav.company">Company</a>
-        <a class="nav-link" data-page="services.html" href="services.html" data-i18n="nav.services">Services</a>
-        <a class="nav-link" data-page="recruitment.html" href="recruitment.html" data-i18n="nav.recruitment">Recruitment</a>
-        <a class="nav-link" data-page="process.html" href="process.html" data-i18n="nav.process">Process</a>
-        <a class="nav-link" data-page="activities.html" href="activities.html" data-i18n="nav.activities">Activities</a>
-        <a class="nav-link nav-contact" data-page="contact.html" href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a class="nav-link" data-page="index.html" href="/" data-i18n="nav.home">Home</a>
+        <a class="nav-link" data-page="about.html" href="/about" data-i18n="nav.company">Company</a>
+        <a class="nav-link" data-page="services.html" href="/services" data-i18n="nav.services">Services</a>
+        <a class="nav-link" data-page="recruitment.html" href="/recruitment" data-i18n="nav.recruitment">Recruitment</a>
+        <a class="nav-link" data-page="process.html" href="/process" data-i18n="nav.process">Process</a>
+        <a class="nav-link" data-page="activities.html" href="/activities" data-i18n="nav.activities">Activities</a>
+        <a class="nav-link nav-contact" data-page="contact.html" href="/contact" data-i18n="nav.contact">Contact</a>
 
         <div class="language-selector" id="languageSelector" role="group" aria-label="Change language"
           data-i18n-aria-label="common.changeLanguage">
@@ -147,6 +147,10 @@
                 <input id="contactName" name="name" type="text" autocomplete="name" required placeholder="Your name">
               </div>
               <div class="form-field">
+                <label for="company">Company Name</label>
+                <input id="company" name="companyName" type="text" autocomplete="companyName" required placeholder="Your company name">
+              </div>
+              <div class="form-field">
                 <label for="contactEmail">Email</label>
                 <input id="contactEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
               </div>
@@ -155,8 +159,8 @@
                 <input id="contactPhone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number">
               </div>
               <div class="form-field">
-                <label for="contactSubject">Subject</label>
-                <input id="contactSubject" name="subject" type="text" required placeholder="How can we help?">
+                <label for="contactSubject">I'm interested in</label>
+                <input id="contactSubject" name="subject" type="text" required placeholder="Please fill in your questions">
               </div>
               <button class="btn btn-red" type="submit">Send inquiry</button>
               <p class="form-note">Your inquiry will be sent securely to Myanmar GSS. Please provide accurate contact details.</p>

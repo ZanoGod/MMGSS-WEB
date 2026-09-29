@@ -64,6 +64,7 @@
   width: 100%;
   /* position: relative; */
 }
+
 .activities-page .section-copy {
   color: var(--muted, #687078);
   line-height: 1.85;

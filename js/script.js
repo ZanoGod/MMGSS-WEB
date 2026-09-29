@@ -38,11 +38,79 @@
   });
 
   /* =========================================================
+     ENVIRONMENT-AWARE INTERNAL LINKS
+
+     Production (Apache):
+       /about -> Apache serves about.html
+
+     Local Live Server:
+       /about would 404 because Live Server does not process
+       .htaccess, so local links are converted to about.html.
+
+     This keeps one HTML codebase for both environments.
+     ========================================================= */
+
+  const LOCAL_STATIC_HOSTS = new Set([
+    "localhost",
+    "127.0.0.1",
+    "[::1]",
+  ]);
+
+  const isLocalStaticServer =
+    LOCAL_STATIC_HOSTS.has(location.hostname) ||
+    location.protocol === "file:";
+
+  const LOCAL_PAGE_ROUTES = new Set([
+    "about",
+    "services",
+    "recruitment",
+    "process",
+    "activities",
+    "contact",
+  ]);
+
+  function normalizeLocalLinks(root = document) {
+    if (!isLocalStaticServer) return;
+
+    root.querySelectorAll("a[href]").forEach((link) => {
+      const rawHref = link.getAttribute("href");
+      if (!rawHref || rawHref.startsWith("#")) return;
+      if (/^(mailto:|tel:|javascript:|https?:)/i.test(rawHref)) return;
+
+      let url;
+      try {
+        url = new URL(rawHref, location.href);
+      } catch {
+        return;
+      }
+
+      if (url.origin !== location.origin) return;
+
+      const path = url.pathname.replace(/^\/+|\/+$/g, "");
+      if (!LOCAL_PAGE_ROUTES.has(path.toLowerCase())) return;
+
+      const filename = `${path.split("/").pop()}.html`;
+      link.setAttribute("href", filename + url.search + url.hash);
+    });
+  }
+
+  normalizeLocalLinks();
+
+  document.addEventListener("componentLoaded", (event) => {
+    normalizeLocalLinks(event.target || document);
+  });
+
+  /* =========================================================
      ACTIVE NAVIGATION
      ========================================================= */
 
-  const currentPage =
-    location.pathname.split("/").pop().toLowerCase() || "index.html";
+  const currentPage = (() => {
+    const path = location.pathname.replace(/\/+$/, "");
+    const last = path.split("/").pop().toLowerCase();
+
+    if (!last || last === "index") return "index.html";
+    return last.endsWith(".html") ? last : `${last}.html`;
+  })();
 
   $$(".nav-link[data-page]").forEach((link) => {
     if (link.dataset.page.toLowerCase() === currentPage) {

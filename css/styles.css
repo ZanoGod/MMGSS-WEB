@@ -62,6 +62,7 @@ img {
   max-width: 100%;
 }
 
+
 button,
 input,
 textarea {
@@ -361,6 +362,11 @@ body.cursor-ready .cursor-glow {
   color: var(--red);
 }
 
+.p_eyebrow {
+    color: var(--black);
+    font-weight: bold;
+}
+
 .hero h2 .red {
   color: #ffbac6;
 }
@@ -570,6 +576,14 @@ body.cursor-ready .cursor-glow {
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.fact-grid1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1px;
+  background: transparent;
   border: 1px solid var(--line);
 }
 
@@ -829,6 +843,10 @@ body.cursor-ready .cursor-glow {
   justify-content: center;
 }
 
+.presentation-image {
+  border-radius: 20px;
+}
+ 
 .principle {
   display: grid;
   grid-template-columns: 42px 1fr;
@@ -1055,6 +1073,11 @@ footer {
 
 .reveal.show {
   opacity: 1;
+  transform: none;
+}
+
+.reveal.show1 {
+  opacity: 0;
   transform: none;
 }
 
@@ -2478,7 +2501,7 @@ body {
   box-shadow: none;
 }
 
-.contact-form .form-field:nth-child(4),
+.contact-form .form-field:nth-child(5),
 .contact-form .btn,
 .contact-form .form-note {
   grid-column: 1 / -1;

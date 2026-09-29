@@ -420,7 +420,7 @@
 
   margin: 0;
 
-  color: #687079;
+  color: black;
 
   font-size: 0.95rem;
 
@@ -437,7 +437,8 @@
 
   background: #d00032;
 
-  color: #fff;
+  /* color: #fff; */
+
 }
 
 .process-cta-inner {

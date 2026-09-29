@@ -28,6 +28,17 @@
         </div>
 
         <div>
+            <label for="company">Company Name</label>
+
+            <input
+                type="text"
+                id="company"
+                name="companyName"
+                required
+            >
+        </div>
+
+        <div>
             <label for="email">Email address</label>
 
             <input
@@ -64,6 +75,7 @@
             Send Message
         </button>
 
+    </form>
     </form>
 
 </body>

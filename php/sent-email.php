@@ -6,11 +6,12 @@ use PHPMailer\PHPMailer\Exception;
 require __DIR__ . '/../vendor/autoload.php';
 
 $name    = trim($_POST['name'] ?? '');
+$company = trim($_POST['company'] ?? '');
 $email   = trim($_POST['email'] ?? '');
 $phone   = trim($_POST['phone'] ?? '');
 $message = trim($_POST['message'] ?? '');
 
-if ($name === '' || $email === '' || $phone === '' || $message === '') {
+if ($name === '' || $company === '' || $email === '' || $phone === '' || $message === '') {
     exit('Please fill in all fields.');
 }
 
@@ -57,6 +58,7 @@ try {
             <h2 style='color: #0066ff;'>New Contact Form Submission</h2>
             <hr style='border: none; border-top: 1px solid #eee; margin: 15px 0;' />
             <p><strong>Name:</strong> " . htmlspecialchars($name) . "</p>
+            <p><strong>Company Name:</strong> " . htmlspecialchars($company) . "</p>
             <p><strong>Email:</strong> " . htmlspecialchars($email) . "</p>
             <p><strong>Phone:</strong> " . htmlspecialchars($phone) . "</p>
             <p><strong>Message:</strong></p>

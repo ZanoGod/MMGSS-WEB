@@ -52,7 +52,11 @@
      --------------------------------------------------------- */
 
   function currentPage() {
-    return location.pathname.split("/").pop().toLowerCase() || "index.html";
+    const path = location.pathname.replace(/\/+$/, "");
+    const last = path.split("/").pop().toLowerCase();
+
+    if (!last || last === "index") return "index.html";
+    return last.endsWith(".html") ? last : `${last}.html`;
   }
 
   function getStoredLang() {
