@@ -40,38 +40,76 @@
   /* =========================================================
      ENVIRONMENT-AWARE INTERNAL LINKS
 
-     Production (Apache):
-       /about -> Apache serves about.html
+     Clean URLs are used everywhere:
+       /about
+       /services
+       /recruitment
+       /process
+       /activities
+       /contact
+       /workerCondition
 
-     Local Live Server:
-       /about would 404 because Live Server does not process
-       .htaccess, so local links are converted to about.html.
+     Apache handles these paths with .htaccess.
+     GitHub Pages and Live Server use matching route directories
+     containing index.html.
 
-     This keeps one HTML codebase for both environments.
+     The site base is detected from this script's own URL, so the
+     same source works at:
+       https://myanmargss.com/
+       http://127.0.0.1:5500/
+       https://zanogod.github.io/MMGSS-WEB/
      ========================================================= */
 
-  const LOCAL_STATIC_HOSTS = new Set([
-    "localhost",
-    "127.0.0.1",
-    "[::1]",
-  ]);
+  const SITE_BASE = (() => {
+    const currentScript =
+      document.currentScript ||
+      [...document.scripts].find((script) =>
+        /(?:^|\/)script\.js(?:[?#].*)?$/i.test(script.src || ""),
+      );
 
-  const isLocalStaticServer =
-    LOCAL_STATIC_HOSTS.has(location.hostname) ||
-    location.protocol === "file:";
+    if (currentScript?.src) {
+      try {
+        return new URL("../", currentScript.src);
+      } catch {
+        // Fall through.
+      }
+    }
 
-  const LOCAL_PAGE_ROUTES = new Set([
+    return new URL(".", location.href);
+  })();
+
+  // Directory-based static hosting may add a trailing slash to route
+  // directories. Remove it after the page has loaded so the visible URL
+  // remains /about, /services, etc.
+  (() => {
+    if (!location.pathname.endsWith("/")) return;
+
+    const basePath = new URL(SITE_BASE).pathname.replace(/\/+$/, "");
+    const relative = location.pathname.slice(basePath.length).replace(/^\/+|\/+$/g, "");
+    if (relative && relative.indexOf("/") === -1) {
+      const route = relative.split("/")[0];
+      const clean = new URL(route, SITE_BASE);
+      clean.search = location.search;
+      clean.hash = location.hash;
+      history.replaceState({}, "", clean.pathname + clean.search + clean.hash);
+    }
+  })();
+
+  const CLEAN_ROUTES = new Set([
     "about",
     "services",
     "recruitment",
     "process",
     "activities",
     "contact",
+    "workerCondition",
   ]);
 
-  function normalizeLocalLinks(root = document) {
-    if (!isLocalStaticServer) return;
+  function siteUrl(path = "") {
+    return new URL(path.replace(/^\/+/, ""), SITE_BASE).href;
+  }
 
+  function normalizeInternalLinks(root = document) {
     root.querySelectorAll("a[href]").forEach((link) => {
       const rawHref = link.getAttribute("href");
       if (!rawHref || rawHref.startsWith("#")) return;
@@ -86,19 +124,68 @@
 
       if (url.origin !== location.origin) return;
 
-      const path = url.pathname.replace(/^\/+|\/+$/g, "");
-      if (!LOCAL_PAGE_ROUTES.has(path.toLowerCase())) return;
+      // Shared components such as footer.html are fetched from the site
+      // root but inserted into nested route pages. Resolve their simple
+      // clean-route links against the detected site base.
+      const simpleRoute = rawHref.replace(/^\/+|\/+$/g, "").split(/[?#]/)[0];
+      if (CLEAN_ROUTES.has(simpleRoute)) {
+        link.setAttribute("href", siteUrl(simpleRoute) + url.search + url.hash);
+        return;
+      }
 
-      const filename = `${path.split("/").pop()}.html`;
-      link.setAttribute("href", filename + url.search + url.hash);
+      if (rawHref === "./" || rawHref === "../" || rawHref === "/") {
+        link.setAttribute("href", SITE_BASE.pathname);
+        return;
+      }
+
+      const path = url.pathname.replace(/^\/+|\/+$/g, "");
+      const basePath = new URL(SITE_BASE).pathname.replace(/^\/+|\/+$/g, "");
+
+      // Convert root links such as "/" and "/about" into links that
+      // include the GitHub Pages project base when required.
+      if (rawHref === "/" || rawHref.startsWith("/")) {
+        const route = path
+          .replace(new RegExp(`^${basePath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/?`), "")
+          .replace(/^\/+/, "");
+
+        if (!route) {
+          link.setAttribute("href", SITE_BASE.pathname);
+          return;
+        }
+
+        const routeName = route.split("/")[0];
+        if (CLEAN_ROUTES.has(routeName)) {
+          link.setAttribute("href", siteUrl(routeName) + url.search + url.hash);
+        } else {
+          link.setAttribute("href", siteUrl(route) + url.search + url.hash);
+        }
+      }
     });
   }
 
-  normalizeLocalLinks();
+  normalizeInternalLinks();
 
   document.addEventListener("componentLoaded", (event) => {
-    normalizeLocalLinks(event.target || document);
+    normalizeInternalLinks(event.target || document);
   });
+
+  // Redirect old .html URLs to the clean URL on all HTTP deployments.
+  // This is a client-side fallback for GitHub Pages; Apache performs
+  // the preferred server-side redirect in .htaccess.
+  if (location.protocol.startsWith("http")) {
+    const currentPath = location.pathname;
+    const match = currentPath.match(/\/([^/]+)\.html$/i);
+
+    if (match && match[1].toLowerCase() !== "index") {
+      const route = match[1];
+      if (CLEAN_ROUTES.has(route)) {
+        const clean = new URL(siteUrl(route), location.href);
+        clean.search = location.search;
+        clean.hash = location.hash;
+        history.replaceState({}, "", clean.pathname + clean.search + clean.hash);
+      }
+    }
+  }
 
   /* =========================================================
      ACTIVE NAVIGATION

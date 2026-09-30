@@ -36,7 +36,14 @@ document.getElementById('ajax-contact-form').addEventListener('submit', async fu
     try {
 
         // Send data to PHP
-        const response = await fetch('contact.php', {
+        const response = await fetch((() => {
+            const script =
+                [...document.scripts].find((item) =>
+                    /(?:^|\/)contact\.js(?:[?#].*)?$/i.test(item.src || ""),
+                );
+            const base = script?.src ? new URL("../", script.src) : new URL(".", window.location.href);
+            return new URL("php/contact.php", base).href;
+        })(), {
             method: 'POST',
             body: formData
         });

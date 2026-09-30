@@ -1,0 +1,30 @@
+# MMGSS — clean URL routing for Apache
+# GitHub Pages does not process this file. GitHub Pages is supported by
+# the route directories (about/index.html, services/index.html, etc.).
+
+Options -MultiViews
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Redirect direct .html URLs to clean URLs.
+# index.html remains the homepage.
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(?:[?\s]) [NC]
+RewriteCond %1 !^index$ [NC]
+RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
+
+# Do not rewrite real files or real directories.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Clean routes -> original HTML files.
+RewriteRule ^about/?$ about.html [L]
+RewriteRule ^services/?$ services.html [L]
+RewriteRule ^recruitment/?$ recruitment.html [L]
+RewriteRule ^process/?$ process.html [L]
+RewriteRule ^activities/?$ activities.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^workerCondition/?$ workerCondition.html [L]
+
+# Leave everything else to Apache.

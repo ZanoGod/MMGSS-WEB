@@ -19,6 +19,24 @@
        back to English; a console warning is logged to help find gaps.
      ========================================================= */
 
+  function getSiteBase() {
+    const script =
+      document.currentScript ||
+      [...document.scripts].find((item) =>
+        /(?:^|\/)i18n\.js(?:[?#].*)?$/i.test(item.src || ""),
+      );
+
+    if (script?.src) {
+      try {
+        return new URL("../", script.src);
+      } catch {
+        // Fall through.
+      }
+    }
+
+    return new URL(".", window.location.href);
+  }
+
   const STORAGE_KEY = "mmgss-language";
   const DEFAULT_LANG = "ja";
   // Myanmar is intentionally disabled for now; keep this commented for later re-enable.
@@ -101,7 +119,7 @@
   async function loadResources() {
     const resources = {};
     const requests = Object.entries(LOCALES).map(async ([code, url]) => {
-      const response = await fetch(url, { credentials: "same-origin" });
+      const response = await fetch(new URL(url, getSiteBase()).href, { credentials: "same-origin" });
       if (!response.ok) {
         throw new Error("Unable to load locale file " + url + " (HTTP " + response.status + ")");
       }
