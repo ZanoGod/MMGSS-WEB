@@ -629,6 +629,11 @@
   min-width: 0;
 }
 
+.recruitment-note-button {
+  display: flex;
+  gap: 15px;
+}
+
 .recruitment-note h2 {
   margin: 8px 0 8px;
 
