@@ -612,11 +612,37 @@
     "viewDetails": "View role details"
   },
   "workCondition": {
-    "note":{
+    "note": {
       "wc": "Work Condition"
     },
     "hero": {
       "title": "Worker's work conditions"
+    },
+    "modal": {
+      "close": "Close"
+    },
+    "hotel": {
+      "title": "Hotel",
+      "subtitle": "Professional Hospitality Environment",
+      "description": "hospitality environment with customer-focused service, teamwork, and well-organized working conditions."
+    },
+    "kaigo": {
+      "title": "Caregiving(Kaigo)",
+      "subtitle": "Compassionate Caregiving Environment",
+      "description": "Safe and supportive care environment focused on respect, teamwork, compassion, and quality of life."
+    },
+    "airport": {
+      "title": "Airport Ground Handling Services",
+      "subtitle": "Safe & Efficient Airport Operations",
+      "description": "Dynamic airport environment with strict safety standards, teamwork, and efficient operations."
+    },
+    "food": {
+      "title": "Food Manufacturing",
+      "description": "Clean and hygienic production environment with strict safety standards, organized operations, and quality-focused work."
+    },
+    "bread": {
+      "title": "Bread & Bakery Production",
+      "description": "Clean and hygienic production environment focused on quality, precision, and efficient teamwork."
     }
   },
   "process": {
