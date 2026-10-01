@@ -54,6 +54,7 @@
     "about.html": "pages.company",
     "services.html": "pages.services",
     "recruitment.html": "pages.recruitment",
+    "workerCondition.html": "pages.recruitment.workCondition",
     "process.html": "pages.process",
     "activities.html": "pages.activities",
     "contact.html": "pages.contact",
