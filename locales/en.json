@@ -624,7 +624,7 @@
     "hotel": {
       "title": "Hotel",
       "subtitle": "Professional Hospitality Environment",
-      "description": "hospitality environment with customer-focused service, teamwork, and well-organized working conditions."
+      "description": "Professional hospitality environment with customer-focused service, teamwork, and well-organized working conditions."
     },
     "kaigo": {
       "title": "Caregiving(Kaigo)",
@@ -633,16 +633,24 @@
     },
     "airport": {
       "title": "Airport Ground Handling Services",
-      "subtitle": "Safe & Efficient Airport Operations",
+      "subtitle": "Safe & Efficient Airport Operations or Efficient Airport Ground Services",
       "description": "Dynamic airport environment with strict safety standards, teamwork, and efficient operations."
     },
     "food": {
-      "title": "Food Manufacturing",
-      "description": "Clean and hygienic production environment with strict safety standards, organized operations, and quality-focused work."
+      "title": "Professional Food Production Environment",
+      "subtitle": "Clean and hygienic workplace."
     },
-    "bread": {
-      "title": "Bread & Bakery Production",
-      "description": "Clean and hygienic production environment focused on quality, precision, and efficient teamwork."
+    "beverage": {
+      "title": "Food & Beverage Service/ Safe & Hygienic Food Service",
+      "subtitle": "Clean and energetic workplace with strong hygiene standards and teamwork."
+    },
+    "construction": {
+      "title": "Professional Construction & Technical Environment",
+      "description": "An active and organized workplace focused on safety, technical skills, reliable operations, and teamwork."
+    },
+    "accommodation": {
+      "title": "Worker Accommodation & Support/",
+      "title1": "Safe & Supportive Living Environment"
     }
   },
   "process": {
